@@ -15,10 +15,18 @@ find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 set(PROJECT_SOURCES
+        objects/ibaseobject.h objects/ibaseobject.cpp
+        gamestatemediator.h gamestatemediator.cpp
+        events/ievent.h events/ievent.cpp
+        objects/human.h objects/human.cpp
+        objects/monster.h objects/monster.cpp
+        gamemanager.h gamemanager.cpp
+        point.h point.cpp
         main.cpp
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
