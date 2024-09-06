@@ -5,7 +5,7 @@
 class Monster: public IBaseObject
 {
 public:
-    Monster();
+    Monster(std::shared_ptr<GameStateMediator>);
 };
 
 #endif // MONSTER_H

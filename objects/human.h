@@ -6,7 +6,7 @@
 class Human: public IBaseObject
 {
 public:
-    Human();
+    Human(std::shared_ptr<GameStateMediator>);
 };
 
 #endif // HUMAN_H

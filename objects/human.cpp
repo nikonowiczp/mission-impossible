@@ -1,6 +1,6 @@
 #include "human.h"
 
-Human::Human()
+Human::Human(std::shared_ptr<GameStateMediator> mediator): IBaseObject(mediator)
 {
 
 }

@@ -1,10 +1,11 @@
 #ifndef GAMESTATEMEDIATOR_H
 #define GAMESTATEMEDIATOR_H
 
-#include "objects/ibaseobject.h"
 #include "events/ievent.h"
 #include <stdint.h>
 #include <vector>
+// forward declaration - needed to avoid circular dependency
+class IBaseObject;
 ///
 /// \brief The GameStateMediator class will be responsible for all of the communication between game objects.
 /// It will also disconnected from any kind of state of the UI - a bit of a change compared to the diagram

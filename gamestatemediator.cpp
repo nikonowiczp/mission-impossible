@@ -1,15 +1,13 @@
 #include "gamestatemediator.h"
-
+#include "objects/ibaseobject.h"
 
 GameStateMediator::GameStateMediator(std::vector<IBaseObject> objects)
 {
     this->gameObjects = std::move(objects);
 }
 
-void GameStateMediator::DoTick()
+void GameStateMediator::DoTick(int userInput)
 {
-    for(auto a : gameObjects){
-        a.onGameTick();
-    }
+
     tick++;
 }
