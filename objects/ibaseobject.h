@@ -11,11 +11,12 @@ class IBaseObject
 public:
     IBaseObject(std::shared_ptr<GameStateMediator>, std::unique_ptr<Point>);
     virtual void OnGameTick() = 0;
-    std::unique_ptr<Point> Coordinates;
-
+    Point GetCoordinates();
+    void SetCoordinates(std::unique_ptr<Point>);
 private:
     std::shared_ptr<GameStateMediator> mediator;
     int speed = 0;
+    std::unique_ptr<Point> coordinates;
     void moveObject();
 };
 
