@@ -9,6 +9,7 @@
 class BaseObject;
 class Positionable;
 class Movable;
+class CommandCenter;
 ///
 /// \brief The GameStateMediator class will be responsible for all of the communication between game objects.
 /// It's also disconnected from any kind of state of the UI - a bit of a change compared to the diagram in stage 2
@@ -23,6 +24,7 @@ public:
 
 private:
     int64_t tick = 0;
+    std::unique_ptr<CommandCenter> commandCenter;
     std::vector<std::shared_ptr<Positionable>> gameObjects;
     std::vector<std::shared_ptr<Positionable>> getVisibleObjects(std::shared_ptr<Movable>);
 };

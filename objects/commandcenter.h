@@ -3,10 +3,11 @@
 
 #include "positionable.h"
 
-class CommandCenter : public Positionable
+class CommandCenter : public BaseObject
 {
 public:
-    CommandCenter(std::shared_ptr<GameStateMediator>, std::unique_ptr<Point> _location);
+    CommandCenter(std::shared_ptr<GameStateMediator>);
+    void OnGameTick();
 };
 
 #endif // COMMANDCENTER_H

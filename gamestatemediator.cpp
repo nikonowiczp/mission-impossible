@@ -1,5 +1,6 @@
 #include "gamestatemediator.h"
 #include "objects/movable.h"
+#include "objects/commandcenter.h"
 #include "utils.h"
 
 GameStateMediator::GameStateMediator(std::vector<std::shared_ptr<Positionable>> objects)
