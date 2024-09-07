@@ -16,6 +16,7 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 set(PROJECT_SOURCES
         objects/baseobject.h objects/baseobject.cpp
+        objects/positionable.h objects/positionable.cpp
         objects/human.h objects/human.cpp
         objects/monster.h objects/monster.cpp
         objects/commandcenter.h objects/commandcenter.cpp

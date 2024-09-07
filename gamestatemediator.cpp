@@ -2,7 +2,7 @@
 #include "objects/baseobject.h"
 #include "utils.h"
 
-GameStateMediator::GameStateMediator(std::vector<std::shared_ptr<BaseObject>> objects)
+GameStateMediator::GameStateMediator(std::vector<std::shared_ptr<Positionable>> objects)
 {
     this->gameObjects = std::move(objects);
 }
@@ -12,9 +12,9 @@ void GameStateMediator::DoTick(int _userInput)
     tick++;
 }
 
-std::vector<std::shared_ptr<BaseObject>> GameStateMediator::getVisibleObjects(std::shared_ptr<BaseObject> _object)
+std::vector<std::shared_ptr<Positionable>> GameStateMediator::getVisibleObjects(std::shared_ptr<Positionable> _object)
 {
-    std::vector<std::shared_ptr<BaseObject>> _visibleObjects = {};
+    std::vector<std::shared_ptr<Positionable>> _visibleObjects = {};
     for (auto _gameObject : this->gameObjects )
     {
         if (_object != _gameObject &&

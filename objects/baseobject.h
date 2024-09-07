@@ -9,16 +9,13 @@
 class BaseObject
 {
 public:
-    BaseObject(std::shared_ptr<GameStateMediator>, std::unique_ptr<Point>);
+    BaseObject(std::shared_ptr<GameStateMediator>);
     virtual void OnGameTick() = 0;
-    Point GetCoordinates();
-    void SetCoordinates(std::unique_ptr<Point>);
     double GetRange();
 private:
     std::shared_ptr<GameStateMediator> mediator;
     int speed = 0;
     double range = 0;
-    std::unique_ptr<Point> coordinates;
     void moveObject();
 };
 

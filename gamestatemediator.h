@@ -7,6 +7,7 @@
 #include <memory>
 // forward declaration - needed to avoid circular dependency
 class BaseObject;
+class Positionable;
 ///
 /// \brief The GameStateMediator class will be responsible for all of the communication between game objects.
 /// It's also disconnected from any kind of state of the UI - a bit of a change compared to the diagram in stage 2
@@ -15,14 +16,14 @@ class BaseObject;
 class GameStateMediator
 {
 public:
-    GameStateMediator(std::vector<std::shared_ptr<BaseObject>>);
+    GameStateMediator(std::vector<std::shared_ptr<Positionable>>);
     void DoTick(int);
     void Notify(BaseObject, IEvent);
 
 private:
     int64_t tick = 0;
-    std::vector<std::shared_ptr<BaseObject>> gameObjects;
-    std::vector<std::shared_ptr<BaseObject>> getVisibleObjects(std::shared_ptr<BaseObject>);
+    std::vector<std::shared_ptr<Positionable>> gameObjects;
+    std::vector<std::shared_ptr<Positionable>> getVisibleObjects(std::shared_ptr<Positionable>);
 };
 
 #endif // GAMESTATEMEDIATOR_H

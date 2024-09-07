@@ -1,8 +1,8 @@
 #ifndef MONSTER_H
 #define MONSTER_H
 
-#include "baseobject.h"
-class Monster: public BaseObject
+#include "positionable.h"
+class Monster: public Positionable
 {
 public:
     Monster(std::shared_ptr<GameStateMediator>,  std::unique_ptr<Point> _location);
