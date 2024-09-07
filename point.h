@@ -5,9 +5,12 @@
 class Point
 {
 public:
-    Point();
-    int X;
-    int Y;
+    Point(int, int);
+    int GetX();
+    int GetY();
+private:
+    int x = 0;
+    int y = 0;
 };
 
 #endif // POINT_H
