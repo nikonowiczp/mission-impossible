@@ -1,9 +1,9 @@
 #ifndef HUMAN_H
 #define HUMAN_H
 
-#include "ibaseobject.h"
+#include "baseobject.h"
 
-class Human: public IBaseObject
+class Human: public BaseObject
 {
 public:
     Human(std::shared_ptr<GameStateMediator>,  std::unique_ptr<Point>);
