@@ -15,3 +15,8 @@ void BaseObject::SetCoordinates(std::unique_ptr<Point> _coordinates)
 {
     this->coordinates = std::move(_coordinates);
 }
+
+double BaseObject::GetRange()
+{
+    return this->range;
+}
