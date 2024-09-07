@@ -22,6 +22,7 @@ set(PROJECT_SOURCES
         events/ievent.h events/ievent.cpp
         gamemanager.h gamemanager.cpp
         point.h point.cpp
+        utils.h utils.cpp
         main.cpp
         mainwindow.cpp
         mainwindow.h
