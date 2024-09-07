@@ -15,7 +15,7 @@ class GameStateMediator
 {
 public:
     GameStateMediator(std::vector<IBaseObject>);
-    void DoTick(int userInput);
+    void DoTick(int);
     void Notify(IBaseObject, IEvent);
 
 private:
