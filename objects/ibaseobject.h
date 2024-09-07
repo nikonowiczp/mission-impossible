@@ -9,9 +9,9 @@
 class IBaseObject
 {
 public:
-    IBaseObject(std::shared_ptr<GameStateMediator>);
+    IBaseObject(std::shared_ptr<GameStateMediator>, std::unique_ptr<Point>);
     virtual void OnGameTick() = 0;
-    Point Coordinates;
+    std::unique_ptr<Point> Coordinates;
 
 private:
     std::shared_ptr<GameStateMediator> mediator;
