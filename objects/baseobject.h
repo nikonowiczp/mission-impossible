@@ -11,12 +11,8 @@ class BaseObject
 public:
     BaseObject(std::shared_ptr<GameStateMediator>);
     virtual void OnGameTick() = 0;
-    double GetRange();
 private:
     std::shared_ptr<GameStateMediator> mediator;
-    int speed = 0;
-    double range = 0;
-    void moveObject();
 };
 
 #endif // BASEOBJECT_H
