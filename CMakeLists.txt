@@ -18,8 +18,9 @@ set(PROJECT_SOURCES
         objects/baseobject.h objects/baseobject.cpp
         objects/human.h objects/human.cpp
         objects/monster.h objects/monster.cpp
-        gamestatemediator.h gamestatemediator.cpp
+        objects/commandcenter.h objects/commandcenter.cpp
         events/ievent.h events/ievent.cpp
+        gamestatemediator.h gamestatemediator.cpp
         gamemanager.h gamemanager.cpp
         point.h point.cpp
         utils.h utils.cpp
