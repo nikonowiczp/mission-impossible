@@ -9,7 +9,7 @@ public:
     ILogHandler();
     virtual void SaveGame(int) = 0;
     virtual std::vector<int> ReadGames() = 0;
-    virtual ~ILogHandler() = 0;
+    virtual ~ILogHandler();
 };
 
 #endif // ILOGHANDLER_H
