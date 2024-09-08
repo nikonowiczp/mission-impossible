@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <bits/stdc++.h>
 
 MainWindow::MainWindow(std::unique_ptr<ILogHandler> _handler, QWidget *_parent)
     : QMainWindow(_parent)
@@ -23,6 +24,16 @@ void MainWindow::on_StartButton_clicked()
 
 void MainWindow::on_RankingButton_clicked()
 {
+    // todo header not visible
+    std::vector<int> _games = this->logHandler->ReadGames();
+    sort(_games.begin(), _games.end(), std::greater<int>());
+    int _gameCounter = _games.size();
+    ui->RankingTableWidget->setRowCount(_gameCounter);
+    for ( int i = 0; i < _gameCounter; i++ )
+    {
+        ui->RankingTableWidget->setItem(i, 0, new QTableWidgetItem(QString((char)(i+1))));
+        ui->RankingTableWidget->setItem(i, 0, new QTableWidgetItem(QString((char)_games[i])));
+    }
     ui->stackedWidget->setCurrentIndex(2);
 }
 
