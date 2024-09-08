@@ -1,10 +1,11 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
+MainWindow::MainWindow(std::unique_ptr<ILogHandler> _handler, QWidget *_parent)
+    : QMainWindow(_parent)
     , ui(new Ui::MainWindow)
 {
+    this->logHandler = std::move(_handler);
     ui->setupUi(this);
 }
 
