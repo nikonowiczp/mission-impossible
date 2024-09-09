@@ -25,6 +25,7 @@ set(PROJECT_SOURCES
         iloghandler.h iloghandler.cpp
         csvloghandler.h csvloghandler.cpp
         gamestatemediator.h gamestatemediator.cpp
+        gameview.h gameview.cpp
         gamemanager.h gamemanager.cpp
         point.h point.cpp
         utils.h utils.cpp

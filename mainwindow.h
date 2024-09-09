@@ -2,7 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QGraphicsScene>
+
 #include "iloghandler.h"
+#include "gameview.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -13,7 +16,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(std::unique_ptr<ILogHandler>, QWidget *parent = nullptr);
+    MainWindow(std::unique_ptr<ILogHandler>, QWidget *_parent = nullptr);
     ~MainWindow();
 
 private slots:
@@ -30,8 +33,16 @@ private slots:
 
     void on_GameOverBackButton_clicked();
 
+    void on_EasyButton_clicked();
+
+    void on_MediumButton_clicked();
+
+    void on_HardButton_clicked();
+
 private:
+    void startGame();
     Ui::MainWindow *ui;
+    GameView *gameView;
     std::unique_ptr<ILogHandler> logHandler;
 };
 #endif // MAINWINDOW_H

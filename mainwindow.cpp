@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+
 #include "./ui_mainwindow.h"
 #include <bits/stdc++.h>
 
@@ -8,6 +9,8 @@ MainWindow::MainWindow(std::unique_ptr<ILogHandler> _handler, QWidget *_parent)
 {
     this->logHandler = std::move(_handler);
     ui->setupUi(this);
+    this->gameView = new GameView();
+    ui->GamePage->layout()->addWidget(this->gameView);
 }
 
 MainWindow::~MainWindow()
@@ -59,5 +62,28 @@ void MainWindow::on_RankingBackButton_clicked()
 void MainWindow::on_GameOverBackButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_EasyButton_clicked()
+{
+    this->startGame();
+}
+
+
+void MainWindow::on_MediumButton_clicked()
+{
+    this->startGame();
+}
+
+
+void MainWindow::on_HardButton_clicked()
+{
+    this->startGame();
+}
+
+void MainWindow::startGame()
+{
+    this->gameView->StartGame();
+    ui->stackedWidget->setCurrentIndex(4);
 }
 

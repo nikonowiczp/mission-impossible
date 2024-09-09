@@ -24,7 +24,7 @@ background-color: black;
 background-color: black;
 }</string>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_13">
+   <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="styleSheet">
@@ -52,7 +52,7 @@ QLabel {
 	color: #c29864;
 }
 
-#MainPage, #DifficultyPage, #RankingPage, #GameOverPage {
+#MainPage, #DifficultyPage, #RankingPage, #GameOverPage, #GamePage {
 	background-color: black;
 }
 
@@ -533,6 +533,9 @@ QHeaderView::section {
          </widget>
         </item>
        </layout>
+      </widget>
+      <widget class="QWidget" name="GamePage">
+       <layout class="QVBoxLayout" name="verticalLayout_13"/>
       </widget>
      </widget>
     </item>
