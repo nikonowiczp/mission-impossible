@@ -1,6 +1,5 @@
 #ifndef BASEOBJECT_H
 #define BASEOBJECT_H
-#include "point.h"
 #include "gamestatemediator.h"
 #include <memory>
 ///
@@ -11,7 +10,9 @@ class BaseObject
 public:
     BaseObject(std::shared_ptr<GameStateMediator>);
     virtual void OnGameTick() = 0;
-private:
+    void ReceiveEvent(std::unique_ptr<IEvent>);
+protected:
+    std::unique_ptr<IEvent> event = nullptr;
     std::shared_ptr<GameStateMediator> mediator;
 };
 

@@ -26,3 +26,12 @@ std::vector<std::shared_ptr<Positionable>> GameStateMediator::getVisibleObjects(
     }
     return _visibleObjects;
 }
+
+std::vector<std::shared_ptr<Positionable> > GameStateMediator::getPeople()
+{
+    //TODO
+}
+
+std::vector<std::shared_ptr<Positionable>> getVisibleObjects(std::shared_ptr<Movable>){
+    //TODO
+}

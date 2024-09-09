@@ -1,6 +1,7 @@
 #ifndef POSITIONABLE_H
 #define POSITIONABLE_H
 
+#include "point.h"
 #include "baseobject.h"
 
 class Positionable : public BaseObject

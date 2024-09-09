@@ -26,6 +26,7 @@ set(PROJECT_SOURCES
         csvloghandler.h csvloghandler.cpp
         gamestatemediator.h gamestatemediator.cpp
         gamemanager.h gamemanager.cpp
+        gameoptions.h gameoptions.cpp
         point.h point.cpp
         utils.h utils.cpp
         main.cpp
@@ -39,6 +40,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(mission-impossible
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        gameoptions.h gameoptions.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET mission-impossible APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

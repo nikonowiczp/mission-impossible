@@ -7,5 +7,5 @@ CommandCenter::CommandCenter(std::shared_ptr<GameStateMediator> _mediator): Base
 
 void CommandCenter::OnGameTick()
 {
-
+    auto visibleGameObject = this->mediator->getPeople();
 }

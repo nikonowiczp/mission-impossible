@@ -22,11 +22,12 @@ public:
     void DoTick(int);
     void Notify(BaseObject, IEvent);
 
+    std::vector<std::shared_ptr<Positionable>> getVisibleObjects(std::shared_ptr<Movable>);
+    std::vector<std::shared_ptr<Positionable>> getPeople();
 private:
     int64_t tick = 0;
     std::unique_ptr<CommandCenter> commandCenter;
     std::vector<std::shared_ptr<Positionable>> gameObjects;
-    std::vector<std::shared_ptr<Positionable>> getVisibleObjects(std::shared_ptr<Movable>);
 };
 
 #endif // GAMESTATEMEDIATOR_H
