@@ -28,6 +28,8 @@ private slots:
 
     void on_RankingBackButton_clicked();
 
+    void on_GameOverBackButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     std::unique_ptr<ILogHandler> logHandler;

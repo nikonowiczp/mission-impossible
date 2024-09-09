@@ -55,3 +55,9 @@ void MainWindow::on_RankingBackButton_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
+
+void MainWindow::on_GameOverBackButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
