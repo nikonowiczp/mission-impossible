@@ -98,12 +98,18 @@ void MainWindow::startGame()
 
 void MainWindow::gameOver()
 {
-
+    timer->stop();
+    delete timer;
+    //TODO add counting the points
+    this->logHandler->SaveGame(this->timeoutCounter);
+    this->timeoutCounter = 0;
+    ui->stackedWidget->setCurrentIndex(3);
 }
 
 void MainWindow::DoTick()
 {
     // TODO get objects from game manager
+    timeoutCounter++;
     std::vector<std::shared_ptr<Positionable>> _gameObjects = {};
     this->gameView->Move(_gameObjects);
     // TODO do tick in game manager
