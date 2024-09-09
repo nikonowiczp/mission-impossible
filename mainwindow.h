@@ -49,5 +49,6 @@ private:
     std::unique_ptr<ILogHandler> logHandler;
     std::unique_ptr<GameManager> gameManager;
     QTimer *timer;
+    int timeoutCounter = 0;
 };
 #endif // MAINWINDOW_H
