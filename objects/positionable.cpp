@@ -1,6 +1,6 @@
 #include "positionable.h"
 
-Positionable::Positionable(std::shared_ptr<GameStateMediator> _mediator, std::unique_ptr<Point> _coordinates) : BaseObject(_mediator)
+Positionable::Positionable(std::shared_ptr<GameStateMediator> _mediator, std::unique_ptr<Point> _coordinates, int _id) : BaseObject(_mediator, _id)
 {
     this->coordinates = std::move(_coordinates);
 }

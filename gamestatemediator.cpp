@@ -1,11 +1,13 @@
 #include "gamestatemediator.h"
-#include "objects/movable.h"
 #include "objects/commandcenter.h"
+#include "objects/movable.h"
 #include "utils.h"
 
-GameStateMediator::GameStateMediator(std::vector<std::shared_ptr<Positionable>> objects)
+GameStateMediator::GameStateMediator(std::vector<std::shared_ptr<Positionable>> objects, std::unique_ptr<GameOptions> options)
 {
-    this->gameObjects = std::move(objects);
+    this->gameObjects = objects;
+    this->options = std::move(options);
+    this->commandCenter = std::make_unique<CommandCenter>(std::shared_ptr<GameStateMediator>(this));
 }
 
 void GameStateMediator::DoTick(int _userInput)
@@ -30,6 +32,11 @@ std::vector<std::shared_ptr<Positionable>> GameStateMediator::getVisibleObjects(
 std::vector<std::shared_ptr<Positionable> > GameStateMediator::getPeople()
 {
     //TODO
+}
+
+std::vector<std::shared_ptr<Positionable> > GameStateMediator::getAll()
+{
+    return gameObjects;
 }
 
 std::vector<std::shared_ptr<Positionable>> getVisibleObjects(std::shared_ptr<Movable>){

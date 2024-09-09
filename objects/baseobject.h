@@ -8,10 +8,13 @@
 class BaseObject
 {
 public:
-    BaseObject(std::shared_ptr<GameStateMediator>);
+    BaseObject(std::shared_ptr<GameStateMediator>, int);
+    const int Radius = 20;
     virtual void OnGameTick() = 0;
     void ReceiveEvent(std::unique_ptr<IEvent>);
+    int GetId();
 protected:
+    int id;
     std::unique_ptr<IEvent> event = nullptr;
     std::shared_ptr<GameStateMediator> mediator;
 };

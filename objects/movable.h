@@ -6,7 +6,7 @@
 class Movable : public Positionable
 {
 public:
-    Movable(std::shared_ptr<GameStateMediator>, std::unique_ptr<Point>, double, double);
+    Movable(std::shared_ptr<GameStateMediator> _mediator, std::unique_ptr<Point> _coordinates,int _id, double _range, double _speed);
     double GetRange();
     double GetSpeed();
 private:
