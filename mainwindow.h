@@ -6,6 +6,7 @@
 
 #include "iloghandler.h"
 #include "gameview.h"
+#include "gamemanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,7 +17,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(std::unique_ptr<ILogHandler>, QWidget *_parent = nullptr);
+    MainWindow(std::unique_ptr<GameManager>, std::unique_ptr<ILogHandler>, QWidget *_parent = nullptr);
     ~MainWindow();
 
 private slots:
@@ -44,5 +45,6 @@ private:
     Ui::MainWindow *ui;
     GameView *gameView;
     std::unique_ptr<ILogHandler> logHandler;
+    std::unique_ptr<GameManager> gameManager;
 };
 #endif // MAINWINDOW_H

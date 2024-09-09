@@ -22,6 +22,7 @@ set(PROJECT_SOURCES
         objects/commandcenter.h objects/commandcenter.cpp
         objects/movable.h objects/movable.cpp
         events/ievent.h events/ievent.cpp
+        sprites/customgraphicsitem.h sprites/customgraphicsitem.cpp
         iloghandler.h iloghandler.cpp
         csvloghandler.h csvloghandler.cpp
         gamestatemediator.h gamestatemediator.cpp

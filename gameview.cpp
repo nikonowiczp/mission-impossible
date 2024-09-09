@@ -10,7 +10,6 @@ GameView::GameView(QWidget *_parent)
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-
 }
 
 void GameView::ClearGame()

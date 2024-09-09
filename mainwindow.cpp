@@ -3,10 +3,11 @@
 #include "./ui_mainwindow.h"
 #include <bits/stdc++.h>
 
-MainWindow::MainWindow(std::unique_ptr<ILogHandler> _handler, QWidget *_parent)
+MainWindow::MainWindow(std::unique_ptr<GameManager> _gameManager, std::unique_ptr<ILogHandler> _handler, QWidget *_parent)
     : QMainWindow(_parent)
     , ui(new Ui::MainWindow)
 {
+    this->gameManager = std::move(_gameManager);
     this->logHandler = std::move(_handler);
     ui->setupUi(this);
     this->gameView = new GameView();
