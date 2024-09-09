@@ -17,10 +17,16 @@ void GameView::ClearGame()
     this->scene()->clear();
 }
 
-void GameView::StartGame()
+void GameView::StartGame(std::vector<std::shared_ptr<Positionable>>)
 {
     this->scene()->setSceneRect(0, 0, 2000, 2000);
     this->centerOn(this->scene()->sceneRect().center());
+
+}
+
+void GameView::Move(std::vector<std::shared_ptr<Positionable> >)
+{
+
 }
 
 

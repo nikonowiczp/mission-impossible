@@ -19,7 +19,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(std::unique_ptr<GameManager>, std::unique_ptr<ILogHandler>, QWidget *_parent = nullptr);
     ~MainWindow();
-
+public slots:
+    void DoTick();
 private slots:
 
     void on_StartButton_clicked();
@@ -42,9 +43,11 @@ private slots:
 
 private:
     void startGame();
+    void gameOver();
     Ui::MainWindow *ui;
     GameView *gameView;
     std::unique_ptr<ILogHandler> logHandler;
     std::unique_ptr<GameManager> gameManager;
+    QTimer *timer;
 };
 #endif // MAINWINDOW_H

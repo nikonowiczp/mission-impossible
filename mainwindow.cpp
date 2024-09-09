@@ -1,6 +1,10 @@
 #include "mainwindow.h"
+#include "objects/positionable.h"
 
+#include "qtimer.h"
 #include "./ui_mainwindow.h"
+
+#include <memory>
 #include <bits/stdc++.h>
 
 MainWindow::MainWindow(std::unique_ptr<GameManager> _gameManager, std::unique_ptr<ILogHandler> _handler, QWidget *_parent)
@@ -84,7 +88,24 @@ void MainWindow::on_HardButton_clicked()
 
 void MainWindow::startGame()
 {
-    this->gameView->StartGame();
+    // TODO get objects from game manager
+    std::vector<std::shared_ptr<Positionable>> _gameObjects = {};
+    this->gameView->StartGame(_gameObjects);
+    this->timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(DoTick()));
     ui->stackedWidget->setCurrentIndex(4);
+}
+
+void MainWindow::gameOver()
+{
+
+}
+
+void MainWindow::DoTick()
+{
+    // TODO get objects from game manager
+    std::vector<std::shared_ptr<Positionable>> _gameObjects = {};
+    this->gameView->Move(_gameObjects);
+    // TODO do tick in game manager
 }
 
