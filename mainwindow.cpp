@@ -20,6 +20,7 @@ MainWindow::MainWindow(std::unique_ptr<GameManager> _gameManager, std::unique_pt
     ui->GamePausedWidget->setParent(this->gameView);
     ui->GamePausedWidget->raise();
     ui->GamePausedWidget->setVisible(false);
+    this->timer = new QTimer(this);
     connect(this->gameView, &GameView::EscPressed, this, &MainWindow::OnEscDuringGame);
 }
 
@@ -96,7 +97,6 @@ void MainWindow::startGame()
     // TODO get objects from game manager
     std::vector<std::shared_ptr<Positionable>> _gameObjects = {};
     this->gameView->StartGame(_gameObjects);
-    this->timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &MainWindow::DoTick);
     ui->stackedWidget->setCurrentIndex(4);
     this->timer->start(timeoutDuration);
@@ -105,7 +105,6 @@ void MainWindow::startGame()
 void MainWindow::gameOver()
 {
     timer->stop();
-    delete timer;
     //TODO add counting the points
     this->logHandler->SaveGame(this->timeoutCounter);
     this->timeoutCounter = 0;
