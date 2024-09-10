@@ -1,4 +1,6 @@
 #include "gameview.h"
+#include "utils.h"
+#include <QDebug>
 
 GameView::GameView(QWidget *_parent)
 {
@@ -10,6 +12,7 @@ GameView::GameView(QWidget *_parent)
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    setFocusPolicy(Qt::StrongFocus);
 }
 
 void GameView::ClearGame()
@@ -28,5 +31,38 @@ void GameView::Move(std::vector<std::shared_ptr<Positionable> >)
 {
 
 }
+
+void GameView::keyPressEvent(QKeyEvent *_event)
+{
+    if (_event->key() == Qt::Key_Escape)
+    {
+        // TODO implement
+        qDebug() << "Esc clicked";
+    }
+    else
+    {
+        auto _keysMap = Utils::GetKeysMap();
+        auto _keysIter = _keysMap.find(_event->key());
+        if (_keysIter != _keysMap.end())
+        {
+            this->keysState |= _keysIter->second;
+            qDebug() << "WASD clicked : " << _event->key();
+        }
+    }
+    QGraphicsView::keyPressEvent(_event);
+}
+
+void GameView::keyReleaseEvent(QKeyEvent *_event)
+{
+    auto _keysMap = Utils::GetKeysMap();
+    auto _keysIter = _keysMap.find(_event->key());
+    if (_keysIter != _keysMap.end())
+    {
+        this->keysState &= ~_keysIter->second;
+        qDebug() << "WASD released : " << _event->key();
+    }
+}
+
+
 
 
