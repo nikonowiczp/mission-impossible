@@ -7,6 +7,9 @@ enum GameDifficulty{
     Hard = 2
 };
 
+///
+/// \brief The GameOptions class is used to create and store all options used in game
+///
 class GameOptions
 {
 public:
@@ -16,12 +19,23 @@ public:
     int GetHumanSight();
 
     int GetMonsterSpeed();
+
+    int GetMapWidth();
+    int GetMapHeight();
+
+    int GetHumanAmount();
+    int GetTicksForNewHumans();
 private:
-    int HumanSpeed;
-    int HumanSight;
+    int humanSpeed;
+    int humanSight;
 
-    int MonsterSpeed;
+    int monsterSpeed;
 
+    int mapWidth;
+    int mapHeight;
+
+    int ticksForNewHumans;
+    int humanAmount;
 };
 
 #endif // GAMEOPTIONS_H

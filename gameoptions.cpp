@@ -1,39 +1,78 @@
 #include "gameoptions.h"
+#include <cassert>
 
 GameOptions::GameOptions(GameDifficulty difficulty) {
     switch(difficulty){
     case Easy:{
-        this->HumanSpeed = 4;
-        this->HumanSight = 20;
-        this->MonsterSpeed = 8;
+        this->humanSpeed = 5;
+        this->humanSight = 20;
+        this->monsterSpeed = 8;
+        this->mapHeight = 500;
+        this->mapWidth = 500;
+        this->ticksForNewHumans = 1000;
         break;
     };
     case Medium:{
-        this->HumanSpeed = 5;
-        this->HumanSight = 25;
-        this->MonsterSpeed = 8;
+        this->humanSpeed = 6;
+        this->humanSight = 25;
+        this->monsterSpeed = 8;
+        this->mapHeight = 400;
+        this->mapWidth = 400;
+        this->ticksForNewHumans = 800;
         break;
     };
     case Hard:{
-        this->HumanSpeed = 6;
-        this->HumanSight = 30;
-        this->MonsterSpeed = 8;
+        this->humanSpeed = 7;
+        this->humanSight = 30;
+        this->monsterSpeed = 8;
+        this->mapHeight = 300;
+        this->mapWidth = 300;
+        this->ticksForNewHumans = 600;
         break;
     }
     }
+
+    assert(humanSpeed > 0);
+    assert(humanSight > 0);
+    assert(monsterSpeed > 0);
+    assert(mapHeight > 0);
+    assert(mapWidth > 0);
+    assert(ticksForNewHumans > 0);
+    assert(humanAmount > 0);
+
 }
 
 int GameOptions::GetHumanSpeed()
 {
-    return HumanSpeed;
+    return humanSpeed;
 }
 
 int GameOptions::GetHumanSight()
 {
-    return HumanSight;
+    return humanSight;
 }
 
 int GameOptions::GetMonsterSpeed()
 {
-    return MonsterSpeed;
+    return monsterSpeed;
+}
+
+int GameOptions::GetMapWidth()
+{
+    return mapWidth;
+}
+
+int GameOptions::GetMapHeight()
+{
+    return mapHeight;
+}
+
+int GameOptions::GetHumanAmount()
+{
+    return humanAmount;
+}
+
+int GameOptions::GetTicksForNewHumans()
+{
+    return ticksForNewHumans;
 }
