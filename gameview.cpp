@@ -36,7 +36,7 @@ void GameView::keyPressEvent(QKeyEvent *_event)
 {
     if (_event->key() == Qt::Key_Escape)
     {
-        // TODO implement
+        emit EscPressed();
         qDebug() << "Esc clicked";
     }
     else

@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "objects/positionable.h"
 
+#include <QDebug>
 #include "qtimer.h"
 #include "./ui_mainwindow.h"
 
@@ -16,7 +17,10 @@ MainWindow::MainWindow(std::unique_ptr<GameManager> _gameManager, std::unique_pt
     ui->setupUi(this);
     this->gameView = new GameView();
     ui->GamePage->layout()->addWidget(this->gameView);
+    ui->GamePausedWidget->setParent(this->gameView);
+    ui->GamePausedWidget->raise();
     ui->GamePausedWidget->setVisible(false);
+    connect(this->gameView, &GameView::EscPressed, this, &MainWindow::OnEscDuringGame);
 }
 
 MainWindow::~MainWindow()
@@ -107,6 +111,15 @@ void MainWindow::gameOver()
     ui->stackedWidget->setCurrentIndex(3);
 }
 
+void MainWindow::resizeEvent(QResizeEvent *_event)
+{
+    QMainWindow::resizeEvent(_event);
+    if (ui->GamePausedWidget->isVisible())
+    {
+        ui->GamePausedWidget->setGeometry(ui->GamePage->rect());
+    }
+}
+
 void MainWindow::DoTick()
 {
     // TODO get objects from game manager
@@ -114,5 +127,19 @@ void MainWindow::DoTick()
     std::vector<std::shared_ptr<Positionable>> _gameObjects = {};
     this->gameView->Move(_gameObjects);
     // TODO do tick in game manager
+}
+
+void MainWindow::OnEscDuringGame()
+{
+    if (ui->GamePausedWidget->isVisible())
+    {
+        ui->GamePausedWidget->setVisible(false);
+    }
+    else
+    {
+        ui->GamePausedWidget->setGeometry(ui->GamePage->rect());
+        ui->GamePausedWidget->setVisible(true);
+    }
+    qDebug() << "on esc during game";
 }
 

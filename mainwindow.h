@@ -21,6 +21,7 @@ public:
     ~MainWindow();
 public slots:
     void DoTick();
+    void OnEscDuringGame();
 private slots:
 
     void on_StartButton_clicked();
@@ -44,6 +45,7 @@ private slots:
 private:
     void startGame();
     void gameOver();
+    void resizeEvent(QResizeEvent *_event) override;
     Ui::MainWindow *ui;
     GameView *gameView;
     std::unique_ptr<ILogHandler> logHandler;

@@ -14,6 +14,8 @@ public:
     void ClearGame();
     void StartGame(std::vector<std::shared_ptr<Positionable>>);
     void Move(std::vector<std::shared_ptr<Positionable>>);
+signals:
+    void EscPressed();
 protected:
     void keyPressEvent(QKeyEvent *_event) override;
     void keyReleaseEvent(QKeyEvent *_event) override;
