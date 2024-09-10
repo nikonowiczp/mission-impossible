@@ -16,6 +16,7 @@ MainWindow::MainWindow(std::unique_ptr<GameManager> _gameManager, std::unique_pt
     ui->setupUi(this);
     this->gameView = new GameView();
     ui->GamePage->layout()->addWidget(this->gameView);
+    ui->GamePausedWidget->setVisible(false);
 }
 
 MainWindow::~MainWindow()
