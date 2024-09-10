@@ -42,9 +42,15 @@ private slots:
 
     void on_HardButton_clicked();
 
+    void on_GameExitButton_clicked();
+
+    void on_ResumeButton_clicked();
+
 private:
     void startGame();
     void gameOver();
+    void pause();
+    void resume();
     void resizeEvent(QResizeEvent *_event) override;
     Ui::MainWindow *ui;
     GameView *gameView;

@@ -103,12 +103,35 @@ void MainWindow::startGame()
 
 void MainWindow::gameOver()
 {
-    timer->stop();
-    delete timer;
+    if (timer)
+    {
+        timer->stop();
+        delete timer;
+    }
     //TODO add counting the points
     this->logHandler->SaveGame(this->timeoutCounter);
     this->timeoutCounter = 0;
+    ui->GamePausedWidget->setVisible(false);
     ui->stackedWidget->setCurrentIndex(3);
+}
+
+void MainWindow::pause()
+{
+    ui->GamePausedWidget->setGeometry(ui->GamePage->rect());
+    ui->GamePausedWidget->setVisible(true);
+    if (this->timer)
+    {
+        this->timer->stop();
+    }
+}
+
+void MainWindow::resume()
+{
+    if (this->timer)
+    {
+        this->timer->start();
+        ui->GamePausedWidget->setVisible(false);
+    }
 }
 
 void MainWindow::resizeEvent(QResizeEvent *_event)
@@ -133,13 +156,23 @@ void MainWindow::OnEscDuringGame()
 {
     if (ui->GamePausedWidget->isVisible())
     {
-        ui->GamePausedWidget->setVisible(false);
+        this->resume();
     }
     else
     {
-        ui->GamePausedWidget->setGeometry(ui->GamePage->rect());
-        ui->GamePausedWidget->setVisible(true);
+        this->pause();
     }
-    qDebug() << "on esc during game";
+}
+
+
+void MainWindow::on_GameExitButton_clicked()
+{
+    this->gameOver();
+}
+
+
+void MainWindow::on_ResumeButton_clicked()
+{
+    this->resume();
 }
 
