@@ -8,6 +8,8 @@ class Positionable : public BaseObject
 {
 public:
     Positionable(std::shared_ptr<GameStateMediator>, std::unique_ptr<Point>, int);
+
+    const int Radius = 20;
     Point GetCoordinates();
     void SetCoordinates(std::unique_ptr<Point>);
 private:
