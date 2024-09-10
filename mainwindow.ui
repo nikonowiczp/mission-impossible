@@ -52,7 +52,7 @@ QLabel {
 	color: #c29864;
 }
 
-#MainPage, #DifficultyPage, #RankingPage {
+#MainPage, #DifficultyPage, #RankingPage, #GameOverPage, #GamePage {
 	background-color: black;
 }
 
@@ -79,7 +79,11 @@ QHeaderView::section {
 	text-transform: uppercase;
 	letter-spacing: 10px;
 }
-</string>
+
+#GameOverText {
+	color: red;
+	font-size: 80px;
+}</string>
       </property>
       <widget class="QWidget" name="MainPage">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -377,7 +381,7 @@ QHeaderView::section {
               <enum>Qt::SolidLine</enum>
              </property>
              <attribute name="horizontalHeaderVisible">
-              <bool>true</bool>
+              <bool>false</bool>
              </attribute>
              <attribute name="horizontalHeaderCascadingSectionResizes">
               <bool>false</bool>
@@ -438,6 +442,159 @@ QHeaderView::section {
              <property name="text">
               <string>Back</string>
              </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="GameOverPage">
+       <layout class="QVBoxLayout" name="verticalLayout_14">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QFrame" name="GameOverTextFrame">
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="GameOverText">
+             <property name="maximumSize">
+              <size>
+               <width>600</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Game Over</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QFrame" name="GameOverButtonsFrame">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>500</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <widget class="QPushButton" name="RestartButton">
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Again</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="GameOverBackButton">
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Back</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="GamePage">
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <widget class="QWidget" name="GamePausedWidget" native="true">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#GamePausedWidget {
+background-color: rgba(0, 0, 0, 128);
+}</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_16">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QFrame" name="GamePausedButtonsFrame">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>200</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>200</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_15">
+              <item>
+               <widget class="QPushButton" name="ResumeButton">
+                <property name="maximumSize">
+                 <size>
+                  <width>500</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Resume</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="GameExitButton">
+                <property name="maximumSize">
+                 <size>
+                  <width>500</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Exit</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
