@@ -97,17 +97,15 @@ void MainWindow::startGame()
     std::vector<std::shared_ptr<Positionable>> _gameObjects = {};
     this->gameView->StartGame(_gameObjects);
     this->timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()), this, SLOT(DoTick()));
+    connect(timer, &QTimer::timeout, this, &MainWindow::DoTick);
     ui->stackedWidget->setCurrentIndex(4);
+    this->timer->start(timeoutDuration);
 }
 
 void MainWindow::gameOver()
 {
-    if (timer)
-    {
-        timer->stop();
-        delete timer;
-    }
+    timer->stop();
+    delete timer;
     //TODO add counting the points
     this->logHandler->SaveGame(this->timeoutCounter);
     this->timeoutCounter = 0;
@@ -119,19 +117,13 @@ void MainWindow::pause()
 {
     ui->GamePausedWidget->setGeometry(ui->GamePage->rect());
     ui->GamePausedWidget->setVisible(true);
-    if (this->timer)
-    {
-        this->timer->stop();
-    }
+    this->timer->stop();
 }
 
 void MainWindow::resume()
 {
-    if (this->timer)
-    {
-        this->timer->start();
-        ui->GamePausedWidget->setVisible(false);
-    }
+    this->timer->start(timeoutDuration);
+    ui->GamePausedWidget->setVisible(false);
 }
 
 void MainWindow::resizeEvent(QResizeEvent *_event)
@@ -174,5 +166,11 @@ void MainWindow::on_GameExitButton_clicked()
 void MainWindow::on_ResumeButton_clicked()
 {
     this->resume();
+}
+
+
+void MainWindow::on_RestartButton_clicked()
+{
+    this->startGame();
 }
 

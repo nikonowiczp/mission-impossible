@@ -46,6 +46,8 @@ private slots:
 
     void on_ResumeButton_clicked();
 
+    void on_RestartButton_clicked();
+
 private:
     void startGame();
     void gameOver();
@@ -58,5 +60,6 @@ private:
     std::unique_ptr<GameManager> gameManager;
     QTimer *timer;
     int timeoutCounter = 0;
+    uint timeoutDuration = 100;
 };
 #endif // MAINWINDOW_H

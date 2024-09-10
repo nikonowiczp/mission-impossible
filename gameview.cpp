@@ -37,7 +37,6 @@ void GameView::keyPressEvent(QKeyEvent *_event)
     if (_event->key() == Qt::Key_Escape)
     {
         emit EscPressed();
-        qDebug() << "Esc clicked";
     }
     else
     {
@@ -46,7 +45,6 @@ void GameView::keyPressEvent(QKeyEvent *_event)
         if (_keysIter != _keysMap.end())
         {
             this->keysState |= _keysIter->second;
-            qDebug() << "WASD clicked : " << _event->key();
         }
     }
     QGraphicsView::keyPressEvent(_event);
@@ -59,7 +57,6 @@ void GameView::keyReleaseEvent(QKeyEvent *_event)
     if (_keysIter != _keysMap.end())
     {
         this->keysState &= ~_keysIter->second;
-        qDebug() << "WASD released : " << _event->key();
     }
 }
 
