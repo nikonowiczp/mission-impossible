@@ -14,3 +14,8 @@ void Positionable::SetCoordinates(std::unique_ptr<Point> _coordinates)
 {
     this->coordinates = std::move(_coordinates);
 }
+
+void Positionable::OnGameTick()
+{
+
+}

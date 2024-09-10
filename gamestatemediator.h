@@ -21,13 +21,15 @@ class CommandCenter;
 class GameStateMediator
 {
 public:
-    GameStateMediator(std::vector<std::shared_ptr<Positionable>>, std::unique_ptr<GameOptions>);
+    GameStateMediator(std::unique_ptr<GameOptions>);
     void DoTick(int);
     void Notify(BaseObject, IEvent);
 
     std::vector<std::shared_ptr<Positionable>> getVisibleObjects(std::shared_ptr<Movable>);
     std::vector<std::shared_ptr<Positionable>> getPeople();
     std::vector<std::shared_ptr<Positionable>> getAll();
+
+    void SetObjects(std::vector<std::shared_ptr<Positionable>>);
 private:
     int64_t tick = 0;
     std::unique_ptr<CommandCenter> commandCenter;

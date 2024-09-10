@@ -14,6 +14,10 @@ public:
     void SetCoordinates(std::unique_ptr<Point>);
 private:
     std::unique_ptr<Point> coordinates;
+
+    // BaseObject interface
+public:
+    void OnGameTick();
 };
 
 #endif // POSITIONABLE_H

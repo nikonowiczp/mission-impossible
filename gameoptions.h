@@ -24,6 +24,8 @@ public:
     int GetMapHeight();
 
     int GetHumanAmount();
+    int GetObstacleAmount();
+
     int GetTicksForNewHumans();
 private:
     int humanSpeed;
@@ -34,8 +36,10 @@ private:
     int mapWidth;
     int mapHeight;
 
-    int ticksForNewHumans;
     int humanAmount;
+    int obstacleAmount;
+
+    int ticksForNewHumans;
 };
 
 #endif // GAMEOPTIONS_H

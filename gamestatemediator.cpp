@@ -3,9 +3,8 @@
 #include "objects/movable.h"
 #include "utils.h"
 
-GameStateMediator::GameStateMediator(std::vector<std::shared_ptr<Positionable>> objects, std::unique_ptr<GameOptions> options)
+GameStateMediator::GameStateMediator(std::unique_ptr<GameOptions> options)
 {
-    this->gameObjects = objects;
     this->options = std::move(options);
     this->commandCenter = std::make_unique<CommandCenter>(std::shared_ptr<GameStateMediator>(this));
 }
@@ -36,9 +35,11 @@ std::vector<std::shared_ptr<Positionable> > GameStateMediator::getPeople()
 
 std::vector<std::shared_ptr<Positionable> > GameStateMediator::getAll()
 {
-    return gameObjects;
+    return this->gameObjects;
 }
 
-std::vector<std::shared_ptr<Positionable>> getVisibleObjects(std::shared_ptr<Movable>){
-    //TODO
+void GameStateMediator::SetObjects(std::vector<std::shared_ptr<Positionable> > objects)
+{
+    this->gameObjects = objects;
 }
+

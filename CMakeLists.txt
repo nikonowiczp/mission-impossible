@@ -21,6 +21,7 @@ set(PROJECT_SOURCES
         objects/monster.h objects/monster.cpp
         objects/commandcenter.h objects/commandcenter.cpp
         objects/movable.h objects/movable.cpp
+        objects/obstacle.h objects/obstacle.cpp
         events/ievent.h events/ievent.cpp
         sprites/customgraphicsitem.h sprites/customgraphicsitem.cpp
         iloghandler.h iloghandler.cpp
@@ -43,6 +44,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         gameoptions.h gameoptions.cpp
+        objects/obstacle.h objects/obstacle.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET mission-impossible APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -15,9 +15,13 @@ public:
     void PrepareMedium();
     void PrepareHard();
 
+    int GetWidth();
+    int GetHeight();
+
     std::vector<std::shared_ptr<Positionable>> GetAllPositionable();
 private:
-    std::unique_ptr<GameStateMediator> mediator;
+    void prepareGame(GameDifficulty);
+    std::shared_ptr<GameStateMediator> mediator;
 };
 
 #endif // GAMEMANAGER_H

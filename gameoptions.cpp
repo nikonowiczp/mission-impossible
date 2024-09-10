@@ -10,6 +10,8 @@ GameOptions::GameOptions(GameDifficulty difficulty) {
         this->mapHeight = 500;
         this->mapWidth = 500;
         this->ticksForNewHumans = 1000;
+        this->humanAmount = 5;
+        this->obstacleAmount = 5;
         break;
     };
     case Medium:{
@@ -19,6 +21,8 @@ GameOptions::GameOptions(GameDifficulty difficulty) {
         this->mapHeight = 400;
         this->mapWidth = 400;
         this->ticksForNewHumans = 800;
+        this->humanAmount = 8;
+        this->obstacleAmount = 10;
         break;
     };
     case Hard:{
@@ -28,6 +32,8 @@ GameOptions::GameOptions(GameDifficulty difficulty) {
         this->mapHeight = 300;
         this->mapWidth = 300;
         this->ticksForNewHumans = 600;
+        this->humanAmount = 12;
+        this->obstacleAmount = 20;
         break;
     }
     }
@@ -38,6 +44,7 @@ GameOptions::GameOptions(GameDifficulty difficulty) {
     assert(mapHeight > 0);
     assert(mapWidth > 0);
     assert(ticksForNewHumans > 0);
+    assert(obstacleAmount > 0);
     assert(humanAmount > 0);
 
 }
@@ -70,6 +77,11 @@ int GameOptions::GetMapHeight()
 int GameOptions::GetHumanAmount()
 {
     return humanAmount;
+}
+
+int GameOptions::GetObstacleAmount()
+{
+    return obstacleAmount;
 }
 
 int GameOptions::GetTicksForNewHumans()
