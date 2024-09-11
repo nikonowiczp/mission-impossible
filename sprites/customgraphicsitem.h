@@ -6,10 +6,12 @@
 class CustomGraphicsItem : public QGraphicsRectItem
 {
 public:
-    CustomGraphicsItem(std::string, int, int, QGraphicsItem* _parent = nullptr);
+    CustomGraphicsItem(std::string, int, int, int, int, QGraphicsItem* _parent = nullptr);
     void move(int, int);
 private:
-    std::string assetId;
+    int assetId;
+    std::string assetPath;
+    int radius;
 };
 
 #endif // CUSTOMGRAPHICSITEM_H

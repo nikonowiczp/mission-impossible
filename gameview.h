@@ -2,8 +2,11 @@
 #define GAMEVIEW_H
 
 #include "objects/positionable.h"
+#include "sprites/customgraphicsitem.h"
+#include <map>
 #include <QGraphicsView>
 #include <QKeyEvent>
+#include <memory>
 
 class GameView : public QGraphicsView
 {
@@ -21,7 +24,18 @@ protected:
     void keyPressEvent(QKeyEvent *_event) override;
     void keyReleaseEvent(QKeyEvent *_event) override;
 private:
+    void addObject(std::string, int, int, int, int);
     int keysState = 0;
+    int playerId = 0;
+    std::map<int, CustomGraphicsItem*> objects = {};
+    std::string humanAssetPath = "./assets/person.png";
+    std::string monsterAssetPath = "./assets/monster.png";
+    std::vector<std::string> obstaclePaths = {
+        "./assets/rock1.png",
+        "./assets/rock2.png",
+        "./assets/rock3.png",
+        "./assets/rock4.png",
+    };
 };
 
 #endif // GAMEVIEW_H

@@ -27,6 +27,16 @@ void GameManager::PrepareHard()
     prepareGame(Hard);
 }
 
+int GameManager::GetWidth()
+{
+    return mediator->options->GetMapWidth();
+}
+
+int GameManager::GetHeight()
+{
+    return mediator->options->GetMapHeight();
+}
+
 std::vector<std::shared_ptr<Positionable>> GameManager::GetAllPositionable()
 {
     if(!mediator){
