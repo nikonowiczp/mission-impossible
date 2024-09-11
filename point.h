@@ -6,11 +6,11 @@ class Point
 {
 public:
     Point(int, int);
-    int GetX();
-    int GetY();
+    double GetX();
+    double GetY();
 private:
-    int x = 0;
-    int y = 0;
+    double x = 0;
+    double y = 0;
 };
 
 #endif // POINT_H

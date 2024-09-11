@@ -1,6 +1,7 @@
 #ifndef BASEOBJECT_H
 #define BASEOBJECT_H
 #include "gamestatemediator.h"
+#include <iostream>
 #include <memory>
 ///
 /// \brief The BaseObject class is the base class that will contain all of the logic of game objects

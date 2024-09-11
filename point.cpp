@@ -6,12 +6,12 @@ Point::Point(int _x, int _y)
     this->y = _y;
 }
 
-int Point::GetX()
+double Point::GetX()
 {
     return this->x;
 }
 
-int Point::GetY()
+double Point::GetY()
 {
     return this->y;
 }

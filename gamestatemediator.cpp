@@ -1,6 +1,7 @@
 #include "gamestatemediator.h"
 #include "objects/commandcenter.h"
 #include "objects/movable.h"
+#include "objects/monster.h"
 #include "utils.h"
 
 GameStateMediator::GameStateMediator(std::unique_ptr<GameOptions> options)
@@ -12,6 +13,13 @@ GameStateMediator::GameStateMediator(std::unique_ptr<GameOptions> options)
 void GameStateMediator::DoTick(int _userInput)
 {
     tick++;
+    //do monster move
+    this->monster->OnGameTick(_userInput);
+    this->commandCenter->OnGameTick();
+    for(auto a : gameObjects){
+        a->OnGameTick();
+    }
+
 }
 
 std::vector<std::shared_ptr<Positionable>> GameStateMediator::getVisibleObjects(std::shared_ptr<Movable> _object)

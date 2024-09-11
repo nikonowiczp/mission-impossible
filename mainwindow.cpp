@@ -6,7 +6,7 @@
 #include "./ui_mainwindow.h"
 
 #include <memory>
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
 
 MainWindow::MainWindow(std::unique_ptr<GameManager> _gameManager, std::unique_ptr<ILogHandler> _handler, QWidget *_parent)
     : QMainWindow(_parent)

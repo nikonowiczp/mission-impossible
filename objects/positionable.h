@@ -12,12 +12,11 @@ public:
     const int Radius = 20;
     Point GetCoordinates();
     void SetCoordinates(std::unique_ptr<Point>);
-private:
+protected:
     std::unique_ptr<Point> coordinates;
+    void MoveBy(int x, int y);
 
     // BaseObject interface
-public:
-    void OnGameTick();
 };
 
 #endif // POSITIONABLE_H

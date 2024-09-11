@@ -15,7 +15,7 @@ void Positionable::SetCoordinates(std::unique_ptr<Point> _coordinates)
     this->coordinates = std::move(_coordinates);
 }
 
-void Positionable::OnGameTick()
+void Positionable::MoveBy(int x, int y)
 {
-
+    this->coordinates = std::make_unique<Point>(this->coordinates->GetX()+x, this->coordinates->GetY()+y);
 }

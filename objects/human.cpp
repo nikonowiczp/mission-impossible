@@ -4,3 +4,8 @@ Human::Human(std::shared_ptr<GameStateMediator> _mediator,  std::unique_ptr<Poin
 {
 
 }
+
+void Human::OnGameTick()
+{
+    std::cout<<"[Human "<<id<<"] position "<<coordinates->GetX()<<", "<<coordinates->GetY()<<std::endl;
+}

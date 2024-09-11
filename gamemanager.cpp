@@ -1,8 +1,15 @@
 #include "gamemanager.h"
-
+#include "objects/human.h"
+#include "objects/monster.h"
+#include "objects/obstacle.h"
 
 GameManager::GameManager()
 {
+}
+
+void GameManager::DoTick(int userInput)
+{
+    mediator->DoTick(userInput);
 }
 
 void GameManager::PrepareEasy()
@@ -12,7 +19,7 @@ void GameManager::PrepareEasy()
 
 void GameManager::PrepareMedium()
 {
-    prepareGame(Easy);
+    prepareGame(Medium);
 }
 
 void GameManager::PrepareHard()
@@ -37,10 +44,14 @@ void GameManager::prepareGame(GameDifficulty)
     int id = 1;
     int dx = options->GetMapWidth()/(options->GetHumanAmount() + 1);
     int x = 0, y = options->GetMapHeight() - 20;
-    for(; id <= options->GetHumanAmount(); id++){
+    for(int i = 0; i < options->GetHumanAmount(); id++, i++){
         x += dx;
-        objects.push_back(std::make_shared<Positionable>(mediator,std::make_unique<Point>(x, y) ,id));
+        objects.push_back(std::make_shared<Human>(mediator,std::make_unique<Point>(x, y) ,id));
+    }
+
+    for(int i = 0; i < options->GetHumanAmount(); id++, i++){
+        x += dx;
+        objects.push_back(std::make_shared<Obstacle>(mediator,std::make_unique<Point>(x, y) ,id));
     }
     mediator->SetObjects(objects);
-
 }
