@@ -1,8 +1,9 @@
 #include <cmath>
 #include "utils.h"
 
-double Utils::CalculateLength(std::shared_ptr<Positionable> _firstObject, std::shared_ptr<Positionable> _secondObject) {
-    return CalculateLength(_firstObject->GetCoordinates().GetX(), _firstObject->GetCoordinates().GetY(), _secondObject->GetCoordinates().GetX(), _secondObject->GetCoordinates().GetY());
+double Utils::CalculateLength(Positionable* _firstObject, Positionable* _secondObject) {
+    return CalculateLength(_firstObject->GetCoordinates().GetX(), _firstObject->GetCoordinates().GetY(),
+                           _secondObject->GetCoordinates().GetX(), _secondObject->GetCoordinates().GetY());
 }
 
 double Utils::CalculateLength(double x1, double y1, double x2, double y2)
@@ -24,7 +25,7 @@ std::map<int, int> Utils::GetKeysMap()
     return _keysMap;
 }
 
-bool Utils::IsCloseToAny(const std::vector<std::shared_ptr<Positionable> >& objects, double x, double y)
+bool Utils::IsCloseToAny(const  std::vector<std::unique_ptr<Positionable> >& objects, double x, double y)
 {
     for (const auto& obj : objects) {
         if (CalculateLength(obj->GetCoordinates().GetX(), obj->GetCoordinates().GetY(), x, y) < 20) {

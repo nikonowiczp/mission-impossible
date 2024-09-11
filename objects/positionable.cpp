@@ -5,7 +5,7 @@ Positionable::Positionable(std::shared_ptr<GameStateMediator> _mediator, std::un
     this->coordinates = std::move(_coordinates);
 }
 
-Point Positionable::GetCoordinates()
+Point Positionable::GetCoordinates() const
 {
     return Point(this->coordinates->GetX(), this->coordinates->GetY());
 }

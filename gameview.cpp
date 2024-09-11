@@ -25,7 +25,7 @@ void GameView::ClearGame()
     this->keysState = 0;
 }
 
-void GameView::StartGame(std::vector<std::shared_ptr<Positionable>> _positionables, Monster* _player, int _width, int _height)
+void GameView::StartGame(std::vector<Positionable *> _positionables, Monster* _player, int _width, int _height)
 {
     std::srand(std::time(0));
     this->scene()->setSceneRect(0, 0, _width, _height);
@@ -37,7 +37,7 @@ void GameView::StartGame(std::vector<std::shared_ptr<Positionable>> _positionabl
     this->centerOn(_player->GetCoordinates().GetX(), _player->GetCoordinates().GetY());
 }
 
-void GameView::DoTick(std::vector<std::shared_ptr<Positionable>> _positionables, Monster* _player)
+void GameView::DoTick(std::vector<Positionable *> _positionables, Monster* _player)
 {
     for ( auto _positionable : _positionables )
     {
@@ -88,23 +88,23 @@ void GameView::keyReleaseEvent(QKeyEvent *_event)
     }
 }
 
-void GameView::addObject(std::shared_ptr<Positionable> _positionable)
+void GameView::addObject(Positionable * _positionable)
 {
-    if (dynamic_cast<Obstacle*>(_positionable.get()) != nullptr)
+    if (dynamic_cast<Obstacle*>(_positionable) != nullptr)
     {
         int i = std::rand() % this->obstaclePaths.size();
         this->addObject(this->obstaclePaths[i], _positionable->GetId(),
                         _positionable->GetCoordinates().GetX(), _positionable->GetCoordinates().GetY(),
                         _positionable->Radius);
     }
-    else if (dynamic_cast<Monster*>(_positionable.get()) != nullptr)
+    else if (dynamic_cast<Monster*>(_positionable) != nullptr)
     {
         this->playerId = _positionable->GetId();
         this->addObject(this->monsterAssetPath, _positionable->GetId(),
                         _positionable->GetCoordinates().GetX(), _positionable->GetCoordinates().GetY(),
                         _positionable->Radius);
     }
-    else if (dynamic_cast<Human*>(_positionable.get()) != nullptr)
+    else if (dynamic_cast<Human*>(_positionable) != nullptr)
     {
         this->addObject(this->humanAssetPath, _positionable->GetId(),
                         _positionable->GetCoordinates().GetX(), _positionable->GetCoordinates().GetY(),

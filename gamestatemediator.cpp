@@ -17,39 +17,46 @@ void GameStateMediator::DoTick(int _userInput)
     //do monster move
     this->monster->OnGameTick(_userInput);
     this->commandCenter->OnGameTick();
-    for(auto a : gameObjects){
+    for(const auto& a : gameObjects){
         a->OnGameTick();
     }
 
 }
 
-std::vector<std::shared_ptr<Positionable>> GameStateMediator::getVisibleObjects(std::shared_ptr<Movable> _object)
+std::vector<Positionable*> GameStateMediator::getVisibleObjects(Movable* _object)
 {
-    std::vector<std::shared_ptr<Positionable>> _visibleObjects = {};
-    for (auto _gameObject : this->gameObjects )
+    std::vector<Positionable*> _visibleObjects = {};
+    for (const auto &_gameObject : this->gameObjects )
     {
-        if (_object != _gameObject &&
-                Utils::CalculateLength(std::dynamic_pointer_cast<Positionable>(_object), _gameObject) < _object->GetRange())
+        if (_object->GetId() != _gameObject->GetId() &&
+            Utils::CalculateLength(_object, _gameObject.get()) < _object->GetRange())
         {
-            _visibleObjects.push_back(_gameObject);
+            _visibleObjects.push_back(_gameObject.get());
         }
     }
     return _visibleObjects;
 }
 
-std::vector<std::shared_ptr<Positionable> > GameStateMediator::getPeople()
+std::vector<Positionable *> GameStateMediator::getPeople()
 {
     //TODO
 }
 
-std::vector<std::shared_ptr<Positionable> > GameStateMediator::getAll()
+std::vector<Positionable *> GameStateMediator::getAll()
 {
-    return this->gameObjects;
+    std::vector<Positionable*> rawPtrs;
+    rawPtrs.reserve(gameObjects.size());
+
+    std::transform(gameObjects.begin(), gameObjects.end(), std::back_inserter(rawPtrs),
+                   [](const std::unique_ptr<Positionable>& ptr) {
+                       return ptr.get();
+                   });
+    return rawPtrs;
 }
 
-void GameStateMediator::SetObjects(std::vector<std::shared_ptr<Positionable> > objects)
+void GameStateMediator::SetObjects(std::vector<std::unique_ptr<Positionable> > objects)
 {
-    this->gameObjects = objects;
+    this->gameObjects = std::move(objects);
 }
 
 void GameStateMediator::SetMonster(std::unique_ptr<Monster> monster)
@@ -65,5 +72,10 @@ void GameStateMediator::SetCommandCenter(std::unique_ptr<CommandCenter> command)
 Monster *GameStateMediator::GetMonster()
 {
     return this->monster.get();
+}
+
+std::reference_wrapper<const GameOptions> GameStateMediator::GetGameOptions()
+{
+    return std::reference_wrapper<const GameOptions>(*options);
 }
 

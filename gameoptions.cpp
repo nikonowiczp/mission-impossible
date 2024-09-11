@@ -49,42 +49,42 @@ GameOptions::GameOptions(GameDifficulty difficulty) {
 
 }
 
-int GameOptions::GetHumanSpeed()
+int GameOptions::GetHumanSpeed() const
 {
     return humanSpeed;
 }
 
-int GameOptions::GetHumanSight()
+int GameOptions::GetHumanSight() const
 {
     return humanSight;
 }
 
-int GameOptions::GetMonsterSpeed()
+int GameOptions::GetMonsterSpeed() const
 {
     return monsterSpeed;
 }
 
-int GameOptions::GetMapWidth()
+int GameOptions::GetMapWidth() const
 {
     return mapWidth;
 }
 
-int GameOptions::GetMapHeight()
+int GameOptions::GetMapHeight() const
 {
     return mapHeight;
 }
 
-int GameOptions::GetHumanAmount()
+int GameOptions::GetHumanAmount() const
 {
     return humanAmount;
 }
 
-int GameOptions::GetObstacleAmount()
+int GameOptions::GetObstacleAmount() const
 {
     return obstacleAmount;
 }
 
-int GameOptions::GetTicksForNewHumans()
+int GameOptions::GetTicksForNewHumans() const
 {
     return ticksForNewHumans;
 }

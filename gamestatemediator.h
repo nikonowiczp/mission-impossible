@@ -26,19 +26,22 @@ public:
     void DoTick(int);
     void Notify(BaseObject, IEvent);
 
-    std::vector<std::shared_ptr<Positionable>> getVisibleObjects(std::shared_ptr<Movable>);
-    std::vector<std::shared_ptr<Positionable>> getPeople();
-    std::vector<std::shared_ptr<Positionable>> getAll();
+    // we do not give ownership, so we return references
+    std::vector<Positionable *> getVisibleObjects(Movable*);
+    std::vector<Positionable *> getPeople();
+    std::vector<Positionable *> getAll();
 
-    void SetObjects(std::vector<std::shared_ptr<Positionable>>);
+    void SetObjects(std::vector<std::unique_ptr<Positionable>>);
     void SetMonster(std::unique_ptr<Monster>);
     void SetCommandCenter(std::unique_ptr<CommandCenter>);
     Monster* GetMonster();
-    std::unique_ptr<GameOptions> options;
+    std::reference_wrapper<const GameOptions> GetGameOptions();
 private:
     int64_t tick = 0;
+    std::unique_ptr<GameOptions> options;
+
     std::unique_ptr<CommandCenter> commandCenter;
-    std::vector<std::shared_ptr<Positionable>> gameObjects;
+    std::vector<std::unique_ptr<Positionable>> gameObjects;
     std::unique_ptr<Monster> monster;
 };
 

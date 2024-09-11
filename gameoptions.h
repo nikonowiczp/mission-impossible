@@ -15,18 +15,18 @@ class GameOptions
 public:
     GameOptions(GameDifficulty);
 
-    int GetHumanSpeed();
-    int GetHumanSight();
+    int GetHumanSpeed() const;
+    int GetHumanSight() const;
 
-    int GetMonsterSpeed();
+    int GetMonsterSpeed() const;
 
-    int GetMapWidth();
-    int GetMapHeight();
+    int GetMapWidth() const;
+    int GetMapHeight() const;
 
-    int GetHumanAmount();
-    int GetObstacleAmount();
+    int GetHumanAmount() const;
+    int GetObstacleAmount() const;
 
-    int GetTicksForNewHumans();
+    int GetTicksForNewHumans() const;
 private:
     int humanSpeed;
     int humanSight;

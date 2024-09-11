@@ -107,7 +107,7 @@ void MainWindow::startGame(GameMode _mode)
             this->gameManager->PrepareHard();
             break;
     }
-    std::vector<std::shared_ptr<Positionable>> _gameObjects = this->gameManager->GetAllPositionable();
+    std::vector<Positionable *> _gameObjects = this->gameManager->GetAllPositionable();
     this->gameView->StartGame(_gameObjects, this->gameManager->GetMonster(), this->gameManager->GetWidth(), this->gameManager->GetHeight());
     connect(timer, &QTimer::timeout, this, &MainWindow::DoTick);
     ui->stackedWidget->setCurrentIndex(4);
@@ -149,7 +149,7 @@ void MainWindow::resizeEvent(QResizeEvent *_event)
 void MainWindow::DoTick()
 {
     timeoutCounter++;
-    std::vector<std::shared_ptr<Positionable>> _gameObjects = this->gameManager->GetAllPositionable();
+    std::vector<Positionable *> _gameObjects = this->gameManager->GetAllPositionable();
     this->gameView->DoTick(_gameObjects, this->gameManager->GetMonster());
     this->gameManager->DoTick(this->gameView->GetKeysState());
 }

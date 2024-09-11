@@ -29,18 +29,18 @@ void GameManager::PrepareHard()
 
 int GameManager::GetWidth()
 {
-    return mediator->options->GetMapWidth();
+    return mediator->GetGameOptions().get().GetMapWidth();
 }
 
 int GameManager::GetHeight()
 {
-    return mediator->options->GetMapHeight();
+    return mediator->GetGameOptions().get().GetMapHeight();
 }
 
-std::vector<std::shared_ptr<Positionable>> GameManager::GetAllPositionable()
+std::vector<Positionable*> GameManager::GetAllPositionable()
 {
     if(!mediator){
-        return std::vector<std::shared_ptr<Positionable>>();
+        return std::vector<Positionable*>();
     }
     return mediator.get()->getAll();
 }
@@ -52,7 +52,7 @@ Monster *GameManager::GetMonster()
 
 void GameManager::prepareGame(GameDifficulty difficulty)
 {
-    std::vector<std::shared_ptr<Positionable>> objects;
+    std::vector<std::unique_ptr<Positionable>> objects;
     std::unique_ptr<GameOptions> options = std::make_unique<GameOptions>(difficulty);
     mediator = std::make_shared<GameStateMediator>( std::make_unique<GameOptions>(difficulty));
 
@@ -67,7 +67,7 @@ void GameManager::prepareGame(GameDifficulty difficulty)
     int x = 0, y = options->GetMapHeight() - 20;
     for(int i = 0; i < options->GetHumanAmount(); id++, i++){
         x += dx;
-        objects.push_back(std::make_shared<Human>(mediator,std::make_unique<Point>(x, y) ,id));
+        objects.push_back(std::make_unique<Human>(mediator,std::make_unique<Point>(x, y) ,id));
     }
     std::srand(static_cast<unsigned int>(std::time(0)));
     for(int i = 0; i < options->GetObstacleAmount(); id++, i++){
@@ -80,7 +80,7 @@ void GameManager::prepareGame(GameDifficulty difficulty)
             if(j>100) break;
         } while (!Utils::IsCloseToAny(objects, newX, newY));
 
-        objects.push_back(std::make_shared<Obstacle>(mediator,std::make_unique<Point>(newX, newY) ,id));
+        objects.push_back(std::make_unique<Obstacle>(mediator,std::make_unique<Point>(newX, newY) ,id));
     }
-    mediator->SetObjects(objects);
+    mediator->SetObjects(std::move(objects));
 }

@@ -1,6 +1,6 @@
 #include "monster.h"
 #include "utils.h"
-Monster::Monster(std::shared_ptr<GameStateMediator> _mediator,  std::unique_ptr<Point> _location, int _id) : Movable(_mediator, std::move(_location), _id, 0, _mediator->options->GetMonsterSpeed())
+Monster::Monster(std::shared_ptr<GameStateMediator> _mediator,  std::unique_ptr<Point> _location, int _id) : Movable(_mediator, std::move(_location), _id, 0, _mediator->GetGameOptions().get().GetMonsterSpeed())
 {
 
 }
@@ -17,8 +17,8 @@ void Monster::OnGameTick(int _userInput)
     if(_userInput & KEY_RIGHT) x += 1;
     if(_userInput & KEY_DOWN) y += 1;
     if(_userInput & KEY_UP) y -= 1;
-    x = x * mediator->options->GetMonsterSpeed() / std::sqrt(2);
-    y = y * mediator->options->GetMonsterSpeed() /  std::sqrt(2);
+    x = x * mediator->GetGameOptions().get().GetMonsterSpeed() / std::sqrt(2);
+    y = y * mediator->GetGameOptions().get().GetMonsterSpeed() /  std::sqrt(2);
 
     this->MoveBy(x, y);
     std::cout<<"[Monster "<<id<<"] position "<<coordinates->GetX()<<", "<<coordinates->GetY()<< " Input: "<<_userInput<<std::endl;
