@@ -1,13 +1,13 @@
-#include "csvloghandler.h"
+#include "loghandler.h"
 #include <iostream>
 #include <fstream>
 
-CSVLogHandler::CSVLogHandler()
+LogHandler::LogHandler()
 {
 
 }
 
-void CSVLogHandler::SaveGame(int _points)
+void LogHandler::SaveGame(int _points)
 {
     std::ofstream _file(this->filePath, std::ios::app);
     if (_file)
@@ -17,7 +17,7 @@ void CSVLogHandler::SaveGame(int _points)
     _file.close();
 }
 
-std::vector<int> CSVLogHandler::ReadGames()
+std::vector<int> LogHandler::ReadGames()
 {
     std::ifstream _file(this->filePath);
     std::vector<int> _games = {};
@@ -40,7 +40,7 @@ std::vector<int> CSVLogHandler::ReadGames()
     return _games;
 }
 
-CSVLogHandler::~CSVLogHandler()
+LogHandler::~LogHandler()
 {
 
 }

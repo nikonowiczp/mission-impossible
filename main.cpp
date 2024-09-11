@@ -1,12 +1,12 @@
 #include "mainwindow.h"
 
 #include <QApplication>
-#include "csvloghandler.h"
+#include "loghandler.h"
 #include "gamemanager.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w(std::make_unique<GameManager>(), std::make_unique<CSVLogHandler>());
+    MainWindow w(std::make_unique<GameManager>(), std::make_unique<LogHandler>());
     w.show();
     auto manager = std::make_unique<GameManager>();
     manager->PrepareHard();

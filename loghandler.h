@@ -4,15 +4,15 @@
 #include "iloghandler.h"
 #include <string>
 
-class CSVLogHandler : public ILogHandler
+class LogHandler : public ILogHandler
 {
 public:
-    CSVLogHandler();
+    LogHandler();
     void SaveGame(int) override;
     std::vector<int> ReadGames() override;
-    ~CSVLogHandler() override;
+    ~LogHandler() override;
 private:
-    std::string filePath = "logs/logs.csv";
+    std::string filePath = "points.log";
 };
 
 #endif // CSVLOGHANDLER_H
