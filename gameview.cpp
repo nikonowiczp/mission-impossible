@@ -33,7 +33,6 @@ void GameView::StartGame(std::vector<std::shared_ptr<Positionable>> _positionabl
     {
         this->addObject(_positionable);
     }
-    this->centerOn(this->scene()->sceneRect().center());
 }
 
 void GameView::DoTick(std::vector<std::shared_ptr<Positionable>> _positionables)
@@ -43,7 +42,7 @@ void GameView::DoTick(std::vector<std::shared_ptr<Positionable>> _positionables)
         auto _objectsIter = this->objects.find(_positionable->GetId());
         if (_objectsIter != this->objects.end())
         {
-            _objectsIter->second->move(_positionable->GetCoordinates().GetX(), _positionable->GetCoordinates().GetY());
+            _objectsIter->second->Move(_positionable->GetCoordinates().GetX(), _positionable->GetCoordinates().GetY());
         }
         else
         {
@@ -115,7 +114,3 @@ void GameView::addObject(std::string _asset, int _id, int _x, int _y, int _r)
     this->scene()->addItem(_item);
     this->objects.insert(std::make_pair(_id, _item));
 }
-
-
-
-

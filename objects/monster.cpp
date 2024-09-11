@@ -18,7 +18,7 @@ void Monster::OnGameTick(int _userInput)
     y = (_userInput & keysMap.at(Qt::Key_W) - _userInput & keysMap.at(Qt::Key_S)) * mediator->options->GetMonsterSpeed() /  std::sqrt(2);
 
     this->MoveBy(x, y);
-    std::cout<<"[Monster "<<id<<"] position "<<coordinates->GetX()<<", "<<coordinates->GetY()<<std::endl;
+    std::cout<<"[Monster "<<id<<"] position "<<coordinates->GetX()<<", "<<coordinates->GetY()<< " Input: "<<_userInput<<std::endl;
 }
 
 void Monster::OnGameTick()

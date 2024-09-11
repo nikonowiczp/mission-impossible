@@ -2,12 +2,13 @@
 #define CUSTOMGRAPHICSITEM_H
 
 #include <QGraphicsRectItem>
+#include <QGraphicsPixmapItem>
 
-class CustomGraphicsItem : public QGraphicsRectItem
+class CustomGraphicsItem : public QGraphicsPixmapItem
 {
 public:
     CustomGraphicsItem(std::string, int, int, int, int, QGraphicsItem* _parent = nullptr);
-    void move(int, int);
+    void Move(int, int);
 private:
     int assetId;
     std::string assetPath;

@@ -29,13 +29,13 @@ private:
     int keysState = 0;
     int playerId = 0;
     std::map<int, CustomGraphicsItem*> objects = {};
-    std::string humanAssetPath = "./assets/person.png";
-    std::string monsterAssetPath = "./assets/monster.png";
+    std::string humanAssetPath = ":/assets/person.png";
+    std::string monsterAssetPath = ":/assets/monster.png";
     std::vector<std::string> obstaclePaths = {
-        "./assets/rock1.png",
-        "./assets/rock2.png",
-        "./assets/rock3.png",
-        "./assets/rock4.png",
+        ":/assets/rock1.png",
+        ":/assets/rock2.png",
+        ":/assets/rock3.png",
+        ":/assets/rock4.png",
     };
 };
 
