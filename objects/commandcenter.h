@@ -6,7 +6,7 @@
 class CommandCenter : public BaseObject
 {
 public:
-    CommandCenter(std::shared_ptr<GameStateMediator>);
+    CommandCenter(std::shared_ptr<GameStateMediator>, int);
     void OnGameTick();
 };
 

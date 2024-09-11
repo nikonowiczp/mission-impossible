@@ -5,7 +5,7 @@
 class Monster: public Positionable
 {
 public:
-    Monster(std::shared_ptr<GameStateMediator>,  std::unique_ptr<Point>);
+    Monster(std::shared_ptr<GameStateMediator>,  std::unique_ptr<Point>, int);
 
 
     void OnGameTick(int _userInput);

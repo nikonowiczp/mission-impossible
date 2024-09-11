@@ -31,6 +31,8 @@ public:
     std::vector<std::shared_ptr<Positionable>> getAll();
 
     void SetObjects(std::vector<std::shared_ptr<Positionable>>);
+    void SetMonster(std::unique_ptr<Monster>);
+    void SetCommandCenter(std::unique_ptr<CommandCenter>);
 
     std::unique_ptr<GameOptions> options;
 private:

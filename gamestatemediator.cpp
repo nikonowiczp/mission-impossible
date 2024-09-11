@@ -7,11 +7,12 @@
 GameStateMediator::GameStateMediator(std::unique_ptr<GameOptions> options)
 {
     this->options = std::move(options);
-    this->commandCenter = std::make_unique<CommandCenter>(std::shared_ptr<GameStateMediator>(this));
 }
 
 void GameStateMediator::DoTick(int _userInput)
 {
+    assert(monster.get() != nullptr);
+    assert(commandCenter.get() != nullptr);
     tick++;
     //do monster move
     this->monster->OnGameTick(_userInput);
@@ -49,5 +50,15 @@ std::vector<std::shared_ptr<Positionable> > GameStateMediator::getAll()
 void GameStateMediator::SetObjects(std::vector<std::shared_ptr<Positionable> > objects)
 {
     this->gameObjects = objects;
+}
+
+void GameStateMediator::SetMonster(std::unique_ptr<Monster> monster)
+{
+    this->monster = std::move(monster);
+}
+
+void GameStateMediator::SetCommandCenter(std::unique_ptr<CommandCenter> command)
+{
+    this->commandCenter = std::move(command);
 }
 
