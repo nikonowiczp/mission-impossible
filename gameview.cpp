@@ -21,9 +21,9 @@ void GameView::ClearGame()
     this->keysState = 0;
 }
 
-void GameView::StartGame(std::vector<std::shared_ptr<Positionable>>)
+void GameView::StartGame(std::vector<std::shared_ptr<Positionable>> _gameObjects, int _width, int _height)
 {
-    this->scene()->setSceneRect(0, 0, 2000, 2000);
+    this->scene()->setSceneRect(0, 0, _width, _height);
     this->centerOn(this->scene()->sceneRect().center());
 }
 

@@ -12,7 +12,7 @@ class GameView : public QGraphicsView
 public:
     GameView(QWidget *_parent = nullptr);
     void ClearGame();
-    void StartGame(std::vector<std::shared_ptr<Positionable>>);
+    void StartGame(std::vector<std::shared_ptr<Positionable>>, int, int);
     void Move(std::vector<std::shared_ptr<Positionable>>);
     int GetKeysState();
 signals:
