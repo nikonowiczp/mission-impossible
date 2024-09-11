@@ -32,6 +32,11 @@ void GameView::Move(std::vector<std::shared_ptr<Positionable> >)
 
 }
 
+int GameView::GetKeysState()
+{
+    return this->keysState;
+}
+
 void GameView::keyPressEvent(QKeyEvent *_event)
 {
     if (_event->key() == Qt::Key_Escape)

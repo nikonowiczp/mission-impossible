@@ -38,7 +38,6 @@ void MainWindow::on_StartButton_clicked()
 
 void MainWindow::on_RankingButton_clicked()
 {
-    // todo header not visible
     std::vector<int> _games = this->logHandler->ReadGames();
     sort(_games.begin(), _games.end(), std::greater<int>());
     int _gameCounter = _games.size();
@@ -136,11 +135,10 @@ void MainWindow::resizeEvent(QResizeEvent *_event)
 
 void MainWindow::DoTick()
 {
-    // TODO get objects from game manager
     timeoutCounter++;
-    std::vector<std::shared_ptr<Positionable>> _gameObjects = {};
+    std::vector<std::shared_ptr<Positionable>> _gameObjects = this->gameManager->GetAllPositionable();
     this->gameView->Move(_gameObjects);
-    // TODO do tick in game manager
+    this->gameManager->DoTick(this->gameView->GetKeysState());
 }
 
 void MainWindow::OnEscDuringGame()
