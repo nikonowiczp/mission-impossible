@@ -14,6 +14,7 @@ public:
     void ClearGame();
     void StartGame(std::vector<std::shared_ptr<Positionable>>);
     void Move(std::vector<std::shared_ptr<Positionable>>);
+    int GetKeysState();
 signals:
     void EscPressed();
 protected:

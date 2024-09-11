@@ -76,25 +76,38 @@ void MainWindow::on_GameOverBackButton_clicked()
 
 void MainWindow::on_EasyButton_clicked()
 {
-    this->startGame();
+    this->startGame(GameMode::EASY);
 }
 
 
 void MainWindow::on_MediumButton_clicked()
 {
-    this->startGame();
+    this->startGame(GameMode::MEDIUM);
 }
 
 
 void MainWindow::on_HardButton_clicked()
 {
-    this->startGame();
+    this->startGame(GameMode::HARD);
 }
 
-void MainWindow::startGame()
+void MainWindow::startGame(GameMode _mode)
 {
     // TODO get objects from game manager
-    std::vector<std::shared_ptr<Positionable>> _gameObjects = {};
+    this->gameMode = _mode;
+    switch(_mode)
+    {
+        case GameMode::EASY:
+            this->gameManager->PrepareEasy();
+            break;
+        case GameMode::MEDIUM:
+            this->gameManager->PrepareMedium();
+            break;
+        case GameMode::HARD:
+            this->gameManager->PrepareHard();
+            break;
+    }
+    std::vector<std::shared_ptr<Positionable>> _gameObjects = this->gameManager->GetAllPositionable();
     this->gameView->StartGame(_gameObjects);
     connect(timer, &QTimer::timeout, this, &MainWindow::DoTick);
     ui->stackedWidget->setCurrentIndex(4);
@@ -168,6 +181,6 @@ void MainWindow::on_ResumeButton_clicked()
 
 void MainWindow::on_RestartButton_clicked()
 {
-    this->startGame();
+    this->startGame(this->gameMode);
 }
 

@@ -7,6 +7,7 @@
 #include "iloghandler.h"
 #include "gameview.h"
 #include "gamemanager.h"
+#include "enums/gamemode.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -49,7 +50,7 @@ private slots:
     void on_RestartButton_clicked();
 
 private:
-    void startGame();
+    void startGame(GameMode);
     void gameOver();
     void pause();
     void resume();
@@ -61,5 +62,6 @@ private:
     QTimer *timer;
     int timeoutCounter = 0;
     uint timeoutDuration = 100;
+    GameMode gameMode;
 };
 #endif // MAINWINDOW_H

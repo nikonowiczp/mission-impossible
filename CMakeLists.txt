@@ -26,6 +26,7 @@ set(PROJECT_SOURCES
         sprites/customgraphicsitem.h sprites/customgraphicsitem.cpp
         iloghandler.h iloghandler.cpp
         csvloghandler.h csvloghandler.cpp
+        enums/gamemode.h
         gamestatemediator.h gamestatemediator.cpp
         gameview.h gameview.cpp
         gamemanager.h gamemanager.cpp
