@@ -62,3 +62,8 @@ void GameStateMediator::SetCommandCenter(std::unique_ptr<CommandCenter> command)
     this->commandCenter = std::move(command);
 }
 
+Monster *GameStateMediator::GetMonster()
+{
+    return this->monster.get();
+}
+

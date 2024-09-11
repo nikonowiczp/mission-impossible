@@ -15,8 +15,8 @@ class GameView : public QGraphicsView
 public:
     GameView(QWidget *_parent = nullptr);
     void ClearGame();
-    void StartGame(std::vector<std::shared_ptr<Positionable>>, int, int);
-    void DoTick(std::vector<std::shared_ptr<Positionable>>);
+    void StartGame(std::vector<std::shared_ptr<Positionable>>, Monster*, int, int);
+    void DoTick(std::vector<std::shared_ptr<Positionable>>, Monster*);
     int GetKeysState();
 signals:
     void EscPressed();
@@ -26,6 +26,7 @@ protected:
 private:
     void addObject(std::shared_ptr<Positionable>);
     void addObject(std::string, int, int, int, int);
+    void addMonster(Monster*);
     int keysState = 0;
     int playerId = 0;
     std::map<int, CustomGraphicsItem*> objects = {};

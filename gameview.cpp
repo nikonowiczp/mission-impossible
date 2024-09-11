@@ -25,7 +25,7 @@ void GameView::ClearGame()
     this->keysState = 0;
 }
 
-void GameView::StartGame(std::vector<std::shared_ptr<Positionable>> _positionables, int _width, int _height)
+void GameView::StartGame(std::vector<std::shared_ptr<Positionable>> _positionables, Monster* _player, int _width, int _height)
 {
     std::srand(std::time(0));
     this->scene()->setSceneRect(0, 0, _width, _height);
@@ -33,9 +33,11 @@ void GameView::StartGame(std::vector<std::shared_ptr<Positionable>> _positionabl
     {
         this->addObject(_positionable);
     }
+    this->addMonster(_player);
+    this->centerOn(_player->GetCoordinates().GetX(), _player->GetCoordinates().GetX());
 }
 
-void GameView::DoTick(std::vector<std::shared_ptr<Positionable>> _positionables)
+void GameView::DoTick(std::vector<std::shared_ptr<Positionable>> _positionables, Monster* _player)
 {
     for ( auto _positionable : _positionables )
     {
@@ -49,6 +51,8 @@ void GameView::DoTick(std::vector<std::shared_ptr<Positionable>> _positionables)
             this->addObject(_positionable);
         }
     }
+    this->objects[_player->GetId()]->Move(_player->GetCoordinates().GetX(), _player->GetCoordinates().GetX());
+    this->centerOn(_player->GetCoordinates().GetX(), _player->GetCoordinates().GetX());
 }
 
 int GameView::GetKeysState()
@@ -113,4 +117,12 @@ void GameView::addObject(std::string _asset, int _id, int _x, int _y, int _r)
     CustomGraphicsItem* _item = new CustomGraphicsItem(_asset, _id, _x, _y, _r);
     this->scene()->addItem(_item);
     this->objects.insert(std::make_pair(_id, _item));
+}
+
+void GameView::addMonster(Monster *_monster)
+{
+    this->playerId = _monster->GetId();
+    this->addObject(this->monsterAssetPath, _monster->GetId(),
+                    _monster->GetCoordinates().GetX(), _monster->GetCoordinates().GetY(),
+                    _monster->Radius);
 }

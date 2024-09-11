@@ -45,6 +45,11 @@ std::vector<std::shared_ptr<Positionable>> GameManager::GetAllPositionable()
     return mediator.get()->getAll();
 }
 
+Monster *GameManager::GetMonster()
+{
+    return mediator->GetMonster();
+}
+
 void GameManager::prepareGame(GameDifficulty difficulty)
 {
     std::vector<std::shared_ptr<Positionable>> objects;

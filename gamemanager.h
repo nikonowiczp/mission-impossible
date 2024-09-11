@@ -20,6 +20,7 @@ public:
     int GetHeight();
 
     std::vector<std::shared_ptr<Positionable>> GetAllPositionable();
+    Monster* GetMonster();
 private:
     void prepareGame(GameDifficulty);
     std::shared_ptr<GameStateMediator> mediator;

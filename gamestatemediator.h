@@ -33,7 +33,7 @@ public:
     void SetObjects(std::vector<std::shared_ptr<Positionable>>);
     void SetMonster(std::unique_ptr<Monster>);
     void SetCommandCenter(std::unique_ptr<CommandCenter>);
-
+    Monster* GetMonster();
     std::unique_ptr<GameOptions> options;
 private:
     int64_t tick = 0;
