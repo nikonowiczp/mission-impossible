@@ -16,10 +16,10 @@ std::map<int, int> Utils::GetKeysMap()
 {
     std::map<int, int> _keysMap =
     {
-        {Qt::Key_W, 0b1000},
-        {Qt::Key_A, 0b0100},
-        {Qt::Key_S, 0b0010},
-        {Qt::Key_D, 0b0001}
+        {Qt::Key_W, KEY_UP},
+        {Qt::Key_A, KEY_LEFT},
+        {Qt::Key_S, KEY_DOWN},
+        {Qt::Key_D, KEY_RIGHT}
     };
     return _keysMap;
 }

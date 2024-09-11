@@ -20,3 +20,8 @@ double Movable::GetSpeed()
 {
     return this->speed;
 }
+
+void Movable::MoveBy(double x, double y)
+{
+    this->coordinates = std::make_unique<Point>(this->coordinates->GetX()+x, this->coordinates->GetY()+y);
+}

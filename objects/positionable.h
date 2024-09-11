@@ -14,9 +14,6 @@ public:
     void SetCoordinates(std::unique_ptr<Point>);
 protected:
     std::unique_ptr<Point> coordinates;
-    void MoveBy(int x, int y);
-
-    // BaseObject interface
 };
 
 #endif // POSITIONABLE_H

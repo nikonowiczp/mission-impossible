@@ -12,7 +12,8 @@ public:
 private:
     double speed = 0;
     double range = 0;
-    virtual void move() = 0;
+public:
+    void MoveBy(double x, double y) ;
 };
 
 #endif // MOVABLE_H

@@ -4,7 +4,10 @@
 #include <memory>
 #include <map>
 #include <QKeyEvent>
-
+#define KEY_UP 0b1000
+#define KEY_LEFT 0b0100
+#define KEY_DOWN 0b0010
+#define KEY_RIGHT 0b0001
 class Utils
 {
     public:

@@ -34,7 +34,7 @@ void GameView::StartGame(std::vector<std::shared_ptr<Positionable>> _positionabl
         this->addObject(_positionable);
     }
     this->addMonster(_player);
-    this->centerOn(_player->GetCoordinates().GetX(), _player->GetCoordinates().GetX());
+    this->centerOn(_player->GetCoordinates().GetX(), _player->GetCoordinates().GetY());
 }
 
 void GameView::DoTick(std::vector<std::shared_ptr<Positionable>> _positionables, Monster* _player)
@@ -51,8 +51,8 @@ void GameView::DoTick(std::vector<std::shared_ptr<Positionable>> _positionables,
             this->addObject(_positionable);
         }
     }
-    this->objects[_player->GetId()]->Move(_player->GetCoordinates().GetX(), _player->GetCoordinates().GetX());
-    this->centerOn(_player->GetCoordinates().GetX(), _player->GetCoordinates().GetX());
+    this->objects[_player->GetId()]->Move(_player->GetCoordinates().GetX(), _player->GetCoordinates().GetY());
+    this->centerOn(_player->GetCoordinates().GetX(), _player->GetCoordinates().GetY());
 }
 
 int GameView::GetKeysState()
