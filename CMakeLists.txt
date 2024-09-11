@@ -23,6 +23,8 @@ set(PROJECT_SOURCES
         objects/movable.h objects/movable.cpp
         objects/obstacle.h objects/obstacle.cpp
         events/ievent.h events/ievent.cpp
+        events/commandcentercommandevent.h events/commandcentercommandevent.cpp
+        events/humanfoundevent.h events/humanfoundevent.cpp
         sprites/customgraphicsitem.h sprites/customgraphicsitem.cpp
         iloghandler.h iloghandler.cpp
         csvloghandler.h csvloghandler.cpp
@@ -44,8 +46,6 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(mission-impossible
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        gameoptions.h gameoptions.cpp
-        objects/obstacle.h objects/obstacle.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET mission-impossible APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

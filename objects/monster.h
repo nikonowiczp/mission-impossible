@@ -9,9 +9,6 @@ public:
 
 
     void OnGameTick(int _userInput);
-    // BaseObject interface
-
-    // BaseObject interface
 public:
     void OnGameTick() override;
 };

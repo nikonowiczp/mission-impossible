@@ -9,10 +9,6 @@ void Monster::OnGameTick(int _userInput)
 {
     double x = 0, y = 0;
     auto keysMap = Utils::GetKeysMap();
-
-    if(_userInput!= 0){
-        std::cout<< "boo";
-    }
     if(_userInput & KEY_LEFT) x -= 1;
     if(_userInput & KEY_RIGHT) x += 1;
     if(_userInput & KEY_DOWN) y += 1;

@@ -120,6 +120,7 @@ void MainWindow::gameOver()
     //TODO add counting the points
     this->logHandler->SaveGame(this->timeoutCounter);
     this->timeoutCounter = 0;
+    this->gameView->ClearGame();
     ui->GamePausedWidget->setVisible(false);
     ui->stackedWidget->setCurrentIndex(3);
 }

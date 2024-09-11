@@ -15,7 +15,7 @@ public:
     int GetId();
 protected:
     int id;
-    std::unique_ptr<IEvent> event = nullptr;
+    std::vector<std::unique_ptr<IEvent>> events;
     std::shared_ptr<GameStateMediator> mediator;
 };
 
