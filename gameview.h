@@ -16,7 +16,7 @@ public:
     GameView(QWidget *_parent = nullptr);
     void ClearGame();
     void StartGame(std::vector<std::shared_ptr<Positionable>>, int, int);
-    void Move(std::vector<std::shared_ptr<Positionable>>);
+    void DoTick(std::vector<std::shared_ptr<Positionable>>);
     int GetKeysState();
 signals:
     void EscPressed();
@@ -24,6 +24,7 @@ protected:
     void keyPressEvent(QKeyEvent *_event) override;
     void keyReleaseEvent(QKeyEvent *_event) override;
 private:
+    void addObject(std::shared_ptr<Positionable>);
     void addObject(std::string, int, int, int, int);
     int keysState = 0;
     int playerId = 0;

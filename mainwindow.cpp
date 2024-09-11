@@ -150,7 +150,7 @@ void MainWindow::DoTick()
 {
     timeoutCounter++;
     std::vector<std::shared_ptr<Positionable>> _gameObjects = this->gameManager->GetAllPositionable();
-    this->gameView->Move(_gameObjects);
+    this->gameView->DoTick(_gameObjects);
     this->gameManager->DoTick(this->gameView->GetKeysState());
 }
 

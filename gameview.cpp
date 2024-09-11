@@ -20,6 +20,7 @@ GameView::GameView(QWidget *_parent)
 
 void GameView::ClearGame()
 {
+    this->objects.clear();
     this->scene()->clear();
     this->keysState = 0;
 }
@@ -28,35 +29,27 @@ void GameView::StartGame(std::vector<std::shared_ptr<Positionable>> _positionabl
 {
     std::srand(std::time(0));
     this->scene()->setSceneRect(0, 0, _width, _height);
-    for (auto _positionable : _positionables )
+    for ( auto _positionable : _positionables )
     {
-        if (dynamic_cast<Obstacle*>(_positionable.get()) != nullptr)
-        {
-            int i = std::rand() % _positionables.size();
-            this->addObject(this->obstaclePaths[i], _positionable->GetId(),
-                            _positionable->GetCoordinates().GetX(), _positionable->GetCoordinates().GetY(),
-                            _positionable->Radius);
-        }
-        else if (dynamic_cast<Monster*>(_positionable.get()) != nullptr)
-        {
-            this->playerId = _positionable->GetId();
-            this->addObject(this->monsterAssetPath, _positionable->GetId(),
-                            _positionable->GetCoordinates().GetX(), _positionable->GetCoordinates().GetY(),
-                            _positionable->Radius);
-        }
-        else if (dynamic_cast<Human*>(_positionable.get()) != nullptr)
-        {
-            this->addObject(this->humanAssetPath, _positionable->GetId(),
-                            _positionable->GetCoordinates().GetX(), _positionable->GetCoordinates().GetY(),
-                            _positionable->Radius);
-        }
+        this->addObject(_positionable);
     }
     this->centerOn(this->scene()->sceneRect().center());
 }
 
-void GameView::Move(std::vector<std::shared_ptr<Positionable> >)
+void GameView::DoTick(std::vector<std::shared_ptr<Positionable>> _positionables)
 {
-
+    for ( auto _positionable : _positionables )
+    {
+        auto _objectsIter = this->objects.find(_positionable->GetId());
+        if (_objectsIter != this->objects.end())
+        {
+            _objectsIter->second->move(_positionable->GetCoordinates().GetX(), _positionable->GetCoordinates().GetY());
+        }
+        else
+        {
+            this->addObject(_positionable);
+        }
+    }
 }
 
 int GameView::GetKeysState()
@@ -89,6 +82,30 @@ void GameView::keyReleaseEvent(QKeyEvent *_event)
     if (_keysIter != _keysMap.end())
     {
         this->keysState &= ~_keysIter->second;
+    }
+}
+
+void GameView::addObject(std::shared_ptr<Positionable> _positionable)
+{
+    if (dynamic_cast<Obstacle*>(_positionable.get()) != nullptr)
+    {
+        int i = std::rand() % this->obstaclePaths.size();
+        this->addObject(this->obstaclePaths[i], _positionable->GetId(),
+                        _positionable->GetCoordinates().GetX(), _positionable->GetCoordinates().GetY(),
+                        _positionable->Radius);
+    }
+    else if (dynamic_cast<Monster*>(_positionable.get()) != nullptr)
+    {
+        this->playerId = _positionable->GetId();
+        this->addObject(this->monsterAssetPath, _positionable->GetId(),
+                        _positionable->GetCoordinates().GetX(), _positionable->GetCoordinates().GetY(),
+                        _positionable->Radius);
+    }
+    else if (dynamic_cast<Human*>(_positionable.get()) != nullptr)
+    {
+        this->addObject(this->humanAssetPath, _positionable->GetId(),
+                        _positionable->GetCoordinates().GetX(), _positionable->GetCoordinates().GetY(),
+                        _positionable->Radius);
     }
 }
 
