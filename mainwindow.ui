@@ -482,6 +482,24 @@ QHeaderView::section {
           </layout>
          </widget>
         </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="ResultText">
+            <property name="text">
+             <string>Your points: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="ResultPoints">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
         <item alignment="Qt::AlignHCenter">
          <widget class="QFrame" name="GameOverButtonsFrame">
           <property name="minimumSize">

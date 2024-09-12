@@ -11,7 +11,8 @@ class GameManager
 {
 public:
     GameManager();
-    void DoTick(int userInput);
+    bool DoTick(int userInput);
+    int GetTick() const;
     void PrepareEasy();
     void PrepareMedium();
     void PrepareHard();

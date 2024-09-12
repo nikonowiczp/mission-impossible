@@ -12,18 +12,30 @@ GameStateMediator::GameStateMediator(std::unique_ptr<GameOptions> options)
     this->options = std::move(options);
 }
 
-void GameStateMediator::DoTick(int _userInput)
+bool GameStateMediator::DoTick(int _userInput)
 {
     assert(monster.get() != nullptr);
     assert(commandCenter.get() != nullptr);
     tick++;
     //do monster move
+    for(const auto& a : gameObjects){
+        if(dynamic_cast<Human*>(a.get()) && Utils::CalculateLength(monster.get(), a.get()) < options->GetHumanCatch()){
+            return false;
+        }
+    }
     this->monster->OnGameTick(_userInput);
+
+
     this->commandCenter->OnGameTick();
     for(const auto& a : gameObjects){
         a->OnGameTick();
     }
+    return true;
+}
 
+int GameStateMediator::GetTick() const
+{
+    return tick;
 }
 
 std::vector<Positionable*> GameStateMediator::getVisibleObjects(Movable* _object)

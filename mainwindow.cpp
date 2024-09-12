@@ -118,6 +118,8 @@ void MainWindow::gameOver()
 {
     timer->stop();
     //TODO add counting the points
+    int points = this->gameManager->GetTick();
+    ui->ResultPoints->setText(QString::number(points));
     this->logHandler->SaveGame(this->timeoutCounter);
     this->timeoutCounter = 0;
     this->gameView->ClearGame();
@@ -152,7 +154,9 @@ void MainWindow::DoTick()
     timeoutCounter++;
     std::vector<Positionable *> _gameObjects = this->gameManager->GetAllPositionable();
     this->gameView->DoTick(_gameObjects, this->gameManager->GetMonster());
-    this->gameManager->DoTick(this->gameView->GetKeysState());
+    if(!this->gameManager->DoTick(this->gameView->GetKeysState())){
+        gameOver();
+    }
 }
 
 void MainWindow::OnEscDuringGame()

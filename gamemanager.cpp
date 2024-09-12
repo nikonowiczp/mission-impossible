@@ -7,9 +7,14 @@ GameManager::GameManager()
 {
 }
 
-void GameManager::DoTick(int userInput)
+bool GameManager::DoTick(int userInput)
 {
-    mediator->DoTick(userInput);
+    return mediator->DoTick(userInput);
+}
+
+int GameManager::GetTick() const
+{
+    return mediator->GetTick();
 }
 
 void GameManager::PrepareEasy()

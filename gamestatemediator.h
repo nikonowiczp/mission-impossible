@@ -23,13 +23,14 @@ class GameStateMediator
 {
 public:
     GameStateMediator(std::unique_ptr<GameOptions>);
-    void DoTick(int);
+    bool DoTick(int);
 
     // raw pointer to objtype because we dont transfer ownership
     // unique pointer to event because we transfer ownership
     template<typename ObjType, typename EventType>
     void Notify(ObjType *, std::unique_ptr<EventType>);
 
+    int GetTick() const;
     // we do not give ownership, so we return references
     std::vector<Positionable *> getVisibleObjects(Movable*);
     std::vector<Positionable *> getPeople();

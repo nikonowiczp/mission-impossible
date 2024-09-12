@@ -59,6 +59,11 @@ int GameOptions::GetHumanSight() const
     return humanSight;
 }
 
+int GameOptions::GetHumanCatch() const
+{
+    return 80;
+}
+
 int GameOptions::GetMonsterSpeed() const
 {
     return monsterSpeed;

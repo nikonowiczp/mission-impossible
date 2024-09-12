@@ -17,6 +17,7 @@ public:
 
     int GetHumanSpeed() const;
     int GetHumanSight() const;
+    int GetHumanCatch() const;
 
     int GetMonsterSpeed() const;
     int GetMonsterSight() const;
