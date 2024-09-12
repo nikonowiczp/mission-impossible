@@ -11,6 +11,6 @@ void CommandCenter::OnGameTick()
     auto humans = mediator->getPeople();
     std::unique_ptr<Point> point = nullptr;
     if(events.size()>0){
-
+        // if we found a
     }
 }

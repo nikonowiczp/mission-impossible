@@ -23,19 +23,20 @@ double Movable::GetSpeed() const
     return this->speed;
 }
 
-void Movable::MoveInDirection(double angle, double length, const std::vector<Positionable*>& others) {
+bool Movable::MoveInDirection(double angle, double length, const std::vector<Positionable*>& others) {
     double startX = this->coordinates->GetX();
     double startY = this->coordinates->GetY();
 
     if (CanMoveTo(startX + length * std::cos(angle), startY + length * std::sin(angle), others)) {
         this->coordinates = std::make_unique<Point>(startX + length * std::cos(angle), startY + length * std::sin(angle));
-        return;
+        return true;
     }
+    return false;
 }
 
 bool Movable::CanMoveTo(double newX, double newY, const std::vector<Positionable*> &others)
 {
-    if(newX < 0 || newX > mediator->GetGameOptions().get().GetMapWidth() || newY < 0 || mediator->GetGameOptions().get().GetMapHeight()){
+    if(newX < 0 || newX > mediator->GetGameOptions().get().GetMapWidth() || newY < 0 || newY > mediator->GetGameOptions().get().GetMapHeight()){
         return false;
     }
     for (const auto& other : others) {
