@@ -1,7 +1,7 @@
 #include "commandcenter.h"
 #include "events/commandcentercommandevent.h"
 #include "events/humanfoundevent.h"
-
+#include "utils.h"
 CommandCenter::CommandCenter(std::shared_ptr<GameStateMediator> _mediator, int _id): BaseObject(_mediator, _id)
 {
 
@@ -23,7 +23,6 @@ void CommandCenter::OnGameTick()
                 y = humanFoundEvent->Location->GetY();
                 eventFound = true;
                 break;
-
             }
         }
         events.clear();
@@ -31,7 +30,8 @@ void CommandCenter::OnGameTick()
 
     if(eventFound){
         for(const auto& human : humans){
-
+            std::unique_ptr<CommandCenterCommandEvent> event = make_unique<CommandCenterCommandEvent>(std::make_unique<Point>(x, y), human->GetId(), 0);
+            mediator->Notify(this, std::move(event));
         }
     }
 }

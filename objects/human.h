@@ -26,6 +26,7 @@ private:
     void doPursueClose(const std::vector<Positionable*>&);
 
     int ticksFromLastEvent = 0;
+    int skew = 0;
     std::unique_ptr<Point> currentGoal;
 };
 

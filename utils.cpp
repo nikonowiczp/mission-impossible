@@ -18,17 +18,17 @@ double Utils::CalculateAngle(double x1, double y1, double x2, double y2)
     return std::atan2(y2 - y1, x2 - x1);
 }
 
-double Utils::crossProduct(const Point &a, const Point &b, const Point &p)
+double Utils::CrossProduct(const Point &a, const Point &b, const Point &p)
 {
     return (b.GetX() - a.GetX()) * (p.GetY() - a.GetY()) - (b.GetY() - a.GetY()) * (p.GetX() - a.GetX());
 }
 
-int Utils::countPointsOnSides(const Point &a, const Point &b, const std::vector<Point> &others)
+int Utils::CountPointsOnSides(const Point &a, const Point &b, const std::vector<Positionable *> &others)
 {
     int leftSide = 0, rightSide = 0;
 
-    for (const Point& p : others) {
-        double cross = crossProduct(a, b, p);
+    for (auto p : others) {
+        double cross = CrossProduct(a, b, p->GetCoordinates());
 
         if (cross > 0) {
             ++leftSide; // Point is on the left side
