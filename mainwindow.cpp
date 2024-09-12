@@ -151,11 +151,14 @@ void MainWindow::resizeEvent(QResizeEvent *_event)
 
 void MainWindow::DoTick()
 {
-    timeoutCounter++;
-    std::vector<Positionable *> _gameObjects = this->gameManager->GetAllPositionable();
-    this->gameView->DoTick(_gameObjects, this->gameManager->GetMonster());
-    if(!this->gameManager->DoTick(this->gameView->GetKeysState())){
-        gameOver();
+    if (this->timer->isActive())
+    {
+        timeoutCounter++;
+        std::vector<Positionable *> _gameObjects = this->gameManager->GetAllPositionable();
+        this->gameView->DoTick(_gameObjects, this->gameManager->GetMonster());
+        if(!this->gameManager->DoTick(this->gameView->GetKeysState())){
+            gameOver();
+        }
     }
 }
 
