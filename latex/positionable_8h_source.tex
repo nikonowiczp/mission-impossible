@@ -1,0 +1,27 @@
+\doxysection{positionable.\+h}
+\hypertarget{positionable_8h_source}{}\label{positionable_8h_source}\index{objects/positionable.h@{objects/positionable.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ POSITIONABLE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ POSITIONABLE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}point.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}baseobject.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPositionable}{Positionable}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBaseObject}{BaseObject}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classPositionable}{Positionable}}(std::shared\_ptr<GameStateMediator>,\ std::unique\_ptr<Point>,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPositionable_a223306a0fee5c2a71c022fc5cc0eb29a}{Radius}}\ =\ 40;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classPoint}{Point}}\ \mbox{\hyperlink{classPositionable_ab4e8fe7eb810a6f56855e105621e2bad}{GetCoordinates}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPositionable_a7814e95fe9fe37d76b367e6b61b84f55}{SetCoordinates}}(std::unique\_ptr<Point>);}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ std::unique\_ptr<Point>\ coordinates;}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ POSITIONABLE\_H}}
+
+\end{DoxyCode}

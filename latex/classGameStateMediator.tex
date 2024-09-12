@@ -1,0 +1,144 @@
+\doxysection{Game\+State\+Mediator Class Reference}
+\hypertarget{classGameStateMediator}{}\label{classGameStateMediator}\index{GameStateMediator@{GameStateMediator}}
+
+
+The \doxylink{classGameStateMediator}{Game\+State\+Mediator} is a class responsible for all of the communication between game objects. It\textquotesingle{}s also disconnected from any kind of state of the UI -\/ a bit of a change compared to the diagram in stage 2 Decided against interface -\/ no need to create abstraction for no reason at all...  
+
+
+
+
+{\ttfamily \#include $<$gamestatemediator.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGameStateMediator_a6f65abe27a3d7e67d9c9a031c331e2be}{Game\+State\+Mediator}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classGameOptions}{Game\+Options}} $>$)
+\item 
+bool \mbox{\hyperlink{classGameStateMediator_acbc0f143cbebae3abef5fd146294b6a8}{Do\+Tick}} (int)
+\item 
+{\footnotesize template$<$typename Obj\+Type , typename Event\+Type $>$ }\\void \mbox{\hyperlink{classGameStateMediator_ad284d29820af15f145d74d55d44f85de}{Notify}} (Obj\+Type \texorpdfstring{$\ast$}{*}, std\+::unique\+\_\+ptr$<$ Event\+Type $>$)
+\item 
+\Hypertarget{classGameStateMediator_ab567690886b83b18bad75cf8371bed45}\label{classGameStateMediator_ab567690886b83b18bad75cf8371bed45} 
+int {\bfseries Get\+Tick} () const
+\begin{DoxyCompactList}\small\item\em Get\+Tick is a function that returns the current tick of the game. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classGameStateMediator_a28d85858d1febff1928a4fca95009dfe}{get\+Visible\+Objects}} (\mbox{\hyperlink{classMovable}{Movable}} \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{classGameStateMediator_a25ce348944499b96a07356bae3891bad}\label{classGameStateMediator_a25ce348944499b96a07356bae3891bad} 
+std\+::vector$<$ \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries get\+People} ()
+\begin{DoxyCompactList}\small\item\em Get\+People is a function that returns all the people in the game. \end{DoxyCompactList}\item 
+\Hypertarget{classGameStateMediator_abb9cf5339ed47d99b0a48059226d8296}\label{classGameStateMediator_abb9cf5339ed47d99b0a48059226d8296} 
+std\+::vector$<$ \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries get\+All} ()
+\begin{DoxyCompactList}\small\item\em Get\+All is a function that returns all the objects in the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameStateMediator_a685f39c6dcbef5c9e00c0e7346657e3a}{Set\+Objects}} (std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPositionable}{Positionable}} $>$ $>$)
+\item 
+void \mbox{\hyperlink{classGameStateMediator_a87f8c7d0e9e0475c039a0468a37fea9d}{Set\+Monster}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classMonster}{Monster}} $>$)
+\item 
+void \mbox{\hyperlink{classGameStateMediator_a32c6bc4180d9d18987e68f4a8578af0e}{Set\+Command\+Center}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCommandCenter}{Command\+Center}} $>$)
+\item 
+\Hypertarget{classGameStateMediator_a5a30ac51f200a935f7f6dc70f56496be}\label{classGameStateMediator_a5a30ac51f200a935f7f6dc70f56496be} 
+\mbox{\hyperlink{classMonster}{Monster}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Monster} ()
+\begin{DoxyCompactList}\small\item\em Get\+Monster is a function that returns the monster in the game. \end{DoxyCompactList}\item 
+\Hypertarget{classGameStateMediator_aa81734961b75a6233537685b502f0754}\label{classGameStateMediator_aa81734961b75a6233537685b502f0754} 
+std\+::reference\+\_\+wrapper$<$ const \mbox{\hyperlink{classGameOptions}{Game\+Options}} $>$ {\bfseries Get\+Game\+Options} ()
+\begin{DoxyCompactList}\small\item\em Get\+Game\+Options is a function that returns the game options. \end{DoxyCompactList}\item 
+\Hypertarget{classGameStateMediator_a7b5ef41b7c4d6b808be641b328297d8e}\label{classGameStateMediator_a7b5ef41b7c4d6b808be641b328297d8e} 
+template$<$$>$ void {\bfseries Notify} (\mbox{\hyperlink{classHuman}{Human}} \texorpdfstring{$\ast$}{*}obj, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classHumanFoundEvent}{Human\+Found\+Event}} $>$ event)
+\item 
+\Hypertarget{classGameStateMediator_af4e7103d58d3e1282870c6554b325006}\label{classGameStateMediator_af4e7103d58d3e1282870c6554b325006} 
+template$<$$>$ void {\bfseries Notify} (\mbox{\hyperlink{classCommandCenter}{Command\+Center}} \texorpdfstring{$\ast$}{*}obj, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCommandCenterCommandEvent}{Command\+Center\+Command\+Event}} $>$ event)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classGameStateMediator}{Game\+State\+Mediator} is a class responsible for all of the communication between game objects. It\textquotesingle{}s also disconnected from any kind of state of the UI -\/ a bit of a change compared to the diagram in stage 2 Decided against interface -\/ no need to create abstraction for no reason at all... 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGameStateMediator_a6f65abe27a3d7e67d9c9a031c331e2be}\label{classGameStateMediator_a6f65abe27a3d7e67d9c9a031c331e2be} 
+\index{GameStateMediator@{GameStateMediator}!GameStateMediator@{GameStateMediator}}
+\index{GameStateMediator@{GameStateMediator}!GameStateMediator@{GameStateMediator}}
+\doxysubsubsection{\texorpdfstring{GameStateMediator()}{GameStateMediator()}}
+{\footnotesize\ttfamily Game\+State\+Mediator\+::\+Game\+State\+Mediator (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classGameOptions}{Game\+Options}} $>$}]{options }\end{DoxyParamCaption})}
+
+\doxylink{classGameStateMediator}{Game\+State\+Mediator} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em options} & Unique pointer to \doxylink{classGameOptions}{Game\+Options} class, the options of the game. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGameStateMediator_acbc0f143cbebae3abef5fd146294b6a8}\label{classGameStateMediator_acbc0f143cbebae3abef5fd146294b6a8} 
+\index{GameStateMediator@{GameStateMediator}!DoTick@{DoTick}}
+\index{DoTick@{DoTick}!GameStateMediator@{GameStateMediator}}
+\doxysubsubsection{\texorpdfstring{DoTick()}{DoTick()}}
+{\footnotesize\ttfamily bool Game\+State\+Mediator\+::\+Do\+Tick (\begin{DoxyParamCaption}\item[{int}]{\+\_\+user\+Input }\end{DoxyParamCaption})}
+
+Do\+Tick is a function that is called every game tick. 
+\begin{DoxyParams}{Parameters}
+{\em user\+Input} & Integer, the user input. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGameStateMediator_a28d85858d1febff1928a4fca95009dfe}\label{classGameStateMediator_a28d85858d1febff1928a4fca95009dfe} 
+\index{GameStateMediator@{GameStateMediator}!getVisibleObjects@{getVisibleObjects}}
+\index{getVisibleObjects@{getVisibleObjects}!GameStateMediator@{GameStateMediator}}
+\doxysubsubsection{\texorpdfstring{getVisibleObjects()}{getVisibleObjects()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*} $>$ Game\+State\+Mediator\+::get\+Visible\+Objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMovable}{Movable}} \texorpdfstring{$\ast$}{*}}]{\+\_\+object }\end{DoxyParamCaption})}
+
+Get\+Visible\+Objects is a function that returns all the visible objects for a given movable object. 
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{classMovable}{Movable}} & Pointer to \doxylink{classMovable}{Movable} class, the object that will see the objects. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGameStateMediator_ad284d29820af15f145d74d55d44f85de}\label{classGameStateMediator_ad284d29820af15f145d74d55d44f85de} 
+\index{GameStateMediator@{GameStateMediator}!Notify@{Notify}}
+\index{Notify@{Notify}!GameStateMediator@{GameStateMediator}}
+\doxysubsubsection{\texorpdfstring{Notify()}{Notify()}}
+{\footnotesize\ttfamily template$<$typename Obj\+Type , typename Event\+Type $>$ \\
+void Game\+State\+Mediator\+::\+Notify (\begin{DoxyParamCaption}\item[{Obj\+Type \texorpdfstring{$\ast$}{*}}]{,  }\item[{std\+::unique\+\_\+ptr$<$ Event\+Type $>$}]{ }\end{DoxyParamCaption})}
+
+Notify is a function that notifies the mediator of an event. 
+\begin{DoxyParams}{Parameters}
+{\em obj} & Pointer to Obj\+Type class, the object that is notifying the mediator. raw pointer to objtype because we dont transfer ownership \\
+\hline
+{\em event} & Unique pointer to Event\+Type class, the event that is being notified. unique pointer to event because we transfer ownership \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGameStateMediator_a32c6bc4180d9d18987e68f4a8578af0e}\label{classGameStateMediator_a32c6bc4180d9d18987e68f4a8578af0e} 
+\index{GameStateMediator@{GameStateMediator}!SetCommandCenter@{SetCommandCenter}}
+\index{SetCommandCenter@{SetCommandCenter}!GameStateMediator@{GameStateMediator}}
+\doxysubsubsection{\texorpdfstring{SetCommandCenter()}{SetCommandCenter()}}
+{\footnotesize\ttfamily void Game\+State\+Mediator\+::\+Set\+Command\+Center (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCommandCenter}{Command\+Center}} $>$}]{command }\end{DoxyParamCaption})}
+
+Set\+Command\+Center is a function that sets the command center. 
+\begin{DoxyParams}{Parameters}
+{\em command\+Center} & Unique pointer to \doxylink{classCommandCenter}{Command\+Center} class, the command center to be set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGameStateMediator_a87f8c7d0e9e0475c039a0468a37fea9d}\label{classGameStateMediator_a87f8c7d0e9e0475c039a0468a37fea9d} 
+\index{GameStateMediator@{GameStateMediator}!SetMonster@{SetMonster}}
+\index{SetMonster@{SetMonster}!GameStateMediator@{GameStateMediator}}
+\doxysubsubsection{\texorpdfstring{SetMonster()}{SetMonster()}}
+{\footnotesize\ttfamily void Game\+State\+Mediator\+::\+Set\+Monster (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classMonster}{Monster}} $>$}]{monster }\end{DoxyParamCaption})}
+
+Set\+Monster is a function that sets the monster. 
+\begin{DoxyParams}{Parameters}
+{\em monster} & Unique pointer to \doxylink{classMonster}{Monster} class, the monster to be set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGameStateMediator_a685f39c6dcbef5c9e00c0e7346657e3a}\label{classGameStateMediator_a685f39c6dcbef5c9e00c0e7346657e3a} 
+\index{GameStateMediator@{GameStateMediator}!SetObjects@{SetObjects}}
+\index{SetObjects@{SetObjects}!GameStateMediator@{GameStateMediator}}
+\doxysubsubsection{\texorpdfstring{SetObjects()}{SetObjects()}}
+{\footnotesize\ttfamily void Game\+State\+Mediator\+::\+Set\+Objects (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPositionable}{Positionable}} $>$ $>$}]{objects }\end{DoxyParamCaption})}
+
+Set\+Objects is a function that sets the all positionable objects in the game. 
+\begin{DoxyParams}{Parameters}
+{\em objects} & Vector of unique pointers to \doxylink{classPositionable}{Positionable} class, the objects to be set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gamestatemediator.\+h\item 
+gamestatemediator.\+cpp\end{DoxyCompactItemize}

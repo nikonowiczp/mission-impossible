@@ -1,0 +1,76 @@
+\doxysection{Command\+Center\+Command\+Event Class Reference}
+\hypertarget{classCommandCenterCommandEvent}{}\label{classCommandCenterCommandEvent}\index{CommandCenterCommandEvent@{CommandCenterCommandEvent}}
+
+
+The \doxylink{classCommandCenterCommandEvent}{Command\+Center\+Command\+Event} class is a class Derived from \doxylink{classEvent}{Event} class.  
+
+
+
+
+{\ttfamily \#include $<$commandcentercommandevent.\+h$>$}
+
+
+
+Inheritance diagram for Command\+Center\+Command\+Event\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classCommandCenterCommandEvent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Command\+Center\+Command\+Event\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classCommandCenterCommandEvent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommandCenterCommandEvent_a5e1268da3ee16fd1a2c112d78ff3364a}{Command\+Center\+Command\+Event}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$, int id, int skew)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCommandCenterCommandEvent_a17fe6152a75b65438bd504c2d923789a}\label{classCommandCenterCommandEvent_a17fe6152a75b65438bd504c2d923789a} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$ {\bfseries location}
+\item 
+\Hypertarget{classCommandCenterCommandEvent_aeea7a084146e4a08f129e47552aae523}\label{classCommandCenterCommandEvent_aeea7a084146e4a08f129e47552aae523} 
+int {\bfseries id}
+\item 
+\Hypertarget{classCommandCenterCommandEvent_acf4acca6ecf798d30496e259c0798ce8}\label{classCommandCenterCommandEvent_acf4acca6ecf798d30496e259c0798ce8} 
+int {\bfseries skew}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classCommandCenterCommandEvent}{Command\+Center\+Command\+Event} class is a class Derived from \doxylink{classEvent}{Event} class. 
+
+The \doxylink{classCommandCenterCommandEvent}{Command\+Center\+Command\+Event} class is used to generate an event when the command center sends a command to a human ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCommandCenterCommandEvent_a5e1268da3ee16fd1a2c112d78ff3364a}\label{classCommandCenterCommandEvent_a5e1268da3ee16fd1a2c112d78ff3364a} 
+\index{CommandCenterCommandEvent@{CommandCenterCommandEvent}!CommandCenterCommandEvent@{CommandCenterCommandEvent}}
+\index{CommandCenterCommandEvent@{CommandCenterCommandEvent}!CommandCenterCommandEvent@{CommandCenterCommandEvent}}
+\doxysubsubsection{\texorpdfstring{CommandCenterCommandEvent()}{CommandCenterCommandEvent()}}
+{\footnotesize\ttfamily Command\+Center\+Command\+Event\+::\+Command\+Center\+Command\+Event (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$}]{point,  }\item[{int}]{id,  }\item[{int}]{skew }\end{DoxyParamCaption})}
+
+\doxylink{classCommandCenterCommandEvent}{Command\+Center\+Command\+Event} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em location} & Unique pointer to \doxylink{classPoint}{Point} class, the location of the command. \\
+\hline
+{\em id} & Integer, the id of the command. \\
+\hline
+{\em skew} & Integer, the skew of the command. Used to change the direction of human -\/ unused \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+events/commandcentercommandevent.\+h\item 
+events/commandcentercommandevent.\+cpp\end{DoxyCompactItemize}

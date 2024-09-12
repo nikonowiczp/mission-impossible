@@ -1,0 +1,37 @@
+\doxysection{human.\+h}
+\hypertarget{human_8h_source}{}\label{human_8h_source}\index{objects/human.h@{objects/human.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HUMAN\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HUMAN\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}movable.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classHuman}{Human}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMovable}{Movable}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classHuman}{Human}}(std::shared\_ptr<GameStateMediator>,\ \ std::unique\_ptr<Point>,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHuman_a05fd6fbfe558788b8dc7bfe2cc7c5357}{OnGameTick}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{enum}\ State\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ Scouting\ =\ 0,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ PursuingFar,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ PursuingClose}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ \ \ \ \ State\ currentState\ =\ Scouting;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ currentScoutingAngle\ =\ 1*\ M\_PI;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ doScouting(\textcolor{keyword}{const}\ std::vector<Positionable*>\&);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ doPursueFar(\textcolor{keyword}{const}\ std::vector<Positionable*>\&);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ doPursueClose(\textcolor{keyword}{const}\ std::vector<Positionable*>\&);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ ticksFromLastEvent\ =\ 0;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ skew\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \ \ std::unique\_ptr<Point>\ currentGoal;}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HUMAN\_H}}
+
+\end{DoxyCode}

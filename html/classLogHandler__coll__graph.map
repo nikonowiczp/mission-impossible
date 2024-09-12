@@ -1,0 +1,5 @@
+<map id="LogHandler" name="LogHandler">
+<area shape="rect" id="Node000001" title="The LogHandler class implementing interface ILogHandler class." alt="" coords="7,79,103,104"/>
+<area shape="rect" id="Node000002" href="$classILogHandler.html" title="Interface allowing to handle logs containing points achieved during one game." alt="" coords="5,5,105,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,44,58,79,53,79,53,44"/>
+</map>

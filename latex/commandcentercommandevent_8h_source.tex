@@ -1,0 +1,24 @@
+\doxysection{commandcentercommandevent.\+h}
+\hypertarget{commandcentercommandevent_8h_source}{}\label{commandcentercommandevent_8h_source}\index{events/commandcentercommandevent.h@{events/commandcentercommandevent.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ COMMANDCENTERCOMMANDEVENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ COMMANDCENTERCOMMANDEVENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}event.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}point.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCommandCenterCommandEvent}{CommandCenterCommandEvent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEvent}{Event}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classCommandCenterCommandEvent}{CommandCenterCommandEvent}}(std::unique\_ptr<Point>,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ skew);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ std::unique\_ptr<Point>\ location;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ skew;}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ COMMANDCENTERCOMMANDEVENT\_H}}
+
+\end{DoxyCode}

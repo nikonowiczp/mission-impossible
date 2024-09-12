@@ -1,0 +1,31 @@
+\doxysection{baseobject.\+h}
+\hypertarget{baseobject_8h_source}{}\label{baseobject_8h_source}\index{objects/baseobject.h@{objects/baseobject.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BASEOBJECT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BASEOBJECT\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}gamestatemediator.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBaseObject}{BaseObject}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classBaseObject}{BaseObject}}(std::shared\_ptr<GameStateMediator>,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBaseObject_ad9e0c815d7cfa448b63938945ef27e02}{OnGameTick}}()\ =\ 0;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBaseObject_adbc5a5f3f86282c0c138f62f6c803b4b}{ReceiveEvent}}(std::unique\_ptr<Event>);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBaseObject_a29dc53291ceb09c05de95de86e1bf4bb}{GetId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::shared\_ptr<GameStateMediator>\ \mbox{\hyperlink{classBaseObject_ae5809808e8857dda4bffece84f9d9e54}{GetMediator}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBaseObject_ab21889ef86ffc1849898d2613ccdc75f}{id}};}
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<std::unique\_ptr<Event>>\ \mbox{\hyperlink{classBaseObject_abe5ab55e51f11aef3ef2e0c8aa5cee80}{events}};}
+\DoxyCodeLine{00037\ \ \ \ \ std::shared\_ptr<GameStateMediator>\ \mbox{\hyperlink{classBaseObject_a0c4be6dacc1344ea340089aedb59a12d}{mediator}};}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BASEOBJECT\_H}}
+
+\end{DoxyCode}

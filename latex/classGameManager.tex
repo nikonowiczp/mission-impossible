@@ -1,0 +1,68 @@
+\doxysection{Game\+Manager Class Reference}
+\hypertarget{classGameManager}{}\label{classGameManager}\index{GameManager@{GameManager}}
+
+
+The \doxylink{classGameManager}{Game\+Manager} class is a class that manages the game.  
+
+
+
+
+{\ttfamily \#include $<$gamemanager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGameManager_aa0e2424dc1a39d380e5b6605b179bf05}\label{classGameManager_aa0e2424dc1a39d380e5b6605b179bf05} 
+{\bfseries Game\+Manager} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classGameManager}{Game\+Manager} constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classGameManager_a7f3782338295e32864e232f28ded4004}\label{classGameManager_a7f3782338295e32864e232f28ded4004} 
+bool {\bfseries Do\+Tick} (int user\+Input)
+\begin{DoxyCompactList}\small\item\em Do\+Tick is a function that is called every game tick. \end{DoxyCompactList}\item 
+\Hypertarget{classGameManager_a2d6e84cb5e716f55698d0ec7be7f31b2}\label{classGameManager_a2d6e84cb5e716f55698d0ec7be7f31b2} 
+int {\bfseries Get\+Tick} () const
+\begin{DoxyCompactList}\small\item\em Get\+Tick is a function that returns the current tick of the game. \end{DoxyCompactList}\item 
+\Hypertarget{classGameManager_a918dff7fc37aee2cc0543a00a00b890b}\label{classGameManager_a918dff7fc37aee2cc0543a00a00b890b} 
+void {\bfseries Prepare\+Easy} ()
+\begin{DoxyCompactList}\small\item\em Prepare\+Easy is a function that prepares the game for easy difficulty. \end{DoxyCompactList}\item 
+\Hypertarget{classGameManager_acb23e4a29f95763b92d1e12034c88a4c}\label{classGameManager_acb23e4a29f95763b92d1e12034c88a4c} 
+void {\bfseries Prepare\+Medium} ()
+\begin{DoxyCompactList}\small\item\em Prepare\+Medium is a function that prepares the game for medium difficulty. \end{DoxyCompactList}\item 
+\Hypertarget{classGameManager_a79ffd30c2bf1465146783392eb6f0127}\label{classGameManager_a79ffd30c2bf1465146783392eb6f0127} 
+void {\bfseries Prepare\+Hard} ()
+\begin{DoxyCompactList}\small\item\em Prepare\+Hard is a function that prepares the game for hard difficulty. \end{DoxyCompactList}\item 
+\Hypertarget{classGameManager_a53de5e33b6451d1211e46179e1afce2a}\label{classGameManager_a53de5e33b6451d1211e46179e1afce2a} 
+int {\bfseries Get\+Width} () const
+\begin{DoxyCompactList}\small\item\em Get\+Width is a function that returns the width of the game map. \end{DoxyCompactList}\item 
+\Hypertarget{classGameManager_af805d30b1896eac5eae88ece81909fec}\label{classGameManager_af805d30b1896eac5eae88ece81909fec} 
+int {\bfseries Get\+Height} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classGameManager_aa198241db5b1aff4674be3a0d7527fa2}{Get\+All\+Positionable}} ()
+\item 
+\mbox{\hyperlink{classMonster}{Monster}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager_a0b112ee9f6457e4e000a22335ab09d4f}{Get\+Monster}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classGameManager}{Game\+Manager} class is a class that manages the game. 
+
+The \doxylink{classGameManager}{Game\+Manager} class is the only point that UI interacts with the game. It is responsible for creating the game for every difficulty 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGameManager_aa198241db5b1aff4674be3a0d7527fa2}\label{classGameManager_aa198241db5b1aff4674be3a0d7527fa2} 
+\index{GameManager@{GameManager}!GetAllPositionable@{GetAllPositionable}}
+\index{GetAllPositionable@{GetAllPositionable}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{GetAllPositionable()}{GetAllPositionable()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*} $>$ Game\+Manager\+::\+Get\+All\+Positionable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get\+All\+Positionable is a function that returns all the positionable objects in the game. User by the UI to draw the game. \Hypertarget{classGameManager_a0b112ee9f6457e4e000a22335ab09d4f}\label{classGameManager_a0b112ee9f6457e4e000a22335ab09d4f} 
+\index{GameManager@{GameManager}!GetMonster@{GetMonster}}
+\index{GetMonster@{GetMonster}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{GetMonster()}{GetMonster()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMonster}{Monster}} \texorpdfstring{$\ast$}{*} Game\+Manager\+::\+Get\+Monster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get\+Monster is a function that returns the monster in the game. User by the UI to save that time needed to find the monster among objects 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gamemanager.\+h\item 
+gamemanager.\+cpp\end{DoxyCompactItemize}

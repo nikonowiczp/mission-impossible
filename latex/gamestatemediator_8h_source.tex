@@ -1,0 +1,55 @@
+\doxysection{gamestatemediator.\+h}
+\hypertarget{gamestatemediator_8h_source}{}\label{gamestatemediator_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAMESTATEMEDIATOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAMESTATEMEDIATOR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}gameoptions.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}events/event.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ forward\ declaration\ -\/\ needed\ to\ avoid\ circular\ dependency}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBaseObject}{BaseObject}};}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPositionable}{Positionable}};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMovable}{Movable}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCommandCenter}{CommandCenter}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMonster}{Monster}};}
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGameStateMediator}{GameStateMediator}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classGameStateMediator}{GameStateMediator}}(std::unique\_ptr<GameOptions>);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGameStateMediator_acbc0f143cbebae3abef5fd146294b6a8}{DoTick}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ObjType,\ \textcolor{keyword}{typename}\ EventType>}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameStateMediator_ad284d29820af15f145d74d55d44f85de}{Notify}}(ObjType\ *,\ std::unique\_ptr<EventType>);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGameStateMediator_ab567690886b83b18bad75cf8371bed45}{GetTick}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ we\ do\ not\ give\ ownership,\ so\ we\ return\ references}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00046\ \ \ \ \ std::vector<Positionable\ *>\ \mbox{\hyperlink{classGameStateMediator_a28d85858d1febff1928a4fca95009dfe}{getVisibleObjects}}(\mbox{\hyperlink{classMovable}{Movable}}*);}
+\DoxyCodeLine{00048\ \ \ \ \ std::vector<Positionable\ *>\ \mbox{\hyperlink{classGameStateMediator_a25ce348944499b96a07356bae3891bad}{getPeople}}();}
+\DoxyCodeLine{00050\ \ \ \ \ std::vector<Positionable\ *>\ \mbox{\hyperlink{classGameStateMediator_abb9cf5339ed47d99b0a48059226d8296}{getAll}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameStateMediator_a685f39c6dcbef5c9e00c0e7346657e3a}{SetObjects}}(std::vector<std::unique\_ptr<Positionable>>);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameStateMediator_a87f8c7d0e9e0475c039a0468a37fea9d}{SetMonster}}(std::unique\_ptr<Monster>);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameStateMediator_a32c6bc4180d9d18987e68f4a8578af0e}{SetCommandCenter}}(std::unique\_ptr<CommandCenter>);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{classMonster}{Monster}}*\ \mbox{\hyperlink{classGameStateMediator_a5a30ac51f200a935f7f6dc70f56496be}{GetMonster}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00067\ \ \ \ \ std::reference\_wrapper<const\ GameOptions>\ \mbox{\hyperlink{classGameStateMediator_aa81734961b75a6233537685b502f0754}{GetGameOptions}}();}
+\DoxyCodeLine{00068\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00069\ \ \ \ \ int64\_t\ tick\ =\ 0;}
+\DoxyCodeLine{00070\ \ \ \ \ std::unique\_ptr<GameOptions>\ options;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ std::unique\_ptr<CommandCenter>\ commandCenter;}
+\DoxyCodeLine{00073\ \ \ \ \ std::vector<std::unique\_ptr<Positionable>>\ gameObjects;}
+\DoxyCodeLine{00074\ \ \ \ \ std::unique\_ptr<Monster>\ monster;}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAMESTATEMEDIATOR\_H}}
+
+\end{DoxyCode}

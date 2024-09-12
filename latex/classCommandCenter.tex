@@ -1,0 +1,101 @@
+\doxysection{Command\+Center Class Reference}
+\hypertarget{classCommandCenter}{}\label{classCommandCenter}\index{CommandCenter@{CommandCenter}}
+
+
+The \doxylink{classCommandCenter}{Command\+Center} class is a class Derived from \doxylink{classBaseObject}{Base\+Object} class.  
+
+
+
+
+{\ttfamily \#include $<$commandcenter.\+h$>$}
+
+
+
+Inheritance diagram for Command\+Center\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classCommandCenter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Command\+Center\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classCommandCenter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommandCenter_a4713b57f3acc42ed079ae08bc8e41df6}{Command\+Center}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$, int)
+\item 
+void \mbox{\hyperlink{classCommandCenter_aedc2f966c3ebe2efe43a9e4cfd7af0ec}{On\+Game\+Tick}} () override
+\begin{DoxyCompactList}\small\item\em On\+Game\+Tick is a function that is called every game tick. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseObject}{Base\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseObject_a32c2ee7a6d9c62380053fcc502c4be0a}{Base\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$, int)
+\item 
+void \mbox{\hyperlink{classBaseObject_adbc5a5f3f86282c0c138f62f6c803b4b}{Receive\+Event}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$)
+\item 
+int {\bfseries Get\+Id} () const
+\begin{DoxyCompactList}\small\item\em Get\+Id is a function that returns the id of the object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$ {\bfseries Get\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Get\+Mediator is a function that returns the mediator of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseObject}{Base\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Integer, the id of the object. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$ $>$ {\bfseries events}
+\begin{DoxyCompactList}\small\item\em Vector of unique pointers to \doxylink{classEvent}{Event} class, the events that the object has received. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$ {\bfseries mediator}
+\begin{DoxyCompactList}\small\item\em Shared pointer to \doxylink{classGameStateMediator}{Game\+State\+Mediator} class, the mediator of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classCommandCenter}{Command\+Center} class is a class Derived from \doxylink{classBaseObject}{Base\+Object} class. 
+
+The \doxylink{classCommandCenter}{Command\+Center} class is used to represent the command center in the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCommandCenter_a4713b57f3acc42ed079ae08bc8e41df6}\label{classCommandCenter_a4713b57f3acc42ed079ae08bc8e41df6} 
+\index{CommandCenter@{CommandCenter}!CommandCenter@{CommandCenter}}
+\index{CommandCenter@{CommandCenter}!CommandCenter@{CommandCenter}}
+\doxysubsubsection{\texorpdfstring{CommandCenter()}{CommandCenter()}}
+{\footnotesize\ttfamily Command\+Center\+::\+Command\+Center (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$}]{\+\_\+mediator,  }\item[{int}]{\+\_\+id }\end{DoxyParamCaption})}
+
+\doxylink{classCommandCenter}{Command\+Center} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em mediator} & Shared pointer to \doxylink{classGameStateMediator}{Game\+State\+Mediator} class, the mediator of the game. \\
+\hline
+{\em id} & Integer, the id of the object. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCommandCenter_aedc2f966c3ebe2efe43a9e4cfd7af0ec}\label{classCommandCenter_aedc2f966c3ebe2efe43a9e4cfd7af0ec} 
+\index{CommandCenter@{CommandCenter}!OnGameTick@{OnGameTick}}
+\index{OnGameTick@{OnGameTick}!CommandCenter@{CommandCenter}}
+\doxysubsubsection{\texorpdfstring{OnGameTick()}{OnGameTick()}}
+{\footnotesize\ttfamily void Command\+Center\+::\+On\+Game\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+On\+Game\+Tick is a function that is called every game tick. 
+
+
+
+Implements \mbox{\hyperlink{classBaseObject_ad9e0c815d7cfa448b63938945ef27e02}{Base\+Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+objects/commandcenter.\+h\item 
+objects/commandcenter.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,21 @@
+\doxysection{obstacle.\+h}
+\hypertarget{obstacle_8h_source}{}\label{obstacle_8h_source}\index{objects/obstacle.h@{objects/obstacle.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OBSTACLE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OBSTACLE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}objects/positionable.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classObstacle}{Obstacle}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPositionable}{Positionable}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classObstacle}{Obstacle}}(std::shared\_ptr<GameStateMediator>,\ \ std::unique\_ptr<Point>,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ BaseObject\ interface}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classObstacle_a1f2866c378061578358360064aac58c3}{OnGameTick}}();}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ OBSTACLE\_H}}
+
+\end{DoxyCode}

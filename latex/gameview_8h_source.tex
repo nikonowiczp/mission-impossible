@@ -1,0 +1,54 @@
+\doxysection{gameview.\+h}
+\hypertarget{gameview_8h_source}{}\label{gameview_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAMEVIEW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAMEVIEW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}objects/positionable.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}sprites/customgraphicsitem.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QGraphicsView>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QKeyEvent>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGameView}{GameView}}\ :\ \textcolor{keyword}{public}\ QGraphicsView}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classGameView}{GameView}}(QWidget\ *\_parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameView_ae0e97ada4d9fa0cbd1b0390f8a43b394}{ClearGame}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameView_a67182247bb1f91b95b628218d027ee6f}{StartGame}}(std::vector<Positionable\ *>\ \_objects,\ \mbox{\hyperlink{classMonster}{Monster}}*\ \_monster,\ \textcolor{keywordtype}{int}\ \_width,\ \textcolor{keywordtype}{int}\ \_height);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameView_a0c1f5f2e06802c61ece946e77d911249}{DoTick}}(std::vector<Positionable\ *>\ \_objects,\ \mbox{\hyperlink{classMonster}{Monster}}*\ \_monster);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGameView_a403e2b728c9b570a4ffe49cc893d6820}{GetKeysState}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ signals:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameView_a7fe1012897ea0b564ff4c06ed16948d9}{EscPressed}}();}
+\DoxyCodeLine{00056\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameView_acae73b649ae768d4e8ba610368e931de}{keyPressEvent}}(QKeyEvent\ *\_event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameView_ac4d8324e6ede62528fc37f00f6fe0652}{keyReleaseEvent}}(QKeyEvent\ *\_event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00066\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ addObject(\mbox{\hyperlink{classPositionable}{Positionable}}\ *);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ addObject(std::string,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ addMonster(\mbox{\hyperlink{classMonster}{Monster}}*);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ keysState\ =\ 0;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ playerId\ =\ 0;}
+\DoxyCodeLine{00072\ \ \ \ \ std::map<int,\ CustomGraphicsItem*>\ objects\ =\ \{\};}
+\DoxyCodeLine{00073\ \ \ \ \ std::string\ humanAssetPath\ =\ \textcolor{stringliteral}{"{}:/assets/person.png"{}};}
+\DoxyCodeLine{00074\ \ \ \ \ std::string\ monsterAssetPath\ =\ \textcolor{stringliteral}{"{}:/assets/monster.png"{}};}
+\DoxyCodeLine{00075\ \ \ \ \ std::vector<std::string>\ obstaclePaths\ =\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}:/assets/rock1.png"{}},}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}:/assets/rock2.png"{}},}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}:/assets/rock3.png"{}},}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}:/assets/rock4.png"{}},}
+\DoxyCodeLine{00080\ \ \ \ \ \};}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAMEVIEW\_H}}
+
+\end{DoxyCode}

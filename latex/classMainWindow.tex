@@ -1,0 +1,75 @@
+\doxysection{Main\+Window Class Reference}
+\hypertarget{classMainWindow}{}\label{classMainWindow}\index{MainWindow@{MainWindow}}
+
+
+The \doxylink{classMainWindow}{Main\+Window} class derived from QMain\+Window class, handling the main window.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
+Inheritance diagram for Main\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classMainWindow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classMainWindow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMainWindow_afb26f7357427a756ae12df1bd8060d6e}\label{classMainWindow_afb26f7357427a756ae12df1bd8060d6e} 
+void {\bfseries Do\+Tick} ()
+\begin{DoxyCompactList}\small\item\em Public slot used to handle the ticks when the game is on. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_aab200f82499288e18a27dbc21f9713ed}\label{classMainWindow_aab200f82499288e18a27dbc21f9713ed} 
+void {\bfseries On\+Esc\+During\+Game} ()
+\begin{DoxyCompactList}\small\item\em Public slot used to handle esc key click during the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMainWindow_a4c56fff5fed392a7f3ad2ecaaa4c4170}{Main\+Window}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classGameManager}{Game\+Manager}} $>$ \+\_\+manager, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classILogHandler}{ILog\+Handler}} $>$ \+\_\+log\+Handler, QWidget \texorpdfstring{$\ast$}{*}\+\_\+parent=nullptr)
+\item 
+\Hypertarget{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}\label{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Main\+Window} ()
+\begin{DoxyCompactList}\small\item\em Basic \doxylink{classMainWindow}{Main\+Window} destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classMainWindow}{Main\+Window} class derived from QMain\+Window class, handling the main window. 
+
+The \doxylink{classMainWindow}{Main\+Window} class is used to generate all the UI in the app using QT 6 framework. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMainWindow_a4c56fff5fed392a7f3ad2ecaaa4c4170}\label{classMainWindow_a4c56fff5fed392a7f3ad2ecaaa4c4170} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classGameManager}{Game\+Manager}} $>$}]{\+\_\+manager,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classILogHandler}{ILog\+Handler}} $>$}]{\+\_\+log\+Handler,  }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{\+\_\+parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\doxylink{classMainWindow}{Main\+Window} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+manager} & Unique pointer to \doxylink{classGameManager}{Game\+Manager} class, used to manage the logic. \\
+\hline
+{\em \+\_\+log\+Handler} & Unique pointer to \doxylink{classILogHandler}{ILog\+Handler} class, used to generate and read logs. \\
+\hline
+{\em \+\_\+parent} & Pointer to the QWidget class, parent of the current widget. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mainwindow.\+h\item 
+mainwindow.\+cpp\end{DoxyCompactItemize}

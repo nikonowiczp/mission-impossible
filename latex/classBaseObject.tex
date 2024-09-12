@@ -1,0 +1,102 @@
+\doxysection{Base\+Object Class Reference}
+\hypertarget{classBaseObject}{}\label{classBaseObject}\index{BaseObject@{BaseObject}}
+
+
+The \doxylink{classBaseObject}{Base\+Object} class is the base class that all of the objects in the game inherit from.  
+
+
+
+
+{\ttfamily \#include $<$baseobject.\+h$>$}
+
+
+
+Inheritance diagram for Base\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classBaseObject__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseObject_a32c2ee7a6d9c62380053fcc502c4be0a}{Base\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$, int)
+\item 
+virtual void \mbox{\hyperlink{classBaseObject_ad9e0c815d7cfa448b63938945ef27e02}{On\+Game\+Tick}} ()=0
+\begin{DoxyCompactList}\small\item\em On\+Game\+Tick is a pure virtual function that is called every game tick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseObject_adbc5a5f3f86282c0c138f62f6c803b4b}{Receive\+Event}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$)
+\item 
+\Hypertarget{classBaseObject_a29dc53291ceb09c05de95de86e1bf4bb}\label{classBaseObject_a29dc53291ceb09c05de95de86e1bf4bb} 
+int {\bfseries Get\+Id} () const
+\begin{DoxyCompactList}\small\item\em Get\+Id is a function that returns the id of the object. \end{DoxyCompactList}\item 
+\Hypertarget{classBaseObject_ae5809808e8857dda4bffece84f9d9e54}\label{classBaseObject_ae5809808e8857dda4bffece84f9d9e54} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$ {\bfseries Get\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Get\+Mediator is a function that returns the mediator of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBaseObject_ab21889ef86ffc1849898d2613ccdc75f}\label{classBaseObject_ab21889ef86ffc1849898d2613ccdc75f} 
+int {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Integer, the id of the object. \end{DoxyCompactList}\item 
+\Hypertarget{classBaseObject_abe5ab55e51f11aef3ef2e0c8aa5cee80}\label{classBaseObject_abe5ab55e51f11aef3ef2e0c8aa5cee80} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$ $>$ {\bfseries events}
+\begin{DoxyCompactList}\small\item\em Vector of unique pointers to \doxylink{classEvent}{Event} class, the events that the object has received. \end{DoxyCompactList}\item 
+\Hypertarget{classBaseObject_a0c4be6dacc1344ea340089aedb59a12d}\label{classBaseObject_a0c4be6dacc1344ea340089aedb59a12d} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$ {\bfseries mediator}
+\begin{DoxyCompactList}\small\item\em Shared pointer to \doxylink{classGameStateMediator}{Game\+State\+Mediator} class, the mediator of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classBaseObject}{Base\+Object} class is the base class that all of the objects in the game inherit from. 
+
+The \doxylink{classBaseObject}{Base\+Object} class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBaseObject_a32c2ee7a6d9c62380053fcc502c4be0a}\label{classBaseObject_a32c2ee7a6d9c62380053fcc502c4be0a} 
+\index{BaseObject@{BaseObject}!BaseObject@{BaseObject}}
+\index{BaseObject@{BaseObject}!BaseObject@{BaseObject}}
+\doxysubsubsection{\texorpdfstring{BaseObject()}{BaseObject()}}
+{\footnotesize\ttfamily Base\+Object\+::\+Base\+Object (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$}]{\+\_\+pointer,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+\doxylink{classBaseObject}{Base\+Object} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em mediator} & Shared pointer to \doxylink{classGameStateMediator}{Game\+State\+Mediator} class, the mediator of the game. \\
+\hline
+{\em id} & Integer, the id of the object. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBaseObject_ad9e0c815d7cfa448b63938945ef27e02}\label{classBaseObject_ad9e0c815d7cfa448b63938945ef27e02} 
+\index{BaseObject@{BaseObject}!OnGameTick@{OnGameTick}}
+\index{OnGameTick@{OnGameTick}!BaseObject@{BaseObject}}
+\doxysubsubsection{\texorpdfstring{OnGameTick()}{OnGameTick()}}
+{\footnotesize\ttfamily virtual void Base\+Object\+::\+On\+Game\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+On\+Game\+Tick is a pure virtual function that is called every game tick. 
+
+
+
+Implemented in \mbox{\hyperlink{classObstacle_a1f2866c378061578358360064aac58c3}{Obstacle}}, \mbox{\hyperlink{classCommandCenter_aedc2f966c3ebe2efe43a9e4cfd7af0ec}{Command\+Center}}, \mbox{\hyperlink{classHuman_a05fd6fbfe558788b8dc7bfe2cc7c5357}{Human}}, and \mbox{\hyperlink{classMonster_ad2fa27dc759938fef825f886ec73840a}{Monster}}.
+
+\Hypertarget{classBaseObject_adbc5a5f3f86282c0c138f62f6c803b4b}\label{classBaseObject_adbc5a5f3f86282c0c138f62f6c803b4b} 
+\index{BaseObject@{BaseObject}!ReceiveEvent@{ReceiveEvent}}
+\index{ReceiveEvent@{ReceiveEvent}!BaseObject@{BaseObject}}
+\doxysubsubsection{\texorpdfstring{ReceiveEvent()}{ReceiveEvent()}}
+{\footnotesize\ttfamily void Base\+Object\+::\+Receive\+Event (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$}]{event }\end{DoxyParamCaption})}
+
+Receive\+Event is a function that receives an event and writes it to the events vector. 
+\begin{DoxyParams}{Parameters}
+{\em event} & Unique pointer to \doxylink{classEvent}{Event} class, the event to be received. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+objects/baseobject.\+h\item 
+objects/baseobject.\+cpp\end{DoxyCompactItemize}

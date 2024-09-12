@@ -1,0 +1,26 @@
+\doxysection{customgraphicsitem.\+h}
+\hypertarget{customgraphicsitem_8h_source}{}\label{customgraphicsitem_8h_source}\index{sprites/customgraphicsitem.h@{sprites/customgraphicsitem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CUSTOMGRAPHICSITEM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CUSTOMGRAPHICSITEM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QGraphicsRectItem>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QGraphicsPixmapItem>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCustomGraphicsItem}{CustomGraphicsItem}}\ :\ \textcolor{keyword}{public}\ QGraphicsPixmapItem}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classCustomGraphicsItem}{CustomGraphicsItem}}(std::string\ \_assetPath,\ \textcolor{keywordtype}{int}\ \_assetId,\ \textcolor{keywordtype}{int}\ \_x,\ \textcolor{keywordtype}{int}\ \_y,\ \textcolor{keywordtype}{int}\ \_radius,\ QGraphicsItem*\ \_parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCustomGraphicsItem_ac3438325e0c2619a728ea53851257cfd}{Move}}(\textcolor{keywordtype}{int}\ \_x,\ \textcolor{keywordtype}{int}\ \_y);}
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ assetId;}
+\DoxyCodeLine{00031\ \ \ \ \ std::string\ assetPath;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ radius;}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CUSTOMGRAPHICSITEM\_H}}
+
+\end{DoxyCode}

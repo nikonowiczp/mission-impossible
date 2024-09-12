@@ -1,0 +1,13 @@
+<map id="Positionable" name="Positionable">
+<area shape="rect" id="Node000001" title="The Positionable class is a class Derived from BaseObject class." alt="" coords="87,79,190,104"/>
+<area shape="rect" id="Node000003" href="$classMovable.html" title="The Movable class is a class Derived from Positionable class." alt="" coords="49,152,127,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,117,98,153,94,150,120,114"/>
+<area shape="rect" id="Node000006" href="$classObstacle.html" title="The Obstacle class is a class Derived from Positionable class." alt="" coords="151,152,230,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="157,114,184,150,180,153,153,117"/>
+<area shape="rect" id="Node000002" href="$classBaseObject.html" title="The BaseObject class is the base class that all of the objects in the game inherit from." alt="" coords="91,5,187,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,44,141,79,136,79,136,44"/>
+<area shape="rect" id="Node000004" href="$classHuman.html" title="The Human class is a class Derived from Movable class." alt="" coords="5,225,75,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="75,190,50,227,46,224,70,187"/>
+<area shape="rect" id="Node000005" href="$classMonster.html" title="The Monster class is a class Derived from Movable class." alt="" coords="99,225,173,251"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="106,187,130,224,126,227,101,190"/>
+</map>

@@ -1,0 +1,76 @@
+\doxysection{ILog\+Handler Class Reference}
+\hypertarget{classILogHandler}{}\label{classILogHandler}\index{ILogHandler@{ILogHandler}}
+
+
+Interface allowing to handle logs containing points achieved during one game.  
+
+
+
+
+{\ttfamily \#include $<$iloghandler.\+h$>$}
+
+
+
+Inheritance diagram for ILog\+Handler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{classILogHandler__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classILogHandler_a4f737d4aa0db41b87143a83e89a34760}\label{classILogHandler_a4f737d4aa0db41b87143a83e89a34760} 
+{\bfseries ILog\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Basic \doxylink{classILogHandler}{ILog\+Handler} constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classILogHandler_ac325343c4fef3b03d4929721f08db673}{Save\+Game}} (int \+\_\+points)=0
+\item 
+virtual std\+::vector$<$ int $>$ \mbox{\hyperlink{classILogHandler_a91b6188a1e4361fe178cfc6cd881c816}{Read\+Games}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual member to read game points saved. \end{DoxyCompactList}\item 
+\Hypertarget{classILogHandler_afd0117edc97cf21bdc7288384eecd553}\label{classILogHandler_afd0117edc97cf21bdc7288384eecd553} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+ILog\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor \texorpdfstring{$\sim$}{\string~}\+ILog\+Handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface allowing to handle logs containing points achieved during one game. 
+
+\doxylink{classILogHandler}{ILog\+Handler} is used to save and read game points. It\textquotesingle{}s an abstraction made to separate implementation. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classILogHandler_a91b6188a1e4361fe178cfc6cd881c816}\label{classILogHandler_a91b6188a1e4361fe178cfc6cd881c816} 
+\index{ILogHandler@{ILogHandler}!ReadGames@{ReadGames}}
+\index{ReadGames@{ReadGames}!ILogHandler@{ILogHandler}}
+\doxysubsubsection{\texorpdfstring{ReadGames()}{ReadGames()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ int $>$ ILog\+Handler\+::\+Read\+Games (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual member to read game points saved. 
+
+
+
+Implemented in \mbox{\hyperlink{classLogHandler_ab9fbc278f033d2078f6361dbb9eafcdb}{Log\+Handler}}.
+
+\Hypertarget{classILogHandler_ac325343c4fef3b03d4929721f08db673}\label{classILogHandler_ac325343c4fef3b03d4929721f08db673} 
+\index{ILogHandler@{ILogHandler}!SaveGame@{SaveGame}}
+\index{SaveGame@{SaveGame}!ILogHandler@{ILogHandler}}
+\doxysubsubsection{\texorpdfstring{SaveGame()}{SaveGame()}}
+{\footnotesize\ttfamily virtual void ILog\+Handler\+::\+Save\+Game (\begin{DoxyParamCaption}\item[{int}]{\+\_\+points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Pure virtual member to save game points. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+points} & The points achieved during game. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classLogHandler_a728a30cce430216f133c921170a4d010}{Log\+Handler}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+iloghandler.\+h\item 
+iloghandler.\+cpp\end{DoxyCompactItemize}

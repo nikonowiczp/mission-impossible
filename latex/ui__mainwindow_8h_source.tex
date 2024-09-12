@@ -1,0 +1,505 @@
+\doxysection{ui\+\_\+mainwindow.\+h}
+\hypertarget{ui__mainwindow_8h_source}{}\label{ui__mainwindow_8h_source}\index{build/QT6\_self\_build-\/Debug/mission-\/impossible\_autogen/include/ui\_mainwindow.h@{build/QT6\_self\_build-\/Debug/mission-\/impossible\_autogen/include/ui\_mainwindow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ Form\ generated\ from\ reading\ UI\ file\ 'mainwindow.ui'}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Created\ by:\ Qt\ User\ Interface\ Compiler\ version\ 6.4.2}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**\ WARNING!\ All\ changes\ made\ in\ this\ file\ will\ be\ lost\ when\ recompiling\ UI\ file!}}
+\DoxyCodeLine{00007\ \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ UI\_MAINWINDOW\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ UI\_MAINWINDOW\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCore/QVariant>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtWidgets/QApplication>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtWidgets/QFrame>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtWidgets/QHBoxLayout>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QtWidgets/QHeaderView>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLabel>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QtWidgets/QMainWindow>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QtWidgets/QMenuBar>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QtWidgets/QPushButton>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <QtWidgets/QStackedWidget>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <QtWidgets/QStatusBar>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <QtWidgets/QTableWidget>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <QtWidgets/QVBoxLayout>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <QtWidgets/QWidget>}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUi__MainWindow}{Ui\_MainWindow}}}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ QWidget\ *centralwidget;}
+\DoxyCodeLine{00033\ \ \ \ \ QHBoxLayout\ *horizontalLayout;}
+\DoxyCodeLine{00034\ \ \ \ \ QStackedWidget\ *stackedWidget;}
+\DoxyCodeLine{00035\ \ \ \ \ QWidget\ *MainPage;}
+\DoxyCodeLine{00036\ \ \ \ \ QVBoxLayout\ *verticalLayout\_2;}
+\DoxyCodeLine{00037\ \ \ \ \ QFrame\ *MenuTitlePage;}
+\DoxyCodeLine{00038\ \ \ \ \ QVBoxLayout\ *verticalLayout\_4;}
+\DoxyCodeLine{00039\ \ \ \ \ QLabel\ *Title;}
+\DoxyCodeLine{00040\ \ \ \ \ QFrame\ *MenuButtonsFrame;}
+\DoxyCodeLine{00041\ \ \ \ \ QVBoxLayout\ *verticalLayout\_3;}
+\DoxyCodeLine{00042\ \ \ \ \ QPushButton\ *StartButton;}
+\DoxyCodeLine{00043\ \ \ \ \ QPushButton\ *RankingButton;}
+\DoxyCodeLine{00044\ \ \ \ \ QPushButton\ *ExitButton;}
+\DoxyCodeLine{00045\ \ \ \ \ QWidget\ *DifficultyPage;}
+\DoxyCodeLine{00046\ \ \ \ \ QVBoxLayout\ *verticalLayout;}
+\DoxyCodeLine{00047\ \ \ \ \ QFrame\ *DifficultyTitleFrame;}
+\DoxyCodeLine{00048\ \ \ \ \ QVBoxLayout\ *verticalLayout\_7;}
+\DoxyCodeLine{00049\ \ \ \ \ QLabel\ *DifficultyTitle;}
+\DoxyCodeLine{00050\ \ \ \ \ QFrame\ *DifficultyButtonsFrame;}
+\DoxyCodeLine{00051\ \ \ \ \ QVBoxLayout\ *verticalLayout\_5;}
+\DoxyCodeLine{00052\ \ \ \ \ QPushButton\ *EasyButton;}
+\DoxyCodeLine{00053\ \ \ \ \ QPushButton\ *MediumButton;}
+\DoxyCodeLine{00054\ \ \ \ \ QPushButton\ *HardButton;}
+\DoxyCodeLine{00055\ \ \ \ \ QPushButton\ *DifficultiesBackButton;}
+\DoxyCodeLine{00056\ \ \ \ \ QWidget\ *RankingPage;}
+\DoxyCodeLine{00057\ \ \ \ \ QVBoxLayout\ *verticalLayout\_8;}
+\DoxyCodeLine{00058\ \ \ \ \ QFrame\ *RankingTitleFrame;}
+\DoxyCodeLine{00059\ \ \ \ \ QVBoxLayout\ *verticalLayout\_9;}
+\DoxyCodeLine{00060\ \ \ \ \ QLabel\ *RankingTitle;}
+\DoxyCodeLine{00061\ \ \ \ \ QFrame\ *RankingFrame;}
+\DoxyCodeLine{00062\ \ \ \ \ QVBoxLayout\ *verticalLayout\_10;}
+\DoxyCodeLine{00063\ \ \ \ \ QTableWidget\ *RankingTableWidget;}
+\DoxyCodeLine{00064\ \ \ \ \ QFrame\ *RankingButtonsFrame;}
+\DoxyCodeLine{00065\ \ \ \ \ QVBoxLayout\ *verticalLayout\_6;}
+\DoxyCodeLine{00066\ \ \ \ \ QPushButton\ *RankingBackButton;}
+\DoxyCodeLine{00067\ \ \ \ \ QWidget\ *GameOverPage;}
+\DoxyCodeLine{00068\ \ \ \ \ QVBoxLayout\ *verticalLayout\_14;}
+\DoxyCodeLine{00069\ \ \ \ \ QFrame\ *GameOverTextFrame;}
+\DoxyCodeLine{00070\ \ \ \ \ QVBoxLayout\ *verticalLayout\_12;}
+\DoxyCodeLine{00071\ \ \ \ \ QLabel\ *GameOverText;}
+\DoxyCodeLine{00072\ \ \ \ \ QFrame\ *PointsTextFrame;}
+\DoxyCodeLine{00073\ \ \ \ \ QHBoxLayout\ *horizontalLayout\_2;}
+\DoxyCodeLine{00074\ \ \ \ \ QLabel\ *ResultText;}
+\DoxyCodeLine{00075\ \ \ \ \ QLabel\ *ResultPoints;}
+\DoxyCodeLine{00076\ \ \ \ \ QFrame\ *GameOverButtonsFrame;}
+\DoxyCodeLine{00077\ \ \ \ \ QVBoxLayout\ *verticalLayout\_11;}
+\DoxyCodeLine{00078\ \ \ \ \ QPushButton\ *RestartButton;}
+\DoxyCodeLine{00079\ \ \ \ \ QPushButton\ *GameOverBackButton;}
+\DoxyCodeLine{00080\ \ \ \ \ QWidget\ *GamePage;}
+\DoxyCodeLine{00081\ \ \ \ \ QVBoxLayout\ *verticalLayout\_13;}
+\DoxyCodeLine{00082\ \ \ \ \ QWidget\ *GamePausedWidget;}
+\DoxyCodeLine{00083\ \ \ \ \ QVBoxLayout\ *verticalLayout\_16;}
+\DoxyCodeLine{00084\ \ \ \ \ QFrame\ *GamePausedButtonsFrame;}
+\DoxyCodeLine{00085\ \ \ \ \ QVBoxLayout\ *verticalLayout\_15;}
+\DoxyCodeLine{00086\ \ \ \ \ QPushButton\ *ResumeButton;}
+\DoxyCodeLine{00087\ \ \ \ \ QPushButton\ *GameExitButton;}
+\DoxyCodeLine{00088\ \ \ \ \ QMenuBar\ *menubar;}
+\DoxyCodeLine{00089\ \ \ \ \ QStatusBar\ *statusbar;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUi(QMainWindow\ *\mbox{\hyperlink{classMainWindow}{MainWindow}})}
+\DoxyCodeLine{00092\ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMainWindow}{MainWindow}}-\/>objectName().isEmpty())}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}-\/>setObjectName(\textcolor{stringliteral}{"{}MainWindow"{}});}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}-\/>resize(799,\ 574);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}\#MainWindow\ \{\(\backslash\)n"{}}}
+\DoxyCodeLine{00097\ \textcolor{stringliteral}{"{}background-\/color:\ black;\(\backslash\)n"{}}}
+\DoxyCodeLine{00098\ \textcolor{stringliteral}{"{}\}"{}}));}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ centralwidget\ =\ \textcolor{keyword}{new}\ QWidget(\mbox{\hyperlink{classMainWindow}{MainWindow}});}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ centralwidget-\/>setObjectName(\textcolor{stringliteral}{"{}centralwidget"{}});}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ centralwidget-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}\#centralwidget\ \{\(\backslash\)n"{}}}
+\DoxyCodeLine{00102\ \textcolor{stringliteral}{"{}background-\/color:\ black;\(\backslash\)n"{}}}
+\DoxyCodeLine{00103\ \textcolor{stringliteral}{"{}\}"{}}));}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ horizontalLayout\ =\ \textcolor{keyword}{new}\ QHBoxLayout(centralwidget);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ horizontalLayout-\/>setObjectName(\textcolor{stringliteral}{"{}horizontalLayout"{}});}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ stackedWidget\ =\ \textcolor{keyword}{new}\ QStackedWidget(centralwidget);}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ stackedWidget-\/>setObjectName(\textcolor{stringliteral}{"{}stackedWidget"{}});}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ stackedWidget-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}QFrame\ \{\(\backslash\)n"{}}}
+\DoxyCodeLine{00109\ \textcolor{stringliteral}{"{}\ \ \ border:\ 0;\(\backslash\)n"{}}}
+\DoxyCodeLine{00110\ \textcolor{stringliteral}{"{}\}\(\backslash\)n"{}}}
+\DoxyCodeLine{00111\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{00112\ \textcolor{stringliteral}{"{}QPushButton\ \{\(\backslash\)n"{}}}
+\DoxyCodeLine{00113\ \textcolor{stringliteral}{"{}\ \ \ background-\/color:\ \#c29864;\ \(\backslash\)n"{}}}
+\DoxyCodeLine{00114\ \textcolor{stringliteral}{"{}\ \ \ color:\ black;\ \(\backslash\)n"{}}}
+\DoxyCodeLine{00115\ \textcolor{stringliteral}{"{}\ \ \ font-\/family:\ \(\backslash\)"{}Courier\ New\(\backslash\)"{};\(\backslash\)n"{}}}
+\DoxyCodeLine{00116\ \textcolor{stringliteral}{"{}\ \ \ font-\/weight:\ bold;\(\backslash\)n"{}}}
+\DoxyCodeLine{00117\ \textcolor{stringliteral}{"{}\ \ \ text-\/transform:\ uppercase;\(\backslash\)n"{}}}
+\DoxyCodeLine{00118\ \textcolor{stringliteral}{"{}\ \ \ letter-\/spacing:\ 10px;\(\backslash\)n"{}}}
+\DoxyCodeLine{00119\ \textcolor{stringliteral}{"{}\ \ \ border:\ 3px\ solid\ black;\(\backslash\)n"{}}}
+\DoxyCodeLine{00120\ \textcolor{stringliteral}{"{}\ \ \ padding:\ 2px;\(\backslash\)n"{}}}
+\DoxyCodeLine{00121\ \textcolor{stringliteral}{"{}\}\(\backslash\)n"{}}}
+\DoxyCodeLine{00122\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{00123\ \textcolor{stringliteral}{"{}QLabel\ \{\(\backslash\)n"{}}}
+\DoxyCodeLine{00124\ \textcolor{stringliteral}{"{}\ \ \ font-\/family:\ \(\backslash\)"{}Courier\ New\(\backslash\)"{};\(\backslash\)n"{}}}
+\DoxyCodeLine{00125\ \textcolor{stringliteral}{"{}\ \ \ font-\/weight:\ bold;\(\backslash\)n"{}}}
+\DoxyCodeLine{00126\ \textcolor{stringliteral}{"{}\ \ \ text-\/transform:\ uppercase;\(\backslash\)n"{}}}
+\DoxyCodeLine{00127\ \textcolor{stringliteral}{"{}\ \ \ letter-\/spacing:\ 15px;\(\backslash\)n"{}}}
+\DoxyCodeLine{00128\ \textcolor{stringliteral}{"{}\ \ \ font-\/size:\ 40px;\(\backslash\)n"{}}}
+\DoxyCodeLine{00129\ \textcolor{stringliteral}{"{}\ \ \ color:\ \#c29864;\(\backslash\)n"{}}}
+\DoxyCodeLine{00130\ \textcolor{stringliteral}{"{}\}\(\backslash\)n"{}}}
+\DoxyCodeLine{00131\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{00132\ \textcolor{stringliteral}{"{}\#MainPage,\ \#DifficultyPage,\ \#RankingPage,\ \#GameOverPage,\ \#GamePage\ \{\(\backslash\)n"{}}}
+\DoxyCodeLine{00133\ \textcolor{stringliteral}{"{}\ \ \ background-\/color:\ black;\(\backslash\)n"{}}}
+\DoxyCodeLine{00134\ \textcolor{stringliteral}{"{}\}\(\backslash\)n"{}}}
+\DoxyCodeLine{00135\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{00136\ \textcolor{stringliteral}{"{}QTableWidget\ \{\(\backslash\)n"{}}}
+\DoxyCodeLine{00137\ \textcolor{stringliteral}{"{}\ \ \ background-\/color:\ \#c29864;\ \(\backslash\)n"{}}}
+\DoxyCodeLine{00138\ \textcolor{stringliteral}{"{}\ \ \ color:\ black;\ \(\backslash\)n"{}}}
+\DoxyCodeLine{00139\ \textcolor{stringliteral}{"{}\ \ \ font-\/family:\ \(\backslash\)"{}Courier\ New\(\backslash\)"{};\(\backslash\)n"{}}}
+\DoxyCodeLine{00140\ \textcolor{stringliteral}{"{}\ \ \ font-\/weight:\ bold;\(\backslash\)n"{}}}
+\DoxyCodeLine{00141\ \textcolor{stringliteral}{"{}\ \ \ text-\/transform:\ uppercase;\(\backslash\)n"{}}}
+\DoxyCodeLine{00142\ \textcolor{stringliteral}{"{}\ \ \ letter-\/spacing:\ 10px;\(\backslash\)n"{}}}
+\DoxyCodeLine{00143\ \textcolor{stringliteral}{"{}\ \ \ border:\ 2px\ solid\ black;\(\backslash\)n"{}}}
+\DoxyCodeLine{00144\ \textcolor{stringliteral}{"{}\ \ \ padding:\ 2px;\(\backslash\)n"{}}}
+\DoxyCodeLine{00145\ \textcolor{stringliteral}{"{}\ \ \ gridline-\/color:\ black;\(\backslash\)n"{}}}
+\DoxyCodeLine{00146\ \textcolor{stringliteral}{"{}\}\(\backslash\)n"{}}}
+\DoxyCodeLine{00147\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{00148\ \textcolor{stringliteral}{"{}QHeaderView::section\ \{\(\backslash\)n"{}}}
+\DoxyCodeLine{00149\ \textcolor{stringliteral}{"{}\ \ \ background-\/color:\ \#c29864;\(\backslash\)n"{}}}
+\DoxyCodeLine{00150\ \textcolor{stringliteral}{"{}\ \ \ gridline-\/color:\ black;\(\backslash\)n"{}}}
+\DoxyCodeLine{00151\ \textcolor{stringliteral}{"{}\ \ \ color:\ black;\ \(\backslash\)n"{}}}
+\DoxyCodeLine{00152\ \textcolor{stringliteral}{"{}\ \ \ border-\/style:\ none;\(\backslash\)n"{}}}
+\DoxyCodeLine{00153\ \textcolor{stringliteral}{"{}\ \ \ border-\/bottom:\ 2px\ solid"{}}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ black;\(\backslash\)n"{}}}
+\DoxyCodeLine{00155\ \textcolor{stringliteral}{"{}\ \ \ font-\/family:\ \(\backslash\)"{}Courier\ New\(\backslash\)"{};\(\backslash\)n"{}}}
+\DoxyCodeLine{00156\ \textcolor{stringliteral}{"{}\ \ \ font-\/weight:\ bold;\(\backslash\)n"{}}}
+\DoxyCodeLine{00157\ \textcolor{stringliteral}{"{}\ \ \ text-\/transform:\ uppercase;\(\backslash\)n"{}}}
+\DoxyCodeLine{00158\ \textcolor{stringliteral}{"{}\ \ \ letter-\/spacing:\ 10px;\(\backslash\)n"{}}}
+\DoxyCodeLine{00159\ \textcolor{stringliteral}{"{}\}\(\backslash\)n"{}}}
+\DoxyCodeLine{00160\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{00161\ \textcolor{stringliteral}{"{}\#GameOverText\ \{\(\backslash\)n"{}}}
+\DoxyCodeLine{00162\ \textcolor{stringliteral}{"{}\ \ \ color:\ red;\(\backslash\)n"{}}}
+\DoxyCodeLine{00163\ \textcolor{stringliteral}{"{}\ \ \ font-\/size:\ 80px;\(\backslash\)n"{}}}
+\DoxyCodeLine{00164\ \textcolor{stringliteral}{"{}\}"{}}));}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ MainPage\ =\ \textcolor{keyword}{new}\ QWidget();}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ MainPage-\/>setObjectName(\textcolor{stringliteral}{"{}MainPage"{}});}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ verticalLayout\_2\ =\ \textcolor{keyword}{new}\ QVBoxLayout(MainPage);}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ verticalLayout\_2-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_2"{}});}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ MenuTitlePage\ =\ \textcolor{keyword}{new}\ QFrame(MainPage);}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ MenuTitlePage-\/>setObjectName(\textcolor{stringliteral}{"{}MenuTitlePage"{}});}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ MenuTitlePage-\/>setMaximumSize(QSize(16777215,\ 200));}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ MenuTitlePage-\/>setFrameShape(QFrame::StyledPanel);}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ MenuTitlePage-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ verticalLayout\_4\ =\ \textcolor{keyword}{new}\ QVBoxLayout(MenuTitlePage);}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ verticalLayout\_4-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_4"{}});}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ Title\ =\ \textcolor{keyword}{new}\ QLabel(MenuTitlePage);}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ Title-\/>setObjectName(\textcolor{stringliteral}{"{}Title"{}});}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ Title-\/>setMaximumSize(QSize(900,\ 50));}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ verticalLayout\_4-\/>addWidget(Title);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ verticalLayout\_2-\/>addWidget(MenuTitlePage,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ MenuButtonsFrame\ =\ \textcolor{keyword}{new}\ QFrame(MainPage);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ MenuButtonsFrame-\/>setObjectName(\textcolor{stringliteral}{"{}MenuButtonsFrame"{}});}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ MenuButtonsFrame-\/>setMinimumSize(QSize(100,\ 200));}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ MenuButtonsFrame-\/>setMaximumSize(QSize(500,\ 300));}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ MenuButtonsFrame-\/>setFrameShape(QFrame::StyledPanel);}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ MenuButtonsFrame-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ verticalLayout\_3\ =\ \textcolor{keyword}{new}\ QVBoxLayout(MenuButtonsFrame);}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ verticalLayout\_3-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_3"{}});}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ StartButton\ =\ \textcolor{keyword}{new}\ QPushButton(MenuButtonsFrame);}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ StartButton-\/>setObjectName(\textcolor{stringliteral}{"{}StartButton"{}});}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ StartButton-\/>setMaximumSize(QSize(500,\ 30));}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ verticalLayout\_3-\/>addWidget(StartButton);}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ RankingButton\ =\ \textcolor{keyword}{new}\ QPushButton(MenuButtonsFrame);}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ RankingButton-\/>setObjectName(\textcolor{stringliteral}{"{}RankingButton"{}});}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ RankingButton-\/>setMaximumSize(QSize(500,\ 30));}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ verticalLayout\_3-\/>addWidget(RankingButton);}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ ExitButton\ =\ \textcolor{keyword}{new}\ QPushButton(MenuButtonsFrame);}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ ExitButton-\/>setObjectName(\textcolor{stringliteral}{"{}ExitButton"{}});}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ ExitButton-\/>setMaximumSize(QSize(500,\ 30));}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ verticalLayout\_3-\/>addWidget(ExitButton);}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ verticalLayout\_2-\/>addWidget(MenuButtonsFrame,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ stackedWidget-\/>addWidget(MainPage);}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ DifficultyPage\ =\ \textcolor{keyword}{new}\ QWidget();}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ DifficultyPage-\/>setObjectName(\textcolor{stringliteral}{"{}DifficultyPage"{}});}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ verticalLayout\ =\ \textcolor{keyword}{new}\ QVBoxLayout(DifficultyPage);}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ verticalLayout-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout"{}});}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ DifficultyTitleFrame\ =\ \textcolor{keyword}{new}\ QFrame(DifficultyPage);}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ DifficultyTitleFrame-\/>setObjectName(\textcolor{stringliteral}{"{}DifficultyTitleFrame"{}});}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ DifficultyTitleFrame-\/>setMaximumSize(QSize(16777215,\ 200));}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ DifficultyTitleFrame-\/>setFrameShape(QFrame::StyledPanel);}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ DifficultyTitleFrame-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ verticalLayout\_7\ =\ \textcolor{keyword}{new}\ QVBoxLayout(DifficultyTitleFrame);}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ verticalLayout\_7-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_7"{}});}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ DifficultyTitle\ =\ \textcolor{keyword}{new}\ QLabel(DifficultyTitleFrame);}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ DifficultyTitle-\/>setObjectName(\textcolor{stringliteral}{"{}DifficultyTitle"{}});}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ DifficultyTitle-\/>setMaximumSize(QSize(900,\ 50));}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ verticalLayout\_7-\/>addWidget(DifficultyTitle);}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ verticalLayout-\/>addWidget(DifficultyTitleFrame,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ DifficultyButtonsFrame\ =\ \textcolor{keyword}{new}\ QFrame(DifficultyPage);}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ DifficultyButtonsFrame-\/>setObjectName(\textcolor{stringliteral}{"{}DifficultyButtonsFrame"{}});}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ DifficultyButtonsFrame-\/>setMinimumSize(QSize(100,\ 200));}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ DifficultyButtonsFrame-\/>setMaximumSize(QSize(500,\ 300));}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ DifficultyButtonsFrame-\/>setFrameShape(QFrame::StyledPanel);}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ DifficultyButtonsFrame-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ verticalLayout\_5\ =\ \textcolor{keyword}{new}\ QVBoxLayout(DifficultyButtonsFrame);}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ verticalLayout\_5-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_5"{}});}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ EasyButton\ =\ \textcolor{keyword}{new}\ QPushButton(DifficultyButtonsFrame);}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ EasyButton-\/>setObjectName(\textcolor{stringliteral}{"{}EasyButton"{}});}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ EasyButton-\/>setMaximumSize(QSize(500,\ 30));}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ verticalLayout\_5-\/>addWidget(EasyButton);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ MediumButton\ =\ \textcolor{keyword}{new}\ QPushButton(DifficultyButtonsFrame);}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ MediumButton-\/>setObjectName(\textcolor{stringliteral}{"{}MediumButton"{}});}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ MediumButton-\/>setMaximumSize(QSize(500,\ 30));}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ verticalLayout\_5-\/>addWidget(MediumButton);}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ HardButton\ =\ \textcolor{keyword}{new}\ QPushButton(DifficultyButtonsFrame);}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ HardButton-\/>setObjectName(\textcolor{stringliteral}{"{}HardButton"{}});}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ HardButton-\/>setMaximumSize(QSize(500,\ 30));}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ verticalLayout\_5-\/>addWidget(HardButton);}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ DifficultiesBackButton\ =\ \textcolor{keyword}{new}\ QPushButton(DifficultyButtonsFrame);}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ DifficultiesBackButton-\/>setObjectName(\textcolor{stringliteral}{"{}DifficultiesBackButton"{}});}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ DifficultiesBackButton-\/>setMaximumSize(QSize(500,\ 30));}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ verticalLayout\_5-\/>addWidget(DifficultiesBackButton);}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ verticalLayout-\/>addWidget(DifficultyButtonsFrame,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ stackedWidget-\/>addWidget(DifficultyPage);}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ RankingPage\ =\ \textcolor{keyword}{new}\ QWidget();}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ RankingPage-\/>setObjectName(\textcolor{stringliteral}{"{}RankingPage"{}});}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ verticalLayout\_8\ =\ \textcolor{keyword}{new}\ QVBoxLayout(RankingPage);}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ verticalLayout\_8-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_8"{}});}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ RankingTitleFrame\ =\ \textcolor{keyword}{new}\ QFrame(RankingPage);}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ RankingTitleFrame-\/>setObjectName(\textcolor{stringliteral}{"{}RankingTitleFrame"{}});}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ RankingTitleFrame-\/>setMaximumSize(QSize(16777215,\ 200));}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ RankingTitleFrame-\/>setFrameShape(QFrame::StyledPanel);}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ RankingTitleFrame-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ verticalLayout\_9\ =\ \textcolor{keyword}{new}\ QVBoxLayout(RankingTitleFrame);}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ verticalLayout\_9-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_9"{}});}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ RankingTitle\ =\ \textcolor{keyword}{new}\ QLabel(RankingTitleFrame);}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ RankingTitle-\/>setObjectName(\textcolor{stringliteral}{"{}RankingTitle"{}});}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ RankingTitle-\/>setMaximumSize(QSize(900,\ 50));}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ verticalLayout\_9-\/>addWidget(RankingTitle,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ verticalLayout\_8-\/>addWidget(RankingTitleFrame,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ RankingFrame\ =\ \textcolor{keyword}{new}\ QFrame(RankingPage);}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ RankingFrame-\/>setObjectName(\textcolor{stringliteral}{"{}RankingFrame"{}});}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ RankingFrame-\/>setMinimumSize(QSize(600,\ 0));}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ RankingFrame-\/>setMaximumSize(QSize(900,\ 500));}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ RankingFrame-\/>setFrameShape(QFrame::StyledPanel);}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ RankingFrame-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ verticalLayout\_10\ =\ \textcolor{keyword}{new}\ QVBoxLayout(RankingFrame);}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ verticalLayout\_10-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_10"{}});}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ RankingTableWidget\ =\ \textcolor{keyword}{new}\ QTableWidget(RankingFrame);}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (RankingTableWidget-\/>columnCount()\ <\ 2)}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ RankingTableWidget-\/>setColumnCount(2);}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ QTableWidgetItem\ *\_\_qtablewidgetitem\ =\ \textcolor{keyword}{new}\ QTableWidgetItem();}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>setHorizontalHeaderItem(0,\ \_\_qtablewidgetitem);}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ QTableWidgetItem\ *\_\_qtablewidgetitem1\ =\ \textcolor{keyword}{new}\ QTableWidgetItem();}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>setHorizontalHeaderItem(1,\ \_\_qtablewidgetitem1);}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>setObjectName(\textcolor{stringliteral}{"{}RankingTableWidget"{}});}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>setMinimumSize(QSize(600,\ 0));}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>setMaximumSize(QSize(900,\ 500));}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>setMidLineWidth(1);}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>setEditTriggers(QAbstractItemView::NoEditTriggers);}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>setDragEnabled(\textcolor{keyword}{false});}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>setAlternatingRowColors(\textcolor{keyword}{false});}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>setShowGrid(\textcolor{keyword}{true});}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>setGridStyle(Qt::SolidLine);}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>horizontalHeader()-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>horizontalHeader()-\/>setCascadingSectionResizes(\textcolor{keyword}{false});}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>horizontalHeader()-\/>setStretchLastSection(\textcolor{keyword}{true});}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>verticalHeader()-\/>setCascadingSectionResizes(\textcolor{keyword}{false});}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ RankingTableWidget-\/>verticalHeader()-\/>setStretchLastSection(\textcolor{keyword}{false});}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ verticalLayout\_10-\/>addWidget(RankingTableWidget);}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ verticalLayout\_8-\/>addWidget(RankingFrame,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ RankingButtonsFrame\ =\ \textcolor{keyword}{new}\ QFrame(RankingPage);}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ RankingButtonsFrame-\/>setObjectName(\textcolor{stringliteral}{"{}RankingButtonsFrame"{}});}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ RankingButtonsFrame-\/>setMinimumSize(QSize(100,\ 100));}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ RankingButtonsFrame-\/>setMaximumSize(QSize(500,\ 100));}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ RankingButtonsFrame-\/>setFrameShape(QFrame::StyledPanel);}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ RankingButtonsFrame-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ verticalLayout\_6\ =\ \textcolor{keyword}{new}\ QVBoxLayout(RankingButtonsFrame);}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ verticalLayout\_6-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_6"{}});}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ RankingBackButton\ =\ \textcolor{keyword}{new}\ QPushButton(RankingButtonsFrame);}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ RankingBackButton-\/>setObjectName(\textcolor{stringliteral}{"{}RankingBackButton"{}});}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ RankingBackButton-\/>setMaximumSize(QSize(500,\ 30));}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ verticalLayout\_6-\/>addWidget(RankingBackButton);}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ verticalLayout\_8-\/>addWidget(RankingButtonsFrame,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ stackedWidget-\/>addWidget(RankingPage);}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ GameOverPage\ =\ \textcolor{keyword}{new}\ QWidget();}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ GameOverPage-\/>setObjectName(\textcolor{stringliteral}{"{}GameOverPage"{}});}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ verticalLayout\_14\ =\ \textcolor{keyword}{new}\ QVBoxLayout(GameOverPage);}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ verticalLayout\_14-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_14"{}});}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ GameOverTextFrame\ =\ \textcolor{keyword}{new}\ QFrame(GameOverPage);}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ GameOverTextFrame-\/>setObjectName(\textcolor{stringliteral}{"{}GameOverTextFrame"{}});}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ GameOverTextFrame-\/>setMaximumSize(QSize(600,\ 100));}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ GameOverTextFrame-\/>setFrameShape(QFrame::StyledPanel);}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ GameOverTextFrame-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ verticalLayout\_12\ =\ \textcolor{keyword}{new}\ QVBoxLayout(GameOverTextFrame);}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ verticalLayout\_12-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_12"{}});}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ GameOverText\ =\ \textcolor{keyword}{new}\ QLabel(GameOverTextFrame);}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ GameOverText-\/>setObjectName(\textcolor{stringliteral}{"{}GameOverText"{}});}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ GameOverText-\/>setMaximumSize(QSize(600,\ 100));}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ verticalLayout\_12-\/>addWidget(GameOverText,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ verticalLayout\_14-\/>addWidget(GameOverTextFrame,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ PointsTextFrame\ =\ \textcolor{keyword}{new}\ QFrame(GameOverPage);}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ PointsTextFrame-\/>setObjectName(\textcolor{stringliteral}{"{}PointsTextFrame"{}});}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ PointsTextFrame-\/>setMaximumSize(QSize(600,\ 100));}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ PointsTextFrame-\/>setFrameShape(QFrame::StyledPanel);}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ PointsTextFrame-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ horizontalLayout\_2\ =\ \textcolor{keyword}{new}\ QHBoxLayout(PointsTextFrame);}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ horizontalLayout\_2-\/>setObjectName(\textcolor{stringliteral}{"{}horizontalLayout\_2"{}});}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ ResultText\ =\ \textcolor{keyword}{new}\ QLabel(PointsTextFrame);}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ ResultText-\/>setObjectName(\textcolor{stringliteral}{"{}ResultText"{}});}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ horizontalLayout\_2-\/>addWidget(ResultText);}
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ ResultPoints\ =\ \textcolor{keyword}{new}\ QLabel(PointsTextFrame);}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ ResultPoints-\/>setObjectName(\textcolor{stringliteral}{"{}ResultPoints"{}});}
+\DoxyCodeLine{00378\ }
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ horizontalLayout\_2-\/>addWidget(ResultPoints);}
+\DoxyCodeLine{00380\ }
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ verticalLayout\_14-\/>addWidget(PointsTextFrame,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ GameOverButtonsFrame\ =\ \textcolor{keyword}{new}\ QFrame(GameOverPage);}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ GameOverButtonsFrame-\/>setObjectName(\textcolor{stringliteral}{"{}GameOverButtonsFrame"{}});}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ GameOverButtonsFrame-\/>setMinimumSize(QSize(100,\ 200));}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ GameOverButtonsFrame-\/>setMaximumSize(QSize(500,\ 200));}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ GameOverButtonsFrame-\/>setFrameShape(QFrame::StyledPanel);}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ GameOverButtonsFrame-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ verticalLayout\_11\ =\ \textcolor{keyword}{new}\ QVBoxLayout(GameOverButtonsFrame);}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ verticalLayout\_11-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_11"{}});}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ RestartButton\ =\ \textcolor{keyword}{new}\ QPushButton(GameOverButtonsFrame);}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ RestartButton-\/>setObjectName(\textcolor{stringliteral}{"{}RestartButton"{}});}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ RestartButton-\/>setMaximumSize(QSize(500,\ 30));}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ verticalLayout\_11-\/>addWidget(RestartButton);}
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ GameOverBackButton\ =\ \textcolor{keyword}{new}\ QPushButton(GameOverButtonsFrame);}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ GameOverBackButton-\/>setObjectName(\textcolor{stringliteral}{"{}GameOverBackButton"{}});}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ GameOverBackButton-\/>setMaximumSize(QSize(500,\ 30));}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ verticalLayout\_11-\/>addWidget(GameOverBackButton);}
+\DoxyCodeLine{00403\ }
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ verticalLayout\_14-\/>addWidget(GameOverButtonsFrame,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00406\ }
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ stackedWidget-\/>addWidget(GameOverPage);}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ GamePage\ =\ \textcolor{keyword}{new}\ QWidget();}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ GamePage-\/>setObjectName(\textcolor{stringliteral}{"{}GamePage"{}});}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ verticalLayout\_13\ =\ \textcolor{keyword}{new}\ QVBoxLayout(GamePage);}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ verticalLayout\_13-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_13"{}});}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ GamePausedWidget\ =\ \textcolor{keyword}{new}\ QWidget(GamePage);}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ GamePausedWidget-\/>setObjectName(\textcolor{stringliteral}{"{}GamePausedWidget"{}});}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ GamePausedWidget-\/>setEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ GamePausedWidget-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}\#GamePausedWidget\ \{\(\backslash\)n"{}}}
+\DoxyCodeLine{00416\ \textcolor{stringliteral}{"{}background-\/color:\ rgba(0,\ 0,\ 0,\ 128);\(\backslash\)n"{}}}
+\DoxyCodeLine{00417\ \textcolor{stringliteral}{"{}\}"{}}));}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ verticalLayout\_16\ =\ \textcolor{keyword}{new}\ QVBoxLayout(GamePausedWidget);}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ verticalLayout\_16-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_16"{}});}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ GamePausedButtonsFrame\ =\ \textcolor{keyword}{new}\ QFrame(GamePausedWidget);}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ GamePausedButtonsFrame-\/>setObjectName(\textcolor{stringliteral}{"{}GamePausedButtonsFrame"{}});}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ GamePausedButtonsFrame-\/>setMinimumSize(QSize(100,\ 200));}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ GamePausedButtonsFrame-\/>setMaximumSize(QSize(500,\ 200));}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ GamePausedButtonsFrame-\/>setFrameShape(QFrame::StyledPanel);}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ GamePausedButtonsFrame-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ verticalLayout\_15\ =\ \textcolor{keyword}{new}\ QVBoxLayout(GamePausedButtonsFrame);}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ verticalLayout\_15-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_15"{}});}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ ResumeButton\ =\ \textcolor{keyword}{new}\ QPushButton(GamePausedButtonsFrame);}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ ResumeButton-\/>setObjectName(\textcolor{stringliteral}{"{}ResumeButton"{}});}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ ResumeButton-\/>setMaximumSize(QSize(500,\ 30));}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ verticalLayout\_15-\/>addWidget(ResumeButton);}
+\DoxyCodeLine{00433\ }
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ GameExitButton\ =\ \textcolor{keyword}{new}\ QPushButton(GamePausedButtonsFrame);}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ GameExitButton-\/>setObjectName(\textcolor{stringliteral}{"{}GameExitButton"{}});}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ GameExitButton-\/>setMaximumSize(QSize(500,\ 30));}
+\DoxyCodeLine{00437\ }
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ verticalLayout\_15-\/>addWidget(GameExitButton);}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ }
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ verticalLayout\_16-\/>addWidget(GamePausedButtonsFrame,\ 0,\ Qt::AlignHCenter);}
+\DoxyCodeLine{00442\ }
+\DoxyCodeLine{00443\ }
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ verticalLayout\_13-\/>addWidget(GamePausedWidget);}
+\DoxyCodeLine{00445\ }
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ stackedWidget-\/>addWidget(GamePage);}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ horizontalLayout-\/>addWidget(stackedWidget);}
+\DoxyCodeLine{00449\ }
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}-\/>setCentralWidget(centralwidget);}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ menubar\ =\ \textcolor{keyword}{new}\ QMenuBar(\mbox{\hyperlink{classMainWindow}{MainWindow}});}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ menubar-\/>setObjectName(\textcolor{stringliteral}{"{}menubar"{}});}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ menubar-\/>setGeometry(QRect(0,\ 0,\ 799,\ 22));}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}-\/>setMenuBar(menubar);}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ statusbar\ =\ \textcolor{keyword}{new}\ QStatusBar(\mbox{\hyperlink{classMainWindow}{MainWindow}});}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ statusbar-\/>setObjectName(\textcolor{stringliteral}{"{}statusbar"{}});}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}-\/>setStatusBar(statusbar);}
+\DoxyCodeLine{00458\ }
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ retranslateUi(\mbox{\hyperlink{classMainWindow}{MainWindow}});}
+\DoxyCodeLine{00460\ }
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ QMetaObject::connectSlotsByName(\mbox{\hyperlink{classMainWindow}{MainWindow}});}
+\DoxyCodeLine{00462\ \ \ \ \ \}\ \textcolor{comment}{//\ setupUi}}
+\DoxyCodeLine{00463\ }
+\DoxyCodeLine{00464\ \ \ \ \ \textcolor{keywordtype}{void}\ retranslateUi(QMainWindow\ *\mbox{\hyperlink{classMainWindow}{MainWindow}})}
+\DoxyCodeLine{00465\ \ \ \ \ \{}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}-\/>setWindowTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ Title-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Mission\ Impossible"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ StartButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Start"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ RankingButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Ranking"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ ExitButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Exit"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ DifficultyTitle-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Mission\ Impossible"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ EasyButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Easy"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ MediumButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Medium"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ HardButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Hard"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ DifficultiesBackButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Back"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ RankingTitle-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Mission\ Impossible"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ QTableWidgetItem\ *\_\_\_qtablewidgetitem\ =\ RankingTableWidget-\/>horizontalHeaderItem(0);}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \_\_\_qtablewidgetitem-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Place"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ QTableWidgetItem\ *\_\_\_qtablewidgetitem1\ =\ RankingTableWidget-\/>horizontalHeaderItem(1);}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \_\_\_qtablewidgetitem1-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Points"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ RankingBackButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Back"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ GameOverText-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Game\ Over"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ ResultText-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Your\ points:\ "{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ ResultPoints-\/>setText(QString());}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ RestartButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Again"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ GameOverBackButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Back"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ ResumeButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Resume"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ GameExitButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Exit"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00489\ \ \ \ \ \}\ \textcolor{comment}{//\ retranslateUi}}
+\DoxyCodeLine{00490\ }
+\DoxyCodeLine{00491\ \};}
+\DoxyCodeLine{00492\ }
+\DoxyCodeLine{00493\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00494\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUi_1_1MainWindow}{MainWindow}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classUi__MainWindow}{Ui\_MainWindow}}\ \{\};}
+\DoxyCodeLine{00495\ \}\ \textcolor{comment}{//\ namespace\ Ui}}
+\DoxyCodeLine{00496\ }
+\DoxyCodeLine{00497\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00498\ }
+\DoxyCodeLine{00499\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UI\_MAINWINDOW\_H}}
+
+\end{DoxyCode}

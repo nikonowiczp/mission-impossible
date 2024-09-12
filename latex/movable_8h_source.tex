@@ -1,0 +1,28 @@
+\doxysection{movable.\+h}
+\hypertarget{movable_8h_source}{}\label{movable_8h_source}\index{objects/movable.h@{objects/movable.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MOVABLE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MOVABLE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}positionable.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMovable}{Movable}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPositionable}{Positionable}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classMovable}{Movable}}(std::shared\_ptr<GameStateMediator>\ \_mediator,\ std::unique\_ptr<Point>\ \_coordinates,\textcolor{keywordtype}{int}\ \_id,\ \textcolor{keywordtype}{double}\ \_range,\ \textcolor{keywordtype}{double}\ \_speed);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classMovable_a6921418a69ae26c4b907f533141b158f}{GetRange}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classMovable_acb1187dc25bd986fdc4dd439b8893999}{GetSpeed}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMovable_a4b533fb169ecdc55cf30e30822d7e3e5}{MoveInDirection}}(\textcolor{keywordtype}{double}\ angle,\ \textcolor{keyword}{const}\ std::vector<Positionable*>\&\ others,\ \textcolor{keywordtype}{bool}\ tryToAvoid\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{double}\ speed\ =\ 0;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{double}\ range\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ CanMoveTo(\textcolor{keywordtype}{double}\ newX,\ \textcolor{keywordtype}{double}\ newY,\ \textcolor{keyword}{const}\ std::vector<Positionable*>\&\ others);}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MOVABLE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,23 @@
+\doxysection{monster.\+h}
+\hypertarget{monster_8h_source}{}\label{monster_8h_source}\index{objects/monster.h@{objects/monster.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MONSTER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MONSTER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}movable.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMonster}{Monster}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMovable}{Movable}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classMonster}{Monster}}(std::shared\_ptr<GameStateMediator>,\ \ std::unique\_ptr<Point>,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMonster_ad2fa27dc759938fef825f886ec73840a}{OnGameTick}}(\textcolor{keywordtype}{int}\ \_userInput);}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMonster_ad2fa27dc759938fef825f886ec73840a}{OnGameTick}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MONSTER\_H}}
+
+\end{DoxyCode}

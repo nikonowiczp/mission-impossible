@@ -1,0 +1,122 @@
+\doxysection{Obstacle Class Reference}
+\hypertarget{classObstacle}{}\label{classObstacle}\index{Obstacle@{Obstacle}}
+
+
+The \doxylink{classObstacle}{Obstacle} class is a class Derived from \doxylink{classPositionable}{Positionable} class.  
+
+
+
+
+{\ttfamily \#include $<$obstacle.\+h$>$}
+
+
+
+Inheritance diagram for Obstacle\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classObstacle__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Obstacle\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classObstacle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObstacle_a23d976c6da70a15fc7c4182ae1e4a5bd}{Obstacle}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$, int)
+\item 
+void \mbox{\hyperlink{classObstacle_a1f2866c378061578358360064aac58c3}{On\+Game\+Tick}} ()
+\begin{DoxyCompactList}\small\item\em On\+Game\+Tick is a pure virtual function that is called every game tick. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPositionable}{Positionable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPositionable_afa655aa3fd6a9b936a7c17f6de352ea1}{Positionable}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$, int)
+\item 
+\mbox{\hyperlink{classPoint}{Point}} {\bfseries Get\+Coordinates} () const
+\begin{DoxyCompactList}\small\item\em Get\+Coordinates is a function that returns the coordinates of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPositionable_a7814e95fe9fe37d76b367e6b61b84f55}{Set\+Coordinates}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseObject}{Base\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseObject_a32c2ee7a6d9c62380053fcc502c4be0a}{Base\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$, int)
+\item 
+void \mbox{\hyperlink{classBaseObject_adbc5a5f3f86282c0c138f62f6c803b4b}{Receive\+Event}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$)
+\item 
+int {\bfseries Get\+Id} () const
+\begin{DoxyCompactList}\small\item\em Get\+Id is a function that returns the id of the object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$ {\bfseries Get\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Get\+Mediator is a function that returns the mediator of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classPositionable}{Positionable}}}
+\begin{DoxyCompactItemize}
+\item 
+const int {\bfseries Radius} = 40
+\begin{DoxyCompactList}\small\item\em Radius is a constant integer that represents the radius of the object. Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classPositionable}{Positionable}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$ {\bfseries coordinates}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseObject}{Base\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Integer, the id of the object. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$ $>$ {\bfseries events}
+\begin{DoxyCompactList}\small\item\em Vector of unique pointers to \doxylink{classEvent}{Event} class, the events that the object has received. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$ {\bfseries mediator}
+\begin{DoxyCompactList}\small\item\em Shared pointer to \doxylink{classGameStateMediator}{Game\+State\+Mediator} class, the mediator of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classObstacle}{Obstacle} class is a class Derived from \doxylink{classPositionable}{Positionable} class. 
+
+The \doxylink{classObstacle}{Obstacle} class is used to represent the obstacles in the game. The \doxylink{classObstacle}{Obstacle} is non movable object that blocks the way of the human and the monster. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classObstacle_a23d976c6da70a15fc7c4182ae1e4a5bd}\label{classObstacle_a23d976c6da70a15fc7c4182ae1e4a5bd} 
+\index{Obstacle@{Obstacle}!Obstacle@{Obstacle}}
+\index{Obstacle@{Obstacle}!Obstacle@{Obstacle}}
+\doxysubsubsection{\texorpdfstring{Obstacle()}{Obstacle()}}
+{\footnotesize\ttfamily Obstacle\+::\+Obstacle (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$}]{\+\_\+mediator,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$}]{\+\_\+location,  }\item[{int}]{\+\_\+id }\end{DoxyParamCaption})}
+
+\doxylink{classObstacle}{Obstacle} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em mediator} & Shared pointer to \doxylink{classGameStateMediator}{Game\+State\+Mediator} class, the mediator of the game. \\
+\hline
+{\em location} & Unique pointer to \doxylink{classPoint}{Point} class, the starting location of the obstacle. \\
+\hline
+{\em id} & Integer, the id of the obstacle. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classObstacle_a1f2866c378061578358360064aac58c3}\label{classObstacle_a1f2866c378061578358360064aac58c3} 
+\index{Obstacle@{Obstacle}!OnGameTick@{OnGameTick}}
+\index{OnGameTick@{OnGameTick}!Obstacle@{Obstacle}}
+\doxysubsubsection{\texorpdfstring{OnGameTick()}{OnGameTick()}}
+{\footnotesize\ttfamily void Obstacle\+::\+On\+Game\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+On\+Game\+Tick is a pure virtual function that is called every game tick. 
+
+
+
+Implements \mbox{\hyperlink{classBaseObject_ad9e0c815d7cfa448b63938945ef27e02}{Base\+Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+objects/obstacle.\+h\item 
+objects/obstacle.\+cpp\end{DoxyCompactItemize}

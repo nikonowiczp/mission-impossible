@@ -1,0 +1,142 @@
+\doxysection{Monster Class Reference}
+\hypertarget{classMonster}{}\label{classMonster}\index{Monster@{Monster}}
+
+
+The \doxylink{classMonster}{Monster} class is a class Derived from \doxylink{classMovable}{Movable} class.  
+
+
+
+
+{\ttfamily \#include $<$monster.\+h$>$}
+
+
+
+Inheritance diagram for Monster\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classMonster__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Monster\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classMonster__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMonster_a18c9c9ff1bfec4d17a5d2aca8a527c31}{Monster}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$, int)
+\item 
+void \mbox{\hyperlink{classMonster_a5f4e0f0ca8ec9537bd4f4cf0389fc2ee}{On\+Game\+Tick}} (int \+\_\+user\+Input)
+\item 
+void \mbox{\hyperlink{classMonster_ad2fa27dc759938fef825f886ec73840a}{On\+Game\+Tick}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMovable}{Movable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMovable_ac1cf7f601660f24b6e929c1c692fdb14}{Movable}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$ \+\_\+mediator, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$ \+\_\+coordinates, int \+\_\+id, double \+\_\+range, double \+\_\+speed)
+\item 
+double \mbox{\hyperlink{classMovable_a6921418a69ae26c4b907f533141b158f}{Get\+Range}} () const
+\item 
+double {\bfseries Get\+Speed} () const
+\begin{DoxyCompactList}\small\item\em Get\+Speed is a function that returns the speed of the the object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMovable_a4b533fb169ecdc55cf30e30822d7e3e5}{Move\+In\+Direction}} (double angle, const std\+::vector$<$ \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*} $>$ \&others, bool try\+To\+Avoid=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPositionable}{Positionable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPositionable_afa655aa3fd6a9b936a7c17f6de352ea1}{Positionable}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$, int)
+\item 
+\mbox{\hyperlink{classPoint}{Point}} {\bfseries Get\+Coordinates} () const
+\begin{DoxyCompactList}\small\item\em Get\+Coordinates is a function that returns the coordinates of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPositionable_a7814e95fe9fe37d76b367e6b61b84f55}{Set\+Coordinates}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseObject}{Base\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseObject_a32c2ee7a6d9c62380053fcc502c4be0a}{Base\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$, int)
+\item 
+void \mbox{\hyperlink{classBaseObject_adbc5a5f3f86282c0c138f62f6c803b4b}{Receive\+Event}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$)
+\item 
+int {\bfseries Get\+Id} () const
+\begin{DoxyCompactList}\small\item\em Get\+Id is a function that returns the id of the object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$ {\bfseries Get\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Get\+Mediator is a function that returns the mediator of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classPositionable}{Positionable}}}
+\begin{DoxyCompactItemize}
+\item 
+const int {\bfseries Radius} = 40
+\begin{DoxyCompactList}\small\item\em Radius is a constant integer that represents the radius of the object. Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classPositionable}{Positionable}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$ {\bfseries coordinates}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseObject}{Base\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Integer, the id of the object. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$ $>$ {\bfseries events}
+\begin{DoxyCompactList}\small\item\em Vector of unique pointers to \doxylink{classEvent}{Event} class, the events that the object has received. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$ {\bfseries mediator}
+\begin{DoxyCompactList}\small\item\em Shared pointer to \doxylink{classGameStateMediator}{Game\+State\+Mediator} class, the mediator of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classMonster}{Monster} class is a class Derived from \doxylink{classMovable}{Movable} class. 
+
+The \doxylink{classMonster}{Monster} class is used to represent the monster in the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMonster_a18c9c9ff1bfec4d17a5d2aca8a527c31}\label{classMonster_a18c9c9ff1bfec4d17a5d2aca8a527c31} 
+\index{Monster@{Monster}!Monster@{Monster}}
+\index{Monster@{Monster}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{Monster()}{Monster()}}
+{\footnotesize\ttfamily Monster\+::\+Monster (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$}]{\+\_\+mediator,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$}]{\+\_\+location,  }\item[{int}]{\+\_\+id }\end{DoxyParamCaption})}
+
+\doxylink{classMonster}{Monster} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em mediator} & Shared pointer to \doxylink{classGameStateMediator}{Game\+State\+Mediator} class, the mediator of the game. \\
+\hline
+{\em location} & Unique pointer to \doxylink{classPoint}{Point} class, the starting location of the monster. \\
+\hline
+{\em id} & Integer, the id of the monster. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMonster_ad2fa27dc759938fef825f886ec73840a}\label{classMonster_ad2fa27dc759938fef825f886ec73840a} 
+\index{Monster@{Monster}!OnGameTick@{OnGameTick}}
+\index{OnGameTick@{OnGameTick}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{OnGameTick()}{OnGameTick()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Monster\+::\+On\+Game\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+On\+Game\+Tick is a function that is called every game tick. Unused for the monster. 
+
+Implements \mbox{\hyperlink{classBaseObject_ad9e0c815d7cfa448b63938945ef27e02}{Base\+Object}}.
+
+\Hypertarget{classMonster_a5f4e0f0ca8ec9537bd4f4cf0389fc2ee}\label{classMonster_a5f4e0f0ca8ec9537bd4f4cf0389fc2ee} 
+\index{Monster@{Monster}!OnGameTick@{OnGameTick}}
+\index{OnGameTick@{OnGameTick}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{OnGameTick()}{OnGameTick()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Monster\+::\+On\+Game\+Tick (\begin{DoxyParamCaption}\item[{int}]{\+\_\+user\+Input }\end{DoxyParamCaption})}
+
+On\+Game\+Tick is a function that is called every game tick. It is responsible for moving the monster around the map. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+user\+Input} & Integer, the user input. It is an integer that has bits set depending on the direction the monster should move. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+objects/monster.\+h\item 
+objects/monster.\+cpp\end{DoxyCompactItemize}

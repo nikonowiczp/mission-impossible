@@ -1,0 +1,146 @@
+\doxysection{Game\+View Class Reference}
+\hypertarget{classGameView}{}\label{classGameView}\index{GameView@{GameView}}
+
+
+The \doxylink{classGameView}{Game\+View} class used to show the game view.  
+
+
+
+
+{\ttfamily \#include $<$gameview.\+h$>$}
+
+
+
+Inheritance diagram for Game\+View\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classGameView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+View\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classGameView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGameView_a7fe1012897ea0b564ff4c06ed16948d9}\label{classGameView_a7fe1012897ea0b564ff4c06ed16948d9} 
+void {\bfseries Esc\+Pressed} ()
+\begin{DoxyCompactList}\small\item\em Public signal emitted when the Esc button is pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGameView_a3be24227c8b8b87c9eb7e23c607552a8}{Game\+View}} (QWidget \texorpdfstring{$\ast$}{*}\+\_\+parent=nullptr)
+\item 
+\Hypertarget{classGameView_ae0e97ada4d9fa0cbd1b0390f8a43b394}\label{classGameView_ae0e97ada4d9fa0cbd1b0390f8a43b394} 
+void {\bfseries Clear\+Game} ()
+\begin{DoxyCompactList}\small\item\em Member used to clear the view after the game is over. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameView_a67182247bb1f91b95b628218d027ee6f}{Start\+Game}} (std\+::vector$<$ \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*} $>$ \+\_\+objects, \mbox{\hyperlink{classMonster}{Monster}} \texorpdfstring{$\ast$}{*}\+\_\+monster, int \+\_\+width, int \+\_\+height)
+\item 
+void \mbox{\hyperlink{classGameView_a0c1f5f2e06802c61ece946e77d911249}{Do\+Tick}} (std\+::vector$<$ \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*} $>$ \+\_\+objects, \mbox{\hyperlink{classMonster}{Monster}} \texorpdfstring{$\ast$}{*}\+\_\+monster)
+\item 
+int \mbox{\hyperlink{classGameView_a403e2b728c9b570a4ffe49cc893d6820}{Get\+Keys\+State}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGameView_acae73b649ae768d4e8ba610368e931de}{key\+Press\+Event}} (QKey\+Event \texorpdfstring{$\ast$}{*}\+\_\+event) override
+\item 
+void \mbox{\hyperlink{classGameView_ac4d8324e6ede62528fc37f00f6fe0652}{key\+Release\+Event}} (QKey\+Event \texorpdfstring{$\ast$}{*}\+\_\+event) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classGameView}{Game\+View} class used to show the game view. 
+
+The \doxylink{classGameView}{Game\+View} class derives from QGraphics\+View class and is used to render the map in the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGameView_a3be24227c8b8b87c9eb7e23c607552a8}\label{classGameView_a3be24227c8b8b87c9eb7e23c607552a8} 
+\index{GameView@{GameView}!GameView@{GameView}}
+\index{GameView@{GameView}!GameView@{GameView}}
+\doxysubsubsection{\texorpdfstring{GameView()}{GameView()}}
+{\footnotesize\ttfamily Game\+View\+::\+Game\+View (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{\+\_\+parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Basic \doxylink{classGameView}{Game\+View} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+parent} & Pointer to QWidget parent. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGameView_a0c1f5f2e06802c61ece946e77d911249}\label{classGameView_a0c1f5f2e06802c61ece946e77d911249} 
+\index{GameView@{GameView}!DoTick@{DoTick}}
+\index{DoTick@{DoTick}!GameView@{GameView}}
+\doxysubsubsection{\texorpdfstring{DoTick()}{DoTick()}}
+{\footnotesize\ttfamily void Game\+View\+::\+Do\+Tick (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*} $>$}]{\+\_\+objects,  }\item[{\mbox{\hyperlink{classMonster}{Monster}} \texorpdfstring{$\ast$}{*}}]{\+\_\+monster }\end{DoxyParamCaption})}
+
+Member used to render the map on every QTimer tick. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+objects} & Objects to be rendered on the map. \\
+\hline
+{\em \+\_\+monster} & Player object to be rendered on the map. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGameView_a403e2b728c9b570a4ffe49cc893d6820}\label{classGameView_a403e2b728c9b570a4ffe49cc893d6820} 
+\index{GameView@{GameView}!GetKeysState@{GetKeysState}}
+\index{GetKeysState@{GetKeysState}!GameView@{GameView}}
+\doxysubsubsection{\texorpdfstring{GetKeysState()}{GetKeysState()}}
+{\footnotesize\ttfamily int Game\+View\+::\+Get\+Keys\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Member used to get the state of the keys that are currently clicked. 1000 -\/ W clicked 0100 -\/ A clicked 0010 -\/ S clicked 0001 -\/ D clicked \begin{DoxyReturn}{Returns}
+Keys State as an int that can be mapped to binary. 
+\end{DoxyReturn}
+\Hypertarget{classGameView_acae73b649ae768d4e8ba610368e931de}\label{classGameView_acae73b649ae768d4e8ba610368e931de} 
+\index{GameView@{GameView}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!GameView@{GameView}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void Game\+View\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event \texorpdfstring{$\ast$}{*}}]{\+\_\+event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+Protected signal emitted when any key is pressed. Overriden from the QGraphics\+View object. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+event} & \doxylink{classEvent}{Event} emitted when the key is pressed as a pointer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGameView_ac4d8324e6ede62528fc37f00f6fe0652}\label{classGameView_ac4d8324e6ede62528fc37f00f6fe0652} 
+\index{GameView@{GameView}!keyReleaseEvent@{keyReleaseEvent}}
+\index{keyReleaseEvent@{keyReleaseEvent}!GameView@{GameView}}
+\doxysubsubsection{\texorpdfstring{keyReleaseEvent()}{keyReleaseEvent()}}
+{\footnotesize\ttfamily void Game\+View\+::key\+Release\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event \texorpdfstring{$\ast$}{*}}]{\+\_\+event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+Protected signal emitted when any key is released. Overriden from the QGraphics\+View object. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+event} & \doxylink{classEvent}{Event} emitted when the key is released as a pointer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGameView_a67182247bb1f91b95b628218d027ee6f}\label{classGameView_a67182247bb1f91b95b628218d027ee6f} 
+\index{GameView@{GameView}!StartGame@{StartGame}}
+\index{StartGame@{StartGame}!GameView@{GameView}}
+\doxysubsubsection{\texorpdfstring{StartGame()}{StartGame()}}
+{\footnotesize\ttfamily void Game\+View\+::\+Start\+Game (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*} $>$}]{\+\_\+objects,  }\item[{\mbox{\hyperlink{classMonster}{Monster}} \texorpdfstring{$\ast$}{*}}]{\+\_\+monster,  }\item[{int}]{\+\_\+width,  }\item[{int}]{\+\_\+height }\end{DoxyParamCaption})}
+
+Member used to render the initial state of the map. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+objects} & Objects to be rendered on the map. \\
+\hline
+{\em \+\_\+monster} & Player object to be rendered on the map. \\
+\hline
+{\em \+\_\+width} & Width of the scene. \\
+\hline
+{\em \+\_\+height} & Height of the scene. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gameview.\+h\item 
+build/\+QT6\+\_\+self\+\_\+build-\/\+Debug/mission-\/impossible\+\_\+autogen/\+EWIEGA46\+WW/moc\+\_\+gameview.\+cpp\item 
+gameview.\+cpp\end{DoxyCompactItemize}

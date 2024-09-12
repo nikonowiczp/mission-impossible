@@ -1,0 +1,76 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QGraphicsScene>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}iloghandler.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}gameview.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}gamemanager.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}enums/gamemode.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }Ui\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}};\ \}}
+\DoxyCodeLine{00014\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}(std::unique\_ptr<GameManager>\ \_manager,\ std::unique\_ptr<ILogHandler>\ \_logHandler,\ QWidget\ *\_parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_afb26f7357427a756ae12df1bd8060d6e}{DoTick}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_aab200f82499288e18a27dbc21f9713ed}{OnEscDuringGame}}();}
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_StartButton\_clicked();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_RankingButton\_clicked();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_ExitButton\_clicked();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_DifficultiesBackButton\_clicked();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_RankingBackButton\_clicked();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_GameOverBackButton\_clicked();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_EasyButton\_clicked();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_MediumButton\_clicked();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_HardButton\_clicked();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_GameExitButton\_clicked();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_ResumeButton\_clicked();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_RestartButton\_clicked();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ startGame(GameMode);}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ gameOver();}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ pause();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ resume();}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ resizeEvent(QResizeEvent\ *\_event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{classUi_1_1MainWindow}{Ui::MainWindow}}\ *ui;}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{classGameView}{GameView}}\ *gameView;}
+\DoxyCodeLine{00079\ \ \ \ \ std::unique\_ptr<ILogHandler>\ logHandler;}
+\DoxyCodeLine{00080\ \ \ \ \ std::unique\_ptr<GameManager>\ gameManager;}
+\DoxyCodeLine{00081\ \ \ \ \ QTimer\ *timer;}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ timeoutCounter\ =\ 0;}
+\DoxyCodeLine{00083\ \ \ \ \ uint\ timeoutDuration\ =\ 100;}
+\DoxyCodeLine{00084\ \ \ \ \ GameMode\ gameMode;}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}

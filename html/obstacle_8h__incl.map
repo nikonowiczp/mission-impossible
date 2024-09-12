@@ -1,0 +1,24 @@
+<map id="objects/obstacle.h" name="objects/obstacle.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="347,5,487,31"/>
+<area shape="rect" id="Node000002" href="$positionable_8h.html" title=" " alt="" coords="334,79,499,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="419,31,419,65,414,65,414,31"/>
+<area shape="rect" id="Node000003" href="$point_8h.html" title=" " alt="" coords="329,152,395,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="410,106,381,143,377,140,406,103"/>
+<area shape="rect" id="Node000004" href="$baseobject_8h.html" title=" " alt="" coords="420,152,525,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="428,103,457,140,453,143,424,106"/>
+<area shape="rect" id="Node000005" href="$gamestatemediator_8h.html" title=" " alt="" coords="235,225,398,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="449,180,356,222,354,217,447,175"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="471,299,549,324"/>
+<area shape="poly" id="edge11_Node000004_Node000008" title=" " alt="" coords="478,177,506,285,501,286,473,178"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="510,225,590,251"/>
+<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="487,175,529,214,525,218,483,179"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,299,76,324"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="273,253,90,300,89,295,272,248"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="100,299,163,324"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="288,253,175,296,173,291,286,248"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="349,248,467,291,465,296,347,253"/>
+<area shape="rect" id="Node000009" href="$gameoptions_8h.html" title=" " alt="" coords="187,299,305,324"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="307,253,269,291,265,287,303,249"/>
+<area shape="rect" id="Node000010" href="$event_8h.html" title=" " alt="" coords="329,299,448,324"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="330,249,369,287,365,291,327,253"/>
+</map>

@@ -1,0 +1,116 @@
+\doxysection{Positionable Class Reference}
+\hypertarget{classPositionable}{}\label{classPositionable}\index{Positionable@{Positionable}}
+
+
+The \doxylink{classPositionable}{Positionable} class is a class Derived from \doxylink{classBaseObject}{Base\+Object} class.  
+
+
+
+
+{\ttfamily \#include $<$positionable.\+h$>$}
+
+
+
+Inheritance diagram for Positionable\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classPositionable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Positionable\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classPositionable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPositionable_afa655aa3fd6a9b936a7c17f6de352ea1}{Positionable}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$, int)
+\item 
+\Hypertarget{classPositionable_ab4e8fe7eb810a6f56855e105621e2bad}\label{classPositionable_ab4e8fe7eb810a6f56855e105621e2bad} 
+\mbox{\hyperlink{classPoint}{Point}} {\bfseries Get\+Coordinates} () const
+\begin{DoxyCompactList}\small\item\em Get\+Coordinates is a function that returns the coordinates of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPositionable_a7814e95fe9fe37d76b367e6b61b84f55}{Set\+Coordinates}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseObject}{Base\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseObject_a32c2ee7a6d9c62380053fcc502c4be0a}{Base\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$, int)
+\item 
+virtual void \mbox{\hyperlink{classBaseObject_ad9e0c815d7cfa448b63938945ef27e02}{On\+Game\+Tick}} ()=0
+\begin{DoxyCompactList}\small\item\em On\+Game\+Tick is a pure virtual function that is called every game tick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseObject_adbc5a5f3f86282c0c138f62f6c803b4b}{Receive\+Event}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$)
+\item 
+int {\bfseries Get\+Id} () const
+\begin{DoxyCompactList}\small\item\em Get\+Id is a function that returns the id of the object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$ {\bfseries Get\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Get\+Mediator is a function that returns the mediator of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classPositionable_a223306a0fee5c2a71c022fc5cc0eb29a}\label{classPositionable_a223306a0fee5c2a71c022fc5cc0eb29a} 
+const int {\bfseries Radius} = 40
+\begin{DoxyCompactList}\small\item\em Radius is a constant integer that represents the radius of the object. Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classPositionable_a75fe494042b0e7481ae422f1d9170851}\label{classPositionable_a75fe494042b0e7481ae422f1d9170851} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$ {\bfseries coordinates}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseObject}{Base\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Integer, the id of the object. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$ $>$ {\bfseries events}
+\begin{DoxyCompactList}\small\item\em Vector of unique pointers to \doxylink{classEvent}{Event} class, the events that the object has received. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$ {\bfseries mediator}
+\begin{DoxyCompactList}\small\item\em Shared pointer to \doxylink{classGameStateMediator}{Game\+State\+Mediator} class, the mediator of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classPositionable}{Positionable} class is a class Derived from \doxylink{classBaseObject}{Base\+Object} class. 
+
+The \doxylink{classPositionable}{Positionable} class is used to represent an object that has a position on the map in the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPositionable_afa655aa3fd6a9b936a7c17f6de352ea1}\label{classPositionable_afa655aa3fd6a9b936a7c17f6de352ea1} 
+\index{Positionable@{Positionable}!Positionable@{Positionable}}
+\index{Positionable@{Positionable}!Positionable@{Positionable}}
+\doxysubsubsection{\texorpdfstring{Positionable()}{Positionable()}}
+{\footnotesize\ttfamily Positionable\+::\+Positionable (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGameStateMediator}{Game\+State\+Mediator}} $>$}]{\+\_\+mediator,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$}]{\+\_\+coordinates,  }\item[{int}]{\+\_\+id }\end{DoxyParamCaption})}
+
+\doxylink{classPositionable}{Positionable} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em mediator} & Shared pointer to \doxylink{classGameStateMediator}{Game\+State\+Mediator} class, the mediator of the game. \\
+\hline
+{\em location} & Unique pointer to \doxylink{classPoint}{Point} class, the starting location of the object. \\
+\hline
+{\em id} & Integer, the id of the object. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPositionable_a7814e95fe9fe37d76b367e6b61b84f55}\label{classPositionable_a7814e95fe9fe37d76b367e6b61b84f55} 
+\index{Positionable@{Positionable}!SetCoordinates@{SetCoordinates}}
+\index{SetCoordinates@{SetCoordinates}!Positionable@{Positionable}}
+\doxysubsubsection{\texorpdfstring{SetCoordinates()}{SetCoordinates()}}
+{\footnotesize\ttfamily void Positionable\+::\+Set\+Coordinates (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPoint}{Point}} $>$}]{\+\_\+coordinates }\end{DoxyParamCaption})}
+
+Set\+Coordinates is a function that sets the coordinates of the object. 
+\begin{DoxyParams}{Parameters}
+{\em coordinates} & Unique pointer to \doxylink{classPoint}{Point} class, the coordinates of the object. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+objects/positionable.\+h\item 
+objects/positionable.\+cpp\end{DoxyCompactItemize}

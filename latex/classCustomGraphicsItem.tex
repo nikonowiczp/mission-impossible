@@ -1,0 +1,85 @@
+\doxysection{Custom\+Graphics\+Item Class Reference}
+\hypertarget{classCustomGraphicsItem}{}\label{classCustomGraphicsItem}\index{CustomGraphicsItem@{CustomGraphicsItem}}
+
+
+The \doxylink{classCustomGraphicsItem}{Custom\+Graphics\+Item} class representing objects on the game map.  
+
+
+
+
+{\ttfamily \#include $<$customgraphicsitem.\+h$>$}
+
+
+
+Inheritance diagram for Custom\+Graphics\+Item\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classCustomGraphicsItem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Custom\+Graphics\+Item\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classCustomGraphicsItem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCustomGraphicsItem_af50ad7f385d1cec5303222dd6d75c7ee}{Custom\+Graphics\+Item}} (std\+::string \+\_\+asset\+Path, int \+\_\+asset\+Id, int \+\_\+x, int \+\_\+y, int \+\_\+radius, QGraphics\+Item \texorpdfstring{$\ast$}{*}\+\_\+parent=nullptr)
+\item 
+void \mbox{\hyperlink{classCustomGraphicsItem_ac3438325e0c2619a728ea53851257cfd}{Move}} (int \+\_\+x, int \+\_\+y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classCustomGraphicsItem}{Custom\+Graphics\+Item} class representing objects on the game map. 
+
+The \doxylink{classCustomGraphicsItem}{Custom\+Graphics\+Item} class derives from QGraphics\+Pixmap\+Item. Its main responsibility is to render the object with the given asset on a given position. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCustomGraphicsItem_af50ad7f385d1cec5303222dd6d75c7ee}\label{classCustomGraphicsItem_af50ad7f385d1cec5303222dd6d75c7ee} 
+\index{CustomGraphicsItem@{CustomGraphicsItem}!CustomGraphicsItem@{CustomGraphicsItem}}
+\index{CustomGraphicsItem@{CustomGraphicsItem}!CustomGraphicsItem@{CustomGraphicsItem}}
+\doxysubsubsection{\texorpdfstring{CustomGraphicsItem()}{CustomGraphicsItem()}}
+{\footnotesize\ttfamily Custom\+Graphics\+Item\+::\+Custom\+Graphics\+Item (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+asset\+Path,  }\item[{int}]{\+\_\+asset\+Id,  }\item[{int}]{\+\_\+x,  }\item[{int}]{\+\_\+y,  }\item[{int}]{\+\_\+radius,  }\item[{QGraphics\+Item \texorpdfstring{$\ast$}{*}}]{\+\_\+parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\doxylink{classCustomGraphicsItem}{Custom\+Graphics\+Item} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+asset\+Path} & Path to the asset representing the object. \\
+\hline
+{\em \+\_\+asset\+Id} & Id of the object as int. \\
+\hline
+{\em \+\_\+x} & Initial x coordinate. \\
+\hline
+{\em \+\_\+y} & Initial y coordinate. \\
+\hline
+{\em \+\_\+parent} & Pointer to the QGraphics\+Item parent of the object. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCustomGraphicsItem_ac3438325e0c2619a728ea53851257cfd}\label{classCustomGraphicsItem_ac3438325e0c2619a728ea53851257cfd} 
+\index{CustomGraphicsItem@{CustomGraphicsItem}!Move@{Move}}
+\index{Move@{Move}!CustomGraphicsItem@{CustomGraphicsItem}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Custom\+Graphics\+Item\+::\+Move (\begin{DoxyParamCaption}\item[{int}]{\+\_\+x,  }\item[{int}]{\+\_\+y }\end{DoxyParamCaption})}
+
+Public method used to move the object to the given place on map. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+x} & X coordinate of the target position. \\
+\hline
+{\em \+\_\+y} & Y coordinate of the target position. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sprites/customgraphicsitem.\+h\item 
+sprites/customgraphicsitem.\+cpp\end{DoxyCompactItemize}

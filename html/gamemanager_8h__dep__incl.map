@@ -1,0 +1,18 @@
+<map id="gamemanager.h" name="gamemanager.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="303,5,431,31"/>
+<area shape="rect" id="Node000002" href="$moc__gamemanager_8cpp.html" title=" " alt="" coords="5,79,217,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="324,38,205,81,203,76,322,33"/>
+<area shape="rect" id="Node000003" href="$gamemanager_8cpp.html" title=" " alt="" coords="241,101,384,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="356,44,322,102,317,99,352,41"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title=" " alt="" coords="362,218,445,243"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="384,42,398,78,405,118,408,158,407,218,402,218,402,158,400,118,393,79,379,44"/>
+<area shape="rect" id="Node000005" href="$mainwindow_8h.html" title=" " alt="" coords="497,101,613,126"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="404,34,533,98,531,103,402,39"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="531,136,420,220,417,216,528,132"/>
+<area shape="rect" id="Node000006" href="$moc__mainwindow_8cpp.html" title=" " alt="" coords="469,196,681,265"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="562,139,572,195,567,196,557,140"/>
+<area shape="rect" id="Node000008" href="$mainwindow_8cpp.html" title=" " alt="" coords="705,218,835,243"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="590,130,750,216,747,220,588,135"/>
+<area shape="rect" id="Node000007" href="$mocs__compilation_8cpp.html" title=" " alt="" coords="459,313,691,368"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="578,279,578,313,573,313,573,279"/>
+</map>

@@ -1,0 +1,35 @@
+\doxysection{utils.\+h}
+\hypertarget{utils_8h_source}{}\label{utils_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UTILS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UTILS\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}objects/positionable.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}enums/gamemode.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QKeyEvent>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ KEY\_UP\ 0b1000}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ KEY\_LEFT\ 0b0100}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ KEY\_DOWN\ 0b0010}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ KEY\_RIGHT\ 0b0001}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUtils}{Utils}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classUtils_ada1a705fc5876c6180e37d0cafb25639}{CalculateLength}}(\mbox{\hyperlink{classPositionable}{Positionable}}\ *\_a,\ \mbox{\hyperlink{classPositionable}{Positionable}}*\_b);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classUtils_ada1a705fc5876c6180e37d0cafb25639}{CalculateLength}}(\textcolor{keywordtype}{double}\ x1,\ \textcolor{keywordtype}{double}\ y1,\ \textcolor{keywordtype}{double}\ x2,\ \textcolor{keywordtype}{double}\ y2);\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ CalculateAngle(\textcolor{keywordtype}{double}\ x1,\ \textcolor{keywordtype}{double}\ y1,\ \textcolor{keywordtype}{double}\ x2,\ \textcolor{keywordtype}{double}\ y2);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ CrossProduct(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPoint}{Point}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classPoint}{Point}}\&\ b,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classPoint}{Point}}\&\ p);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ CountPointsOnSides(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPoint}{Point}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classPoint}{Point}}\&\ b,\ \textcolor{keyword}{const}\ std::vector<Positionable\ *>\&\ others);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::map<int,\ int>\ \mbox{\hyperlink{classUtils_ae74cdd818afcc6fcc739d1210a31268d}{GetKeysMap}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classUtils_a40cef72c043d673effe09ef91a308584}{GetDifficultyMultiplier}}(GameMode\ \_mode);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ IsCloseToAny(\textcolor{keyword}{const}\ std::vector<std::unique\_ptr<Positionable>\ >\ \&,\ \textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y);}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UTILS\_H}}
+
+\end{DoxyCode}

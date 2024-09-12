@@ -1,0 +1,26 @@
+\doxysection{loghandler.\+h}
+\hypertarget{loghandler_8h_source}{}\label{loghandler_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CSVLOGHANDLER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CSVLOGHANDLER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}iloghandler.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classLogHandler}{LogHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classILogHandler}{ILogHandler}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classLogHandler_a59bd3b769913f4e599f0d7a46d9c7d9b}{LogHandler}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLogHandler_a728a30cce430216f133c921170a4d010}{SaveGame}}(\textcolor{keywordtype}{int}\ \_points)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{classLogHandler_ab9fbc278f033d2078f6361dbb9eafcdb}{ReadGames}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classLogHandler_a5b9315393200676f0ea723da48bbad93}{\string~LogHandler}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ std::string\ filePath\ =\ \textcolor{stringliteral}{"{}points.log"{}};}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CSVLOGHANDLER\_H}}
+
+\end{DoxyCode}

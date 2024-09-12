@@ -1,0 +1,107 @@
+\doxysection{Utils Class Reference}
+\hypertarget{classUtils}{}\label{classUtils}\index{Utils@{Utils}}
+
+
+\doxylink{classUtils}{Utils} class containing general use functions.  
+
+
+
+
+{\ttfamily \#include $<$utils.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classUtils_ada1a705fc5876c6180e37d0cafb25639}{Calculate\+Length}} (\mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*}\+\_\+a, \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*}\+\_\+b)
+\item 
+static double \mbox{\hyperlink{classUtils_ab40ae1acbc985581a179aa5d823a10c1}{Calculate\+Length}} (double x1, double y1, double x2, double y2)
+\item 
+\Hypertarget{classUtils_a28895bfb25f21a4174e103842ef46887}\label{classUtils_a28895bfb25f21a4174e103842ef46887} 
+static double {\bfseries Calculate\+Angle} (double x1, double y1, double x2, double y2)
+\item 
+\Hypertarget{classUtils_af57ad9baac2156718415a6ef91e262d5}\label{classUtils_af57ad9baac2156718415a6ef91e262d5} 
+static double {\bfseries Cross\+Product} (const \mbox{\hyperlink{classPoint}{Point}} \&a, const \mbox{\hyperlink{classPoint}{Point}} \&b, const \mbox{\hyperlink{classPoint}{Point}} \&p)
+\item 
+\Hypertarget{classUtils_ad820f98b7f7e5d36cbc9ad961450adb6}\label{classUtils_ad820f98b7f7e5d36cbc9ad961450adb6} 
+static int {\bfseries Count\+Points\+On\+Sides} (const \mbox{\hyperlink{classPoint}{Point}} \&a, const \mbox{\hyperlink{classPoint}{Point}} \&b, const std\+::vector$<$ \mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*} $>$ \&others)
+\item 
+static std\+::map$<$ int, int $>$ \mbox{\hyperlink{classUtils_ae74cdd818afcc6fcc739d1210a31268d}{Get\+Keys\+Map}} ()
+\item 
+static double \mbox{\hyperlink{classUtils_a40cef72c043d673effe09ef91a308584}{Get\+Difficulty\+Multiplier}} (Game\+Mode \+\_\+mode)
+\item 
+\Hypertarget{classUtils_a38f7dc903b1fa5cabfad146972a08ec8}\label{classUtils_a38f7dc903b1fa5cabfad146972a08ec8} 
+static bool {\bfseries Is\+Close\+To\+Any} (const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPositionable}{Positionable}} $>$ $>$ \&, double x, double y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classUtils}{Utils} class containing general use functions. 
+
+\doxylink{classUtils}{Utils} class contains public static functions that cannot be regarded as the members of the specific class. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classUtils_ab40ae1acbc985581a179aa5d823a10c1}\label{classUtils_ab40ae1acbc985581a179aa5d823a10c1} 
+\index{Utils@{Utils}!CalculateLength@{CalculateLength}}
+\index{CalculateLength@{CalculateLength}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{CalculateLength()}{CalculateLength()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Utils\+::\+Calculate\+Length (\begin{DoxyParamCaption}\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{x2,  }\item[{double}]{y2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Public method that calculates the distance between two positions. 
+\begin{DoxyParams}{Parameters}
+{\em x1} & X coordinate of first position. \\
+\hline
+{\em y1} & Y coordinate of first position. \\
+\hline
+{\em x2} & X coordinate of second position. \\
+\hline
+{\em y2} & Y coordinate of second position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance between two objects as double. 
+\end{DoxyReturn}
+\Hypertarget{classUtils_ada1a705fc5876c6180e37d0cafb25639}\label{classUtils_ada1a705fc5876c6180e37d0cafb25639} 
+\index{Utils@{Utils}!CalculateLength@{CalculateLength}}
+\index{CalculateLength@{CalculateLength}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{CalculateLength()}{CalculateLength()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double Utils\+::\+Calculate\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*}}]{\+\_\+a,  }\item[{\mbox{\hyperlink{classPositionable}{Positionable}} \texorpdfstring{$\ast$}{*}}]{\+\_\+b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Public method that calculates the distance between two \doxylink{classPositionable}{Positionable} objects. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+a} & Pointer to the first \doxylink{classPositionable}{Positionable} object. \\
+\hline
+{\em \+\_\+b} & Pointer to the second \doxylink{classPositionable}{Positionable} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance between two objects as double. 
+\end{DoxyReturn}
+\Hypertarget{classUtils_a40cef72c043d673effe09ef91a308584}\label{classUtils_a40cef72c043d673effe09ef91a308584} 
+\index{Utils@{Utils}!GetDifficultyMultiplier@{GetDifficultyMultiplier}}
+\index{GetDifficultyMultiplier@{GetDifficultyMultiplier}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{GetDifficultyMultiplier()}{GetDifficultyMultiplier()}}
+{\footnotesize\ttfamily double Utils\+::\+Get\+Difficulty\+Multiplier (\begin{DoxyParamCaption}\item[{Game\+Mode}]{\+\_\+mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Public method to get the multipier used to calculate the points of the game. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+mode} & Game\+Mode used in the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Multiplier as double. 
+\end{DoxyReturn}
+\Hypertarget{classUtils_ae74cdd818afcc6fcc739d1210a31268d}\label{classUtils_ae74cdd818afcc6fcc739d1210a31268d} 
+\index{Utils@{Utils}!GetKeysMap@{GetKeysMap}}
+\index{GetKeysMap@{GetKeysMap}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{GetKeysMap()}{GetKeysMap()}}
+{\footnotesize\ttfamily std\+::map$<$ int, int $>$ Utils\+::\+Get\+Keys\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Public method to get the integer that represents the correlating W, A, S, D letters. \begin{DoxyReturn}{Returns}
+Map of ints that represents the correlation between QT Key clicked and corresponding code. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+utils.\+h\item 
+utils.\+cpp\end{DoxyCompactItemize}
