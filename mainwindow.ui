@@ -482,23 +482,37 @@ QHeaderView::section {
           </layout>
          </widget>
         </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <widget class="QLabel" name="ResultText">
-            <property name="text">
-             <string>Your points: </string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="ResultPoints">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-         </layout>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QFrame" name="PointsTextFrame">
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="ResultText">
+             <property name="text">
+              <string>Your points: </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="ResultPoints">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </item>
         <item alignment="Qt::AlignHCenter">
          <widget class="QFrame" name="GameOverButtonsFrame">
