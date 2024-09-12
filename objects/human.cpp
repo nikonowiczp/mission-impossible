@@ -33,6 +33,7 @@ void Human::OnGameTick()
         if(CommandCenterCommandEvent* commandCenterEvent =dynamic_cast<CommandCenterCommandEvent *>(events.front().get())){
             if(currentState == Scouting){
                 currentGoal = std::move(commandCenterEvent->location);
+                currentState = PursuingFar;
             }
             events.clear();
         }

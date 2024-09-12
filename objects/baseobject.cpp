@@ -14,3 +14,8 @@ int BaseObject::GetId() const
 {
     return this->id;
 }
+
+std::shared_ptr<GameStateMediator> BaseObject::GetMediator()
+{
+    return mediator;
+}

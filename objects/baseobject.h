@@ -13,6 +13,8 @@ public:
     virtual void OnGameTick() = 0;
     void ReceiveEvent(std::unique_ptr<Event>);
     int GetId() const;
+    std::shared_ptr<GameStateMediator> GetMediator();
+
 protected:
     int id;
     std::vector<std::unique_ptr<Event>> events;

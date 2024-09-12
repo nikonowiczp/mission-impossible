@@ -17,6 +17,9 @@ bool GameStateMediator::DoTick(int _userInput)
     assert(monster.get() != nullptr);
     assert(commandCenter.get() != nullptr);
     tick++;
+    if(tick % options->GetTicksForNewHumans() == 0){
+        gameObjects.push_back(std::make_unique<Human>(monster->GetMediator(),std::make_unique<Point>(1, 1) ,gameObjects.back()->GetId() + 1));
+    }
     //do monster move
     for(const auto& a : gameObjects){
         if(dynamic_cast<Human*>(a.get()) && Utils::CalculateLength(monster.get(), a.get()) < options->GetHumanCatch()){
