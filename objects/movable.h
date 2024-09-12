@@ -10,7 +10,7 @@ public:
     double GetRange() const;
     double GetSpeed() const;
 public:
-    bool MoveInDirection(double angle, double length, const std::vector<Positionable*>& others);
+    bool MoveInDirection(double angle, double length, const std::vector<Positionable*>& others, bool tryToAvoid = false);
 private:
     double speed = 0;
     double range = 0;

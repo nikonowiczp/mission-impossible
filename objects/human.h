@@ -25,6 +25,8 @@ private:
     void doPursueFar(const std::vector<Positionable*>&);
     void doPursueClose(const std::vector<Positionable*>&);
 
+    int ticksFromLastEvent = 0;
+    std::unique_ptr<Point> currentGoal;
 };
 
 #endif // HUMAN_H

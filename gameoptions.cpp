@@ -5,7 +5,7 @@ GameOptions::GameOptions(GameDifficulty difficulty) {
     switch(difficulty){
     case Easy:{
         this->humanSpeed = 12;
-        this->humanSight = 100;
+        this->humanSight = 300;
         this->monsterSpeed = 20;
         this->mapHeight = 2000;
         this->mapWidth = 2000;
@@ -16,7 +16,7 @@ GameOptions::GameOptions(GameDifficulty difficulty) {
     };
     case Medium:{
         this->humanSpeed = 15;
-        this->humanSight = 150;
+        this->humanSight = 400;
         this->monsterSpeed = 20;
         this->mapHeight = 1500;
         this->mapWidth = 1500;
@@ -27,7 +27,7 @@ GameOptions::GameOptions(GameDifficulty difficulty) {
     };
     case Hard:{
         this->humanSpeed = 18;
-        this->humanSight = 200;
+        this->humanSight = 500;
         this->monsterSpeed = 20;
         this->mapHeight = 1000;
         this->mapWidth = 1000;

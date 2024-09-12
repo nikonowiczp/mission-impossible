@@ -109,11 +109,17 @@ std::reference_wrapper<const GameOptions> GameStateMediator::GetGameOptions()
 }
 
 template<>
-void GameStateMediator::Notify<Human, HumanFoundEvent>(Human* obj, std::unique_ptr<HumanFoundEvent> evt){
-    std::cout <<"Human event"<<std::endl;
+void GameStateMediator::Notify<Human, HumanFoundEvent>(Human* obj, std::unique_ptr<HumanFoundEvent> event){
+    commandCenter->ReceiveEvent(std::move(event));
 }
 
 template<>
-void GameStateMediator::Notify<CommandCenter, CommandCenterCommandEvent>(CommandCenter* obj, std::unique_ptr<CommandCenterCommandEvent> evt){
-    std::cout <<"Command center event"<<std::endl;
+void GameStateMediator::Notify<CommandCenter, CommandCenterCommandEvent>(CommandCenter* obj, std::unique_ptr<CommandCenterCommandEvent> event){
+    for(auto a : this->getPeople()){
+        if(a->GetId() == event->id){
+            a->ReceiveEvent(std::move(event));
+            break;
+        }
+    }
+    event.release();
 }

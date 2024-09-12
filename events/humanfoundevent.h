@@ -1,11 +1,11 @@
 #ifndef HUMANFOUNDEVENT_H
 #define HUMANFOUNDEVENT_H
 
-#include "ievent.h"
+#include "event.h"
 #include "point.h"
 
 #include <memory>
-class HumanFoundEvent: public IEvent
+class HumanFoundEvent: public Event
 {
 public:
     HumanFoundEvent(std::unique_ptr<Point>);

@@ -1,12 +1,17 @@
 #ifndef COMMANDCENTERCOMMANDEVENT_H
 #define COMMANDCENTERCOMMANDEVENT_H
 
-#include "ievent.h"
+#include "event.h"
+#include "point.h"
+#include <memory>
 
-class CommandCenterCommandEvent : public IEvent
+class CommandCenterCommandEvent : public Event
 {
 public:
-    CommandCenterCommandEvent();
+    CommandCenterCommandEvent(std::unique_ptr<Point>, int id);
+
+    std::unique_ptr<Point> location;
+    int id;
 };
 
 #endif // COMMANDCENTERCOMMANDEVENT_H

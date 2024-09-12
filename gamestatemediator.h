@@ -6,7 +6,7 @@
 #include <memory>
 
 #include "gameoptions.h"
-#include "events/ievent.h"
+#include "events/event.h"
 
 // forward declaration - needed to avoid circular dependency
 class BaseObject;

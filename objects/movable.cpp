@@ -23,7 +23,7 @@ double Movable::GetSpeed() const
     return this->speed;
 }
 
-bool Movable::MoveInDirection(double angle, double length, const std::vector<Positionable*>& others) {
+bool Movable::MoveInDirection(double angle, double length, const std::vector<Positionable*>& others, bool tryToAvoid) {
     double startX = this->coordinates->GetX();
     double startY = this->coordinates->GetY();
 

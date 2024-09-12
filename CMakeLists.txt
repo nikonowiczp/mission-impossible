@@ -22,7 +22,7 @@ set(PROJECT_SOURCES
         objects/commandcenter.h objects/commandcenter.cpp
         objects/movable.h objects/movable.cpp
         objects/obstacle.h objects/obstacle.cpp
-        events/ievent.h events/ievent.cpp
+        events/event.h events/event.cpp
         events/commandcentercommandevent.h events/commandcentercommandevent.cpp
         events/humanfoundevent.h events/humanfoundevent.cpp
         sprites/customgraphicsitem.h sprites/customgraphicsitem.cpp
