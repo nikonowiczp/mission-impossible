@@ -39,7 +39,6 @@ void MainWindow::on_StartButton_clicked()
 void MainWindow::on_RankingButton_clicked()
 {
     std::vector<int> _games = this->logHandler->ReadGames();
-    sort(_games.begin(), _games.end(), std::greater<int>());
     int _gameCounter = _games.size();
     ui->RankingTableWidget->setRowCount(_gameCounter);
     for ( int i = 0; i < _gameCounter; i++ )
