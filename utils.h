@@ -1,6 +1,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 #include "objects/positionable.h"
+#include "enums/gamemode.h"
 #include <memory>
 #include <map>
 #include <QKeyEvent>
@@ -20,6 +21,7 @@ class Utils
         static int CountPointsOnSides(const Point& a, const Point& b, const std::vector<Positionable *>& others);
 
         static std::map<int, int> GetKeysMap();
+        static double GetDifficultyMultiplier(GameMode);
         static bool IsCloseToAny(const std::vector<std::unique_ptr<Positionable> > &, double x, double y);
 };
 
