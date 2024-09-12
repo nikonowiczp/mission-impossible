@@ -12,7 +12,7 @@ public:
     BaseObject(std::shared_ptr<GameStateMediator>, int);
     virtual void OnGameTick() = 0;
     void ReceiveEvent(std::unique_ptr<IEvent>);
-    int GetId();
+    int GetId() const;
 protected:
     int id;
     std::vector<std::unique_ptr<IEvent>> events;

@@ -19,6 +19,7 @@ public:
     int GetHumanSight() const;
 
     int GetMonsterSpeed() const;
+    int GetMonsterSight() const;
 
     int GetMapWidth() const;
     int GetMapHeight() const;

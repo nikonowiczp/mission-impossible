@@ -64,6 +64,11 @@ int GameOptions::GetMonsterSpeed() const
     return monsterSpeed;
 }
 
+int GameOptions::GetMonsterSight() const
+{
+    return 200;
+}
+
 int GameOptions::GetMapWidth() const
 {
     return mapWidth;

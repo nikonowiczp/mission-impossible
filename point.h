@@ -5,9 +5,9 @@
 class Point
 {
 public:
-    Point(int, int);
-    double GetX();
-    double GetY();
+    Point(double, double);
+    double GetX() const;
+    double GetY() const;
 private:
     double x = 0;
     double y = 0;

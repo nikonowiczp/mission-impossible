@@ -10,7 +10,7 @@ void BaseObject::ReceiveEvent(std::unique_ptr<IEvent> event){
     this->events.push_back(std::move(event));
 }
 
-int BaseObject::GetId()
+int BaseObject::GetId() const
 {
     return this->id;
 }

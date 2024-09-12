@@ -1,6 +1,8 @@
 #include <stdexcept>
 
 #include "movable.h"
+#include <cmath>
+#include "utils.h"
 
 Movable::Movable(std::shared_ptr<GameStateMediator> _mediator, std::unique_ptr<Point> _coordinates, int _id, double _range, double _speed) : Positionable(_mediator, std::move(_coordinates), _id)
 {
@@ -11,17 +13,36 @@ Movable::Movable(std::shared_ptr<GameStateMediator> _mediator, std::unique_ptr<P
     this->speed = _speed;
 }
 
-double Movable::GetRange()
+double Movable::GetRange() const
 {
     return this->range;
 }
 
-double Movable::GetSpeed()
+double Movable::GetSpeed() const
 {
     return this->speed;
 }
 
-void Movable::MoveBy(double x, double y)
+void Movable::MoveInDirection(double angle, double length, const std::vector<Positionable*>& others) {
+    double startX = this->coordinates->GetX();
+    double startY = this->coordinates->GetY();
+
+    if (CanMoveTo(startX + length * std::cos(angle), startY + length * std::sin(angle), others)) {
+        this->coordinates = std::make_unique<Point>(startX + length * std::cos(angle), startY + length * std::sin(angle));
+        return;
+    }
+}
+
+bool Movable::CanMoveTo(double newX, double newY, const std::vector<Positionable*> &others)
 {
-    this->coordinates = std::make_unique<Point>(this->coordinates->GetX()+x, this->coordinates->GetY()+y);
+    if(newX < 0 || newX > mediator->GetGameOptions().get().GetMapWidth() || newY < 0 || mediator->GetGameOptions().get().GetMapHeight()){
+        return false;
+    }
+    for (const auto& other : others) {
+        double distance = Utils::CalculateLength(newX, newY, other->GetCoordinates().GetX(), other->GetCoordinates().GetY());
+        if (distance < this->Radius) {
+            return false;
+        }
+    }
+    return true;
 }

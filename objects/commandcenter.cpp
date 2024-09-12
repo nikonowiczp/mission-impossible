@@ -8,4 +8,9 @@ CommandCenter::CommandCenter(std::shared_ptr<GameStateMediator> _mediator, int _
 void CommandCenter::OnGameTick()
 {
     std::cout<<"[Command center "<<id<<"] "<<std::endl;
+    auto humans = mediator->getPeople();
+    std::unique_ptr<Point> point = nullptr;
+    if(events.size()>0){
+
+    }
 }
