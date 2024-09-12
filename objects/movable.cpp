@@ -28,8 +28,18 @@ bool Movable::MoveInDirection(double angle, double length, const std::vector<Pos
     double startY = this->coordinates->GetY();
 
     if (CanMoveTo(startX + length * std::cos(angle), startY + length * std::sin(angle), others)) {
-        this->coordinates = std::make_unique<Point>(startX + length * std::cos(angle), startY + length * std::sin(angle));
-        return true;
+            this->coordinates = std::make_unique<Point>(startX + length * std::cos(angle), startY + length * std::sin(angle));
+            return true;
+    }
+    if(tryToAvoid){
+        for(int i = 0;i <5; i++){
+            angle += 0.25* M_PI ;
+            if (CanMoveTo(startX + length * std::cos(angle), startY + length * std::sin(angle), others)) {
+                this->coordinates = std::make_unique<Point>(startX + length * std::cos(angle), startY + length * std::sin(angle));
+                return true;
+            }
+        }
+
     }
     return false;
 }

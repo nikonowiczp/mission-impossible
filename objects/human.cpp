@@ -86,5 +86,5 @@ void Human::doPursueFar(const std::vector<Positionable *> & others)
 void Human::doPursueClose(const std::vector<Positionable *> & others)
 {
     double angle = Utils::CalculateAngle(this->coordinates->GetX(), this->coordinates->GetY(), currentGoal->GetX(), currentGoal->GetY());
-    this->MoveInDirection(angle, this->mediator->GetGameOptions().get().GetHumanSpeed(), others);
+    this->MoveInDirection(angle, this->mediator->GetGameOptions().get().GetHumanSpeed(), others, true);
 }
