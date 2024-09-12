@@ -53,6 +53,19 @@ std::map<int, int> Utils::GetKeysMap()
     return _keysMap;
 }
 
+double Utils::GetDifficultyMultiplier(GameMode _mode)
+{
+    switch(_mode)
+    {
+        case (GameMode::EASY):
+            return 1;
+        case (GameMode::MEDIUM):
+            return 1.5;
+        case (GameMode::HARD):
+            return 2;
+    }
+}
+
 bool Utils::IsCloseToAny(const  std::vector<std::unique_ptr<Positionable> >& objects, double x, double y)
 {
     for (const auto& obj : objects) {

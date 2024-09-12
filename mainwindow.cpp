@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "objects/positionable.h"
+#include "utils.h"
 
 #include <QDebug>
 #include "qtimer.h"
@@ -43,8 +44,8 @@ void MainWindow::on_RankingButton_clicked()
     ui->RankingTableWidget->setRowCount(_gameCounter);
     for ( int i = 0; i < _gameCounter; i++ )
     {
-        ui->RankingTableWidget->setItem(i, 0, new QTableWidgetItem(QString((char)(i+1))));
-        ui->RankingTableWidget->setItem(i, 0, new QTableWidgetItem(QString((char)_games[i])));
+        ui->RankingTableWidget->setItem(i, 0, new QTableWidgetItem(QString::number(i+1)));
+        ui->RankingTableWidget->setItem(i, 1, new QTableWidgetItem(QString::number(_games[i])));
     }
     ui->stackedWidget->setCurrentIndex(2);
 }
@@ -116,10 +117,9 @@ void MainWindow::startGame(GameMode _mode)
 void MainWindow::gameOver()
 {
     timer->stop();
-    //TODO add counting the points
-    int points = this->gameManager->GetTick();
-    ui->ResultPoints->setText(QString::number(points));
-    this->logHandler->SaveGame(this->timeoutCounter);
+    int _points = this->gameManager->GetTick() * Utils::GetDifficultyMultiplier(this->gameMode);
+    ui->ResultPoints->setText(QString::number(_points));
+    this->logHandler->SaveGame(_points);
     this->timeoutCounter = 0;
     this->gameView->ClearGame();
     ui->GamePausedWidget->setVisible(false);
