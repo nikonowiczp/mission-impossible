@@ -23,10 +23,11 @@ double Movable::GetSpeed() const
     return this->speed;
 }
 
-bool Movable::MoveInDirection(double angle, double length, const std::vector<Positionable*>& others, bool tryToAvoid) {
+bool Movable::MoveInDirection(double angle, const std::vector<Positionable*>& others, bool tryToAvoid) {
     double startX = this->coordinates->GetX();
     double startY = this->coordinates->GetY();
 
+    double length = this->speed;
     if (CanMoveTo(startX + length * std::cos(angle), startY + length * std::sin(angle), others)) {
             this->coordinates = std::make_unique<Point>(startX + length * std::cos(angle), startY + length * std::sin(angle));
             return true;

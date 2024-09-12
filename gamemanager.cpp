@@ -32,12 +32,12 @@ void GameManager::PrepareHard()
     prepareGame(Hard);
 }
 
-int GameManager::GetWidth()
+int GameManager::GetWidth() const
 {
     return mediator->GetGameOptions().get().GetMapWidth();
 }
 
-int GameManager::GetHeight()
+int GameManager::GetHeight() const
 {
     return mediator->GetGameOptions().get().GetMapHeight();
 }

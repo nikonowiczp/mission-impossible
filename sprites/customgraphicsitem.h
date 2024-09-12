@@ -19,7 +19,7 @@ public:
     /// @param _x           Initial x coordinate.
     /// @param _y           Initial y coordinate.
     /// @param _parent      Pointer to the QGraphicsItem parent of the object.
-    CustomGraphicsItem(std::string _assetPath, int _assetId, int _x, int _y, int _radius, QGraphicsItem* _parent);
+    CustomGraphicsItem(std::string _assetPath, int _assetId, int _x, int _y, int _radius, QGraphicsItem* _parent = nullptr);
 
     ///
     /// Public method used to move the object to the given place on map.

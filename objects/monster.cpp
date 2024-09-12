@@ -25,7 +25,7 @@ void Monster::OnGameTick(int _userInput)
         if(x == -1 && y == -1 )angle = 0.75;
         if(x == 1 && y == -1 )angle = 0.25;
         auto objects = mediator->getVisibleObjects(this);
-        this->MoveInDirection(angle * M_PI, mediator->GetGameOptions().get().GetMonsterSpeed(), objects);
+        this->MoveInDirection(angle * M_PI, objects);
     }
     std::cout<<"[Monster "<<id<<"] position "<<coordinates->GetX()<<", "<<coordinates->GetY()<< " Input: "<<_userInput<<std::endl;
 }

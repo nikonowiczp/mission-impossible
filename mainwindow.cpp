@@ -22,6 +22,7 @@ MainWindow::MainWindow(std::unique_ptr<GameManager> _gameManager, std::unique_pt
     ui->GamePausedWidget->raise();
     ui->GamePausedWidget->setVisible(false);
     this->timer = new QTimer(this);
+    connect(timer, &QTimer::timeout, this, &MainWindow::DoTick);
     connect(this->gameView, &GameView::EscPressed, this, &MainWindow::OnEscDuringGame);
 }
 
@@ -109,7 +110,6 @@ void MainWindow::startGame(GameMode _mode)
     }
     std::vector<Positionable *> _gameObjects = this->gameManager->GetAllPositionable();
     this->gameView->StartGame(_gameObjects, this->gameManager->GetMonster(), this->gameManager->GetWidth(), this->gameManager->GetHeight());
-    connect(timer, &QTimer::timeout, this, &MainWindow::DoTick);
     ui->stackedWidget->setCurrentIndex(4);
     this->timer->start(timeoutDuration);
 }

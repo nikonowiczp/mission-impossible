@@ -64,6 +64,7 @@ double Utils::GetDifficultyMultiplier(GameMode _mode)
         case (GameMode::HARD):
             return 2;
     }
+        return -1;
 }
 
 bool Utils::IsCloseToAny(const  std::vector<std::unique_ptr<Positionable> >& objects, double x, double y)

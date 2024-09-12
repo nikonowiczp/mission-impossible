@@ -1,6 +1,7 @@
 #include "loghandler.h"
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 
 LogHandler::LogHandler()
 {
@@ -36,7 +37,7 @@ std::vector<int> LogHandler::ReadGames()
         }
     }
     _file.close();
-    sort(_games.begin(), _games.end(), std::greater<int>());
+    std::sort(_games.begin(), _games.end(), std::greater<int>());
     return _games;
 }
 

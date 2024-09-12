@@ -67,7 +67,7 @@ void Human::doScouting(const std::vector<Positionable*>& others)
 
     double angle = currentScoutingAngle + dist(gen);
     int i = 0;
-    while(!this->MoveInDirection(angle, this->mediator->GetGameOptions().get().GetHumanSpeed(), others)){
+    while(!this->MoveInDirection(angle, others)){
         i++;
         currentScoutingAngle =  dist2(gen);
         angle = currentScoutingAngle;
@@ -78,7 +78,7 @@ void Human::doScouting(const std::vector<Positionable*>& others)
 void Human::doPursueFar(const std::vector<Positionable *> & others)
 {
     double angle = Utils::CalculateAngle(this->coordinates->GetX(), this->coordinates->GetY(), currentGoal->GetX(), currentGoal->GetY());
-    if(!this->MoveInDirection(angle, this->mediator->GetGameOptions().get().GetHumanSpeed(), others, true)){
+    if(!this->MoveInDirection(angle, others, true)){
         doScouting(others);
         currentState = Scouting;
     }
@@ -92,5 +92,5 @@ void Human::doPursueFar(const std::vector<Positionable *> & others)
 void Human::doPursueClose(const std::vector<Positionable *> & others)
 {
     double angle = Utils::CalculateAngle(this->coordinates->GetX(), this->coordinates->GetY(), currentGoal->GetX(), currentGoal->GetY());
-    this->MoveInDirection(angle, this->mediator->GetGameOptions().get().GetHumanSpeed(), others, true);
+    this->MoveInDirection(angle, others, true);
 }
