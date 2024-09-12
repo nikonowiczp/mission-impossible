@@ -18,7 +18,7 @@ void Human::OnGameTick()
 
 
     auto visibleObjects = mediator->getVisibleObjects(this);
-    if(ticksFromLastEvent > 100)currentState = Scouting;
+    if(ticksFromLastEvent > 5)currentState = Scouting;
     for( const auto& object : visibleObjects){
         if(dynamic_cast<Monster*>(object)){
             std::cout<<"Monster found";
@@ -82,8 +82,7 @@ void Human::doPursueFar(const std::vector<Positionable *> & others)
         doScouting(others);
         currentState = Scouting;
     }
-    if(abs(currentGoal->GetX() - coordinates->GetX()) < Radius && abs(currentGoal->GetY() - coordinates->GetY()) < Radius){
-        doScouting(others);
+    if(abs(currentGoal->GetX() - coordinates->GetX()) < Radius*2 && abs(currentGoal->GetY() - coordinates->GetY()) < Radius*2){
         currentState = Scouting;
     }
 
